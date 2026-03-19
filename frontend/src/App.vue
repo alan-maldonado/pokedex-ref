@@ -246,10 +246,14 @@ const progressPct = computed(() =>
 async function loadGames() {
   const res = await fetch('/api/games')
   games.value = await res.json()
-  if (games.value.length) {
-    selectedGameSlug.value = games.value[0].slug
-    selectedDex.value = games.value[0].dexes[0] ?? null
-  }
+  if (!games.value.length) return
+
+  const savedSlug  = localStorage.getItem('selectedGameSlug')
+  const savedDexId = Number(localStorage.getItem('selectedDexId'))
+
+  const game = games.value.find(g => g.slug === savedSlug) ?? games.value[0]
+  selectedGameSlug.value = game.slug
+  selectedDex.value = game.dexes.find(d => d.id === savedDexId) ?? game.dexes[0] ?? null
 }
 
 async function loadPokemon() {
@@ -285,11 +289,15 @@ watch(hideCaught, v => sessionStorage.setItem('hideCaught', v))
 watch(hideForms,  v => sessionStorage.setItem('hideForms',  v))
 watch(search,     v => sessionStorage.setItem('search',     v))
 
-watch(selectedGameSlug, () => {
+watch(selectedGameSlug, (slug) => {
+  localStorage.setItem('selectedGameSlug', slug)
   if (selectedGame.value) selectedDex.value = selectedGame.value.dexes[0] ?? null
 })
 
-watch(selectedDex, loadPokemon)
+watch(selectedDex, (dex) => {
+  if (dex) localStorage.setItem('selectedDexId', dex.id)
+  loadPokemon()
+})
 
 onMounted(async () => {
   await loadGames()
