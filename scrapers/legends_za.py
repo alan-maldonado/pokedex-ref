@@ -40,6 +40,23 @@ def get_icon_url(cell_html):
     return src.group(1) if src else None
 
 
+def get_all_icons(cell_html):
+    """Returns list of (alt_name, url) for every <img> in the cell."""
+    results = []
+    for img_match in re.finditer(r'<img([^>]+)>', cell_html):
+        attrs = img_match.group(1)
+        alt = re.search(r'alt="([^"]+)"', attrs)
+        name = alt.group(1) if alt else ""
+        srcset = re.search(r'srcset="([^"]+)"', attrs)
+        if srcset:
+            url = srcset.group(1).split(",")[-1].strip().split(" ")[0]
+        else:
+            src = re.search(r'src="([^"]+)"', attrs)
+            url = src.group(1) if src else None
+        results.append((name, url))
+    return results
+
+
 def get_icon_name(cell_html):
     """Returns the alt text of the first <img> (name fallback for rowspanned name cells)."""
     m = re.search(r'<img[^>]+alt="([^"]+)"', cell_html)
@@ -91,13 +108,23 @@ def parse_table(table_html):
             name_rowspan = re.search(r'rowspan="(\d+)"', cells[3][0])
             pending_name = name if (name_rowspan and int(name_rowspan.group(1)) > 1) else None
 
-            icon_url = get_icon_url(cells[2][1])
             tipo1, tipo2 = get_types([c[1] for c in cells[3:]])
+            icons = get_all_icons(cells[2][1])
 
-            entries.append({
-                "nac": nac, "dex_num": lum, "name": name,
-                "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
-            })
+            if len(icons) > 1:
+                # Multiple forms packed into one row (e.g. Floette, Flabébé)
+                for form_name, icon_url in icons:
+                    entries.append({
+                        "nac": nac, "dex_num": lum,
+                        "name": form_name or name,
+                        "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
+                    })
+            else:
+                icon_url = icons[0][1] if icons else None
+                entries.append({
+                    "nac": nac, "dex_num": lum, "name": name,
+                    "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
+                })
 
         elif n <= 4 and pending_nac:
             # Variant row: national/dex numbers come from the rowspan above
