@@ -8,18 +8,49 @@
         <!-- Game title + selector -->
         <div class="flex items-center gap-3 mb-3">
           <div class="w-8 h-8 rounded-full bg-white border-4 border-gray-800 flex-shrink-0" />
-          <div>
+          <div class="relative">
             <p class="text-white/60 text-xs uppercase tracking-widest leading-none mb-0.5">Pokédex</p>
-            <select
-              v-if="games.length > 1"
-              v-model="selectedGameSlug"
-              class="bg-transparent text-white text-xl font-bold tracking-wide border-0 outline-none cursor-pointer appearance-none pr-6"
-            >
-              <option v-for="g in games" :key="g.slug" :value="g.slug">{{ g.name }}</option>
-            </select>
-            <h1 v-else class="text-xl font-bold text-white tracking-wide">
+
+            <!-- Single game: plain title -->
+            <h1 v-if="games.length <= 1" class="text-xl font-bold text-white tracking-wide">
               {{ selectedGame?.name ?? '…' }}
             </h1>
+
+            <!-- Multiple games: dropdown button -->
+            <div v-else>
+              <button
+                @click="gameDropdownOpen = !gameDropdownOpen"
+                class="flex items-center gap-2 text-xl font-bold text-white tracking-wide hover:text-white/80 transition-colors"
+              >
+                {{ selectedGame?.name ?? '…' }}
+                <svg
+                  :class="['w-4 h-4 transition-transform', gameDropdownOpen ? 'rotate-180' : '']"
+                  fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                </svg>
+              </button>
+
+              <div
+                v-if="gameDropdownOpen"
+                class="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-xl z-50 overflow-hidden min-w-56"
+              >
+                <button
+                  v-for="g in games"
+                  :key="g.slug"
+                  @click="selectedGameSlug = g.slug; gameDropdownOpen = false"
+                  :class="[
+                    'w-full text-left px-4 py-3 text-sm font-medium transition-colors',
+                    g.slug === selectedGameSlug
+                      ? 'bg-red-50 text-red-600'
+                      : 'text-gray-700 hover:bg-gray-50'
+                  ]"
+                >
+                  {{ g.name }}
+                  <span class="block text-xs text-gray-400 font-normal">{{ g.year }}</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -206,6 +237,7 @@ const selectedGameSlug = ref(null)
 const selectedDex      = ref(null)
 const pokemon          = ref([])
 const loading          = ref(false)
+const gameDropdownOpen = ref(false)
 const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
 const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
 const search           = ref(sessionStorage.getItem('search') ?? '')
@@ -249,7 +281,7 @@ async function loadGames() {
   if (!games.value.length) return
 
   const savedSlug  = localStorage.getItem('selectedGameSlug')
-  const savedDexId = Number(localStorage.getItem('selectedDexId'))
+  const savedDexId = Number(sessionStorage.getItem('selectedDexId'))
 
   const game = games.value.find(g => g.slug === savedSlug) ?? games.value[0]
   selectedGameSlug.value = game.slug
@@ -289,18 +321,21 @@ watch(hideCaught, v => sessionStorage.setItem('hideCaught', v))
 watch(hideForms,  v => sessionStorage.setItem('hideForms',  v))
 watch(search,     v => sessionStorage.setItem('search',     v))
 
-watch(selectedGameSlug, (slug) => {
+watch(selectedGameSlug, (slug, oldSlug) => {
   localStorage.setItem('selectedGameSlug', slug)
-  if (selectedGame.value) selectedDex.value = selectedGame.value.dexes[0] ?? null
+  // Solo resetea el tab cuando el usuario cambia de juego, no durante la inicialización
+  if (oldSlug && selectedGame.value) selectedDex.value = selectedGame.value.dexes[0] ?? null
 })
 
 watch(selectedDex, (dex) => {
-  if (dex) localStorage.setItem('selectedDexId', dex.id)
+  if (dex) sessionStorage.setItem('selectedDexId', dex.id)
   loadPokemon()
 })
 
-onMounted(async () => {
-  await loadGames()
-  await loadPokemon()
+onMounted(() => {
+  loadGames()
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.relative')) gameDropdownOpen.value = false
+  })
 })
 </script>
