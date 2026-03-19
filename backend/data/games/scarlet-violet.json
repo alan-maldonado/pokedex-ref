@@ -1,0 +1,3592 @@
+{
+  "game": {
+    "slug": "scarlet-violet",
+    "name": "Pokémon Scarlet & Violet",
+    "year": 2022
+  },
+  "dexes": [
+    {
+      "slug": "paldea",
+      "name": "Pokédex de Paldea",
+      "col_label": "PAL",
+      "pokemon": [
+        {
+          "nac": "0906",
+          "dex_num": "001",
+          "name": "Sprigatito",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/58/latest/20221117212012/Sprigatito_icono_EP.png/96px-Sprigatito_icono_EP.png"
+        },
+        {
+          "nac": "0907",
+          "dex_num": "002",
+          "name": "Floragato",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/48/latest/20221117181719/Floragato_icono_EP.png/96px-Floragato_icono_EP.png"
+        },
+        {
+          "nac": "0908",
+          "dex_num": "003",
+          "name": "Meowscarada",
+          "tipo1": "Planta",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7f/latest/20221117181746/Meowscarada_icono_EP.png/96px-Meowscarada_icono_EP.png"
+        },
+        {
+          "nac": "0909",
+          "dex_num": "004",
+          "name": "Fuecoco",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6d/latest/20221117212053/Fuecoco_icono_EP.png/96px-Fuecoco_icono_EP.png"
+        },
+        {
+          "nac": "0910",
+          "dex_num": "005",
+          "name": "Crocalor",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/68/latest/20221117212117/Crocalor_icono_EP.png/96px-Crocalor_icono_EP.png"
+        },
+        {
+          "nac": "0911",
+          "dex_num": "006",
+          "name": "Skeledirge",
+          "tipo1": "Fuego",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/81/latest/20221117212134/Skeledirge_icono_EP.png/96px-Skeledirge_icono_EP.png"
+        },
+        {
+          "nac": "0912",
+          "dex_num": "007",
+          "name": "Quaxly",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/dd/latest/20221117212156/Quaxly_icono_EP.png/96px-Quaxly_icono_EP.png"
+        },
+        {
+          "nac": "0913",
+          "dex_num": "008",
+          "name": "Quaxwell",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ef/latest/20221117212209/Quaxwell_icono_EP.png/96px-Quaxwell_icono_EP.png"
+        },
+        {
+          "nac": "0914",
+          "dex_num": "009",
+          "name": "Quaquaval",
+          "tipo1": "Agua",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8e/latest/20221117212224/Quaquaval_icono_EP.png/96px-Quaquaval_icono_EP.png"
+        },
+        {
+          "nac": "0915",
+          "dex_num": "010",
+          "name": "Lechonk",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f5/latest/20221118055040/Lechonk_icono_EP.png/96px-Lechonk_icono_EP.png"
+        },
+        {
+          "nac": "0916",
+          "dex_num": "011",
+          "name": "Oinkologne",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/da/latest/20221117200230/Oinkologne_icono_EP.png/96px-Oinkologne_icono_EP.png"
+        },
+        {
+          "nac": "0916",
+          "dex_num": "011",
+          "name": "Oinkologne",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d8/latest/20221117200403/Oinkologne_icono_EP_hembra.png/96px-Oinkologne_icono_EP_hembra.png"
+        },
+        {
+          "nac": "0917",
+          "dex_num": "012",
+          "name": "Tarountula",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7b/latest/20221118112220/Tarountula_icono_EP.png/96px-Tarountula_icono_EP.png"
+        },
+        {
+          "nac": "0918",
+          "dex_num": "013",
+          "name": "Spidops",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/16/latest/20221118110900/Spidops_icono_EP.png/96px-Spidops_icono_EP.png"
+        },
+        {
+          "nac": "0919",
+          "dex_num": "014",
+          "name": "Nymble",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a4/latest/20221118110643/Nymble_icono_EP.png/96px-Nymble_icono_EP.png"
+        },
+        {
+          "nac": "0920",
+          "dex_num": "015",
+          "name": "Lokix",
+          "tipo1": "Bicho",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9e/latest/20221118110340/Lokix_icono_EP.png/96px-Lokix_icono_EP.png"
+        },
+        {
+          "nac": "0187",
+          "dex_num": "016",
+          "name": "Hoppip",
+          "tipo1": "Planta",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4a/latest/20221118112033/Hoppip_icono_EP.png/96px-Hoppip_icono_EP.png"
+        },
+        {
+          "nac": "0188",
+          "dex_num": "017",
+          "name": "Skiploom",
+          "tipo1": "Planta",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/78/latest/20221118112258/Skiploom_icono_EP.png/96px-Skiploom_icono_EP.png"
+        },
+        {
+          "nac": "0189",
+          "dex_num": "018",
+          "name": "Jumpluff",
+          "tipo1": "Planta",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0a/latest/20221118110704/Jumpluff_icono_EP.png/96px-Jumpluff_icono_EP.png"
+        },
+        {
+          "nac": "0661",
+          "dex_num": "019",
+          "name": "Fletchling",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2b/latest/20221118112450/Fletchling_icono_EP.png/96px-Fletchling_icono_EP.png"
+        },
+        {
+          "nac": "0662",
+          "dex_num": "020",
+          "name": "Fletchinder",
+          "tipo1": "Fuego",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8c/latest/20221118110427/Fletchinder_icono_EP.png/96px-Fletchinder_icono_EP.png"
+        },
+        {
+          "nac": "0663",
+          "dex_num": "021",
+          "name": "Talonflame",
+          "tipo1": "Fuego",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/ab/latest/20221118112041/Talonflame_icono_EP.png/96px-Talonflame_icono_EP.png"
+        },
+        {
+          "nac": "0921",
+          "dex_num": "022",
+          "name": "Pawmi",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/22/latest/20221118111603/Pawmi_icono_EP.png/96px-Pawmi_icono_EP.png"
+        },
+        {
+          "nac": "0922",
+          "dex_num": "023",
+          "name": "Pawmo",
+          "tipo1": "Eléctrico",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/12/latest/20221118110400/Pawmo_icono_EP.png/96px-Pawmo_icono_EP.png"
+        },
+        {
+          "nac": "0923",
+          "dex_num": "024",
+          "name": "Pawmot",
+          "tipo1": "Eléctrico",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/89/latest/20221118110512/Pawmot_icono_EP.png/96px-Pawmot_icono_EP.png"
+        },
+        {
+          "nac": "0228",
+          "dex_num": "025",
+          "name": "Houndour",
+          "tipo1": "Siniestro",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8c/latest/20221118112300/Houndour_icono_EP.png/96px-Houndour_icono_EP.png"
+        },
+        {
+          "nac": "0229",
+          "dex_num": "026",
+          "name": "Houndoom",
+          "tipo1": "Siniestro",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c4/latest/20221118111834/Houndoom_icono_EP.png/96px-Houndoom_icono_EP.png"
+        },
+        {
+          "nac": "0734",
+          "dex_num": "027",
+          "name": "Yungoos",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5c/latest/20221118112051/Yungoos_icono_EP.png/96px-Yungoos_icono_EP.png"
+        },
+        {
+          "nac": "0735",
+          "dex_num": "028",
+          "name": "Gumshoos",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/18/latest/20221118112218/Gumshoos_icono_EP.png/96px-Gumshoos_icono_EP.png"
+        },
+        {
+          "nac": "0819",
+          "dex_num": "029",
+          "name": "Skwovet",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b3/latest/20221118110213/Skwovet_icono_EP.png/96px-Skwovet_icono_EP.png"
+        },
+        {
+          "nac": "0820",
+          "dex_num": "030",
+          "name": "Greedent",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6f/latest/20221118112224/Greedent_icono_EP.png/96px-Greedent_icono_EP.png"
+        },
+        {
+          "nac": "0191",
+          "dex_num": "031",
+          "name": "Sunkern",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20221118110548/Sunkern_icono_EP.png/96px-Sunkern_icono_EP.png"
+        },
+        {
+          "nac": "0192",
+          "dex_num": "032",
+          "name": "Sunflora",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20221118110902/Sunflora_icono_EP.png/96px-Sunflora_icono_EP.png"
+        },
+        {
+          "nac": "0401",
+          "dex_num": "033",
+          "name": "Kricketot",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cb/latest/20221118110414/Kricketot_icono_EP.png/96px-Kricketot_icono_EP.png"
+        },
+        {
+          "nac": "0402",
+          "dex_num": "034",
+          "name": "Kricketune",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/01/latest/20221118111915/Kricketune_icono_EP.png/96px-Kricketune_icono_EP.png"
+        },
+        {
+          "nac": "0664",
+          "dex_num": "035",
+          "name": "Scatterbug",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1c/latest/20221118112412/Scatterbug_icono_EP.png/96px-Scatterbug_icono_EP.png"
+        },
+        {
+          "nac": "0665",
+          "dex_num": "036",
+          "name": "Spewpa",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8c/latest/20221118112403/Spewpa_icono_EP.png/96px-Spewpa_icono_EP.png"
+        },
+        {
+          "nac": "0666",
+          "dex_num": "037",
+          "name": "Vivillon",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/95/latest/20221118111259/Vivillon_fantas%C3%ADa_icono_EP.png/96px-Vivillon_fantas%C3%ADa_icono_EP.png"
+        },
+        {
+          "nac": "0415",
+          "dex_num": "038",
+          "name": "Combee",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f7/latest/20221118110205/Combee_icono_EP.png/96px-Combee_icono_EP.png"
+        },
+        {
+          "nac": "0416",
+          "dex_num": "039",
+          "name": "Vespiquen",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bd/latest/20221118110156/Vespiquen_icono_EP.png/96px-Vespiquen_icono_EP.png"
+        },
+        {
+          "nac": "0821",
+          "dex_num": "040",
+          "name": "Rookidee",
+          "tipo1": "Volador",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/03/latest/20221118112252/Rookidee_icono_EP.png/96px-Rookidee_icono_EP.png"
+        },
+        {
+          "nac": "0822",
+          "dex_num": "041",
+          "name": "Corvisquire",
+          "tipo1": "Volador",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/10/latest/20221118111126/Corvisquire_icono_EP.png/96px-Corvisquire_icono_EP.png"
+        },
+        {
+          "nac": "0823",
+          "dex_num": "042",
+          "name": "Corviknight",
+          "tipo1": "Volador",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/dd/latest/20221118110229/Corviknight_icono_EP.png/96px-Corviknight_icono_EP.png"
+        },
+        {
+          "nac": "0440",
+          "dex_num": "043",
+          "name": "Happiny",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9f/latest/20221118111955/Happiny_icono_EP.png/96px-Happiny_icono_EP.png"
+        },
+        {
+          "nac": "0113",
+          "dex_num": "044",
+          "name": "Chansey",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ca/latest/20221118002740/Chansey_icono_EP.png/96px-Chansey_icono_EP.png"
+        },
+        {
+          "nac": "0242",
+          "dex_num": "045",
+          "name": "Blissey",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/ac/latest/20221118111529/Blissey_icono_EP.png/96px-Blissey_icono_EP.png"
+        },
+        {
+          "nac": "0298",
+          "dex_num": "046",
+          "name": "Azurill",
+          "tipo1": "Normal",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e6/latest/20221118111136/Azurill_icono_EP.png/96px-Azurill_icono_EP.png"
+        },
+        {
+          "nac": "0183",
+          "dex_num": "047",
+          "name": "Marill",
+          "tipo1": "Agua",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/60/latest/20221118111418/Marill_icono_EP.png/96px-Marill_icono_EP.png"
+        },
+        {
+          "nac": "0184",
+          "dex_num": "048",
+          "name": "Azumarill",
+          "tipo1": "Agua",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7f/latest/20221118112321/Azumarill_icono_EP.png/96px-Azumarill_icono_EP.png"
+        },
+        {
+          "nac": "0283",
+          "dex_num": "049",
+          "name": "Surskit",
+          "tipo1": "Bicho",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20221118111407/Surskit_icono_EP.png/96px-Surskit_icono_EP.png"
+        },
+        {
+          "nac": "0284",
+          "dex_num": "050",
+          "name": "Masquerain",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/11/latest/20221118111022/Masquerain_icono_EP.png/96px-Masquerain_icono_EP.png"
+        },
+        {
+          "nac": "0418",
+          "dex_num": "051",
+          "name": "Buizel",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/32/latest/20221118110501/Buizel_icono_EP.png/96px-Buizel_icono_EP.png"
+        },
+        {
+          "nac": "0419",
+          "dex_num": "052",
+          "name": "Floatzel",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3b/latest/20221118110450/Floatzel_icono_EP.png/96px-Floatzel_icono_EP.png"
+        },
+        {
+          "nac": "0194",
+          "dex_num": "053",
+          "name": "Wooper de Paldea",
+          "tipo1": "Veneno",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1b/latest/20221118111030/Wooper_de_Paldea_icono_EP.png/96px-Wooper_de_Paldea_icono_EP.png"
+        },
+        {
+          "nac": "0980",
+          "dex_num": "054",
+          "name": "Clodsire",
+          "tipo1": "Veneno",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8c/latest/20221118112407/Clodsire_icono_EP.png/96px-Clodsire_icono_EP.png"
+        },
+        {
+          "nac": "0054",
+          "dex_num": "055",
+          "name": "Psyduck",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f4/latest/20221117133101/Psyduck_icono_EP.png/96px-Psyduck_icono_EP.png"
+        },
+        {
+          "nac": "0055",
+          "dex_num": "056",
+          "name": "Golduck",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8d/latest/20221117133130/Golduck_icono_EP.png/96px-Golduck_icono_EP.png"
+        },
+        {
+          "nac": "0833",
+          "dex_num": "057",
+          "name": "Chewtle",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b1/latest/20221118110557/Chewtle_icono_EP.png/96px-Chewtle_icono_EP.png"
+        },
+        {
+          "nac": "0834",
+          "dex_num": "058",
+          "name": "Drednaw",
+          "tipo1": "Agua",
+          "tipo2": "Roca",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4e/latest/20221118110955/Drednaw_icono_EP.png/96px-Drednaw_icono_EP.png"
+        },
+        {
+          "nac": "0174",
+          "dex_num": "059",
+          "name": "Igglybuff",
+          "tipo1": "Normal",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d6/latest/20221118112443/Igglybuff_icono_EP.png/96px-Igglybuff_icono_EP.png"
+        },
+        {
+          "nac": "0039",
+          "dex_num": "060",
+          "name": "Jigglypuff",
+          "tipo1": "Normal",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b8/latest/20221117131900/Jigglypuff_icono_EP.png/96px-Jigglypuff_icono_EP.png"
+        },
+        {
+          "nac": "0040",
+          "dex_num": "061",
+          "name": "Wigglytuff",
+          "tipo1": "Normal",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/eb/latest/20221117131938/Wigglytuff_icono_EP.png/96px-Wigglytuff_icono_EP.png"
+        },
+        {
+          "nac": "0280",
+          "dex_num": "062",
+          "name": "Ralts",
+          "tipo1": "Psíquico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8c/latest/20221118110328/Ralts_icono_EP.png/96px-Ralts_icono_EP.png"
+        },
+        {
+          "nac": "0281",
+          "dex_num": "063",
+          "name": "Kirlia",
+          "tipo1": "Psíquico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7f/latest/20221118110906/Kirlia_icono_EP.png/96px-Kirlia_icono_EP.png"
+        },
+        {
+          "nac": "0282",
+          "dex_num": "064",
+          "name": "Gardevoir",
+          "tipo1": "Psíquico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/22/latest/20221118112102/Gardevoir_icono_EP.png/96px-Gardevoir_icono_EP.png"
+        },
+        {
+          "nac": "0475",
+          "dex_num": "065",
+          "name": "Gallade",
+          "tipo1": "Psíquico",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8c/latest/20221118110957/Gallade_icono_EP.png/96px-Gallade_icono_EP.png"
+        },
+        {
+          "nac": "0096",
+          "dex_num": "066",
+          "name": "Drowzee",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/df/latest/20221118002030/Drowzee_icono_EP.png/96px-Drowzee_icono_EP.png"
+        },
+        {
+          "nac": "0097",
+          "dex_num": "067",
+          "name": "Hypno",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/97/latest/20221118002414/Hypno_icono_EP.png/96px-Hypno_icono_EP.png"
+        },
+        {
+          "nac": "0092",
+          "dex_num": "068",
+          "name": "Gastly",
+          "tipo1": "Fantasma",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5f/latest/20221118002125/Gastly_icono_EP.png/96px-Gastly_icono_EP.png"
+        },
+        {
+          "nac": "0093",
+          "dex_num": "069",
+          "name": "Haunter",
+          "tipo1": "Fantasma",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c7/latest/20221118002400/Haunter_icono_EP.png/96px-Haunter_icono_EP.png"
+        },
+        {
+          "nac": "0094",
+          "dex_num": "070",
+          "name": "Gengar",
+          "tipo1": "Fantasma",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/27/latest/20221118002136/Gengar_icono_EP.png/96px-Gengar_icono_EP.png"
+        },
+        {
+          "nac": "0924",
+          "dex_num": "071",
+          "name": "Tandemaus",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f3/latest/20221118111839/Tandemaus_icono_EP.png/96px-Tandemaus_icono_EP.png"
+        },
+        {
+          "nac": "0925",
+          "dex_num": "072",
+          "name": "Maushold familia de tres",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221118110239/Maushold_familia_de_tres_icono_EP.png/96px-Maushold_familia_de_tres_icono_EP.png"
+        },
+        {
+          "nac": "0925",
+          "dex_num": "072",
+          "name": "Maushold",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c7/latest/20221118111510/Maushold_familia_de_cuatro_icono_EP.png/96px-Maushold_familia_de_cuatro_icono_EP.png"
+        },
+        {
+          "nac": "0172",
+          "dex_num": "073",
+          "name": "Pichu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/ad/latest/20221118111033/Pichu_icono_EP.png/96px-Pichu_icono_EP.png"
+        },
+        {
+          "nac": "0025",
+          "dex_num": "074",
+          "name": "Pikachu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b1/latest/20221117130819/Pikachu_icono_EP.png/96px-Pikachu_icono_EP.png"
+        },
+        {
+          "nac": "0026",
+          "dex_num": "075",
+          "name": "Raichu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/81/latest/20221117131429/Raichu_icono_EP.png/96px-Raichu_icono_EP.png"
+        },
+        {
+          "nac": "0926",
+          "dex_num": "076",
+          "name": "Fidough",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a4/latest/20221118111445/Fidough_icono_EP.png/96px-Fidough_icono_EP.png"
+        },
+        {
+          "nac": "0927",
+          "dex_num": "077",
+          "name": "Dachsbun",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/67/latest/20221118111633/Dachsbun_icono_EP.png/96px-Dachsbun_icono_EP.png"
+        },
+        {
+          "nac": "0287",
+          "dex_num": "078",
+          "name": "Slakoth",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8e/latest/20221118111056/Slakoth_icono_EP.png/96px-Slakoth_icono_EP.png"
+        },
+        {
+          "nac": "0288",
+          "dex_num": "079",
+          "name": "Vigoroth",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/12/latest/20221118110551/Vigoroth_icono_EP.png/96px-Vigoroth_icono_EP.png"
+        },
+        {
+          "nac": "0289",
+          "dex_num": "080",
+          "name": "Slaking",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/05/latest/20221118111648/Slaking_icono_EP.png/96px-Slaking_icono_EP.png"
+        },
+        {
+          "nac": "0761",
+          "dex_num": "081",
+          "name": "Bounsweet",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/39/latest/20221118112027/Bounsweet_icono_EP.png/96px-Bounsweet_icono_EP.png"
+        },
+        {
+          "nac": "0762",
+          "dex_num": "082",
+          "name": "Steenee",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/46/latest/20221118111911/Steenee_icono_EP.png/96px-Steenee_icono_EP.png"
+        },
+        {
+          "nac": "0763",
+          "dex_num": "083",
+          "name": "Tsareena",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b4/latest/20221118111250/Tsareena_icono_EP.png/96px-Tsareena_icono_EP.png"
+        },
+        {
+          "nac": "0928",
+          "dex_num": "084",
+          "name": "Smoliv",
+          "tipo1": "Planta",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9b/latest/20221118111559/Smoliv_icono_EP.png/96px-Smoliv_icono_EP.png"
+        },
+        {
+          "nac": "0929",
+          "dex_num": "085",
+          "name": "Dolliv",
+          "tipo1": "Planta",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/66/latest/20221118110616/Dolliv_icono_EP.png/96px-Dolliv_icono_EP.png"
+        },
+        {
+          "nac": "0930",
+          "dex_num": "086",
+          "name": "Arboliva",
+          "tipo1": "Planta",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/56/latest/20221118111932/Arboliva_icono_EP.png/96px-Arboliva_icono_EP.png"
+        },
+        {
+          "nac": "0438",
+          "dex_num": "087",
+          "name": "Bonsly",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4f/latest/20221118112348/Bonsly_icono_EP.png/96px-Bonsly_icono_EP.png"
+        },
+        {
+          "nac": "0185",
+          "dex_num": "088",
+          "name": "Sudowoodo",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/04/latest/20221118110626/Sudowoodo_icono_EP.png/96px-Sudowoodo_icono_EP.png"
+        },
+        {
+          "nac": "0744",
+          "dex_num": "089",
+          "name": "Rockruff",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9f/latest/20221118111248/Rockruff_icono_EP.png/96px-Rockruff_icono_EP.png"
+        },
+        {
+          "nac": "0745",
+          "dex_num": "090",
+          "name": "Lycanroc diurno",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/39/latest/20221118110307/Lycanroc_diurno_icono_EP.png/96px-Lycanroc_diurno_icono_EP.png"
+        },
+        {
+          "nac": "0745",
+          "dex_num": "090",
+          "name": "Lycanroc nocturno",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/75/latest/20221118110222/Lycanroc_nocturno_icono_EP.png/96px-Lycanroc_nocturno_icono_EP.png"
+        },
+        {
+          "nac": "0745",
+          "dex_num": "090",
+          "name": "Lycanroc crepuscular",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20221118110651/Lycanroc_crepuscular_icono_EP.png/96px-Lycanroc_crepuscular_icono_EP.png"
+        },
+        {
+          "nac": "0837",
+          "dex_num": "091",
+          "name": "Rolycoly",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a9/latest/20221118110850/Rolycoly_icono_EP.png/96px-Rolycoly_icono_EP.png"
+        },
+        {
+          "nac": "0838",
+          "dex_num": "092",
+          "name": "Carkol",
+          "tipo1": "Roca",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6d/latest/20221118110934/Carkol_icono_EP.png/96px-Carkol_icono_EP.png"
+        },
+        {
+          "nac": "0839",
+          "dex_num": "093",
+          "name": "Coalossal",
+          "tipo1": "Roca",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/49/latest/20221118110919/Coalossal_icono_EP.png/96px-Coalossal_icono_EP.png"
+        },
+        {
+          "nac": "0403",
+          "dex_num": "094",
+          "name": "Shinx",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/56/latest/20221118110446/Shinx_icono_EP.png/96px-Shinx_icono_EP.png"
+        },
+        {
+          "nac": "0404",
+          "dex_num": "095",
+          "name": "Luxio",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/26/latest/20221118111516/Luxio_icono_EP.png/96px-Luxio_icono_EP.png"
+        },
+        {
+          "nac": "0405",
+          "dex_num": "096",
+          "name": "Luxray",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1b/latest/20221118110856/Luxray_icono_EP.png/96px-Luxray_icono_EP.png"
+        },
+        {
+          "nac": "0396",
+          "dex_num": "097",
+          "name": "Starly",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2f/latest/20221118110637/Starly_icono_EP.png/96px-Starly_icono_EP.png"
+        },
+        {
+          "nac": "0397",
+          "dex_num": "098",
+          "name": "Staravia",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e7/latest/20221118110538/Staravia_icono_EP.png/96px-Staravia_icono_EP.png"
+        },
+        {
+          "nac": "0398",
+          "dex_num": "099",
+          "name": "Staraptor",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20221118112018/Staraptor_icono_EP.png/96px-Staraptor_icono_EP.png"
+        },
+        {
+          "nac": "0741",
+          "dex_num": "100",
+          "name": "Oricorio",
+          "tipo1": "Fuego",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/76/latest/20221118110835/Oricorio_apasionado_icono_EP.png/96px-Oricorio_apasionado_icono_EP.png"
+        },
+        {
+          "nac": "0741",
+          "dex_num": "100",
+          "name": "Oricorio animado",
+          "tipo1": "Eléctrico",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/22/latest/20221118112430/Oricorio_animado_icono_EP.png/96px-Oricorio_animado_icono_EP.png"
+        },
+        {
+          "nac": "0741",
+          "dex_num": "100",
+          "name": "Oricorio plácido",
+          "tipo1": "Psíquico",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1a/latest/20221118110220/Oricorio_pl%C3%A1cido_icono_EP.png/96px-Oricorio_pl%C3%A1cido_icono_EP.png"
+        },
+        {
+          "nac": "0741",
+          "dex_num": "100",
+          "name": "Oricorio refinado",
+          "tipo1": "Fantasma",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e9/latest/20221118112424/Oricorio_refinado_icono_EP.png/96px-Oricorio_refinado_icono_EP.png"
+        },
+        {
+          "nac": "0179",
+          "dex_num": "101",
+          "name": "Mareep",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/56/latest/20221118112239/Mareep_icono_EP.png/96px-Mareep_icono_EP.png"
+        },
+        {
+          "nac": "0180",
+          "dex_num": "102",
+          "name": "Flaaffy",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1f/latest/20221118110211/Flaaffy_icono_EP.png/96px-Flaaffy_icono_EP.png"
+        },
+        {
+          "nac": "0181",
+          "dex_num": "103",
+          "name": "Ampharos",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/93/latest/20221118110418/Ampharos_icono_EP.png/96px-Ampharos_icono_EP.png"
+        },
+        {
+          "nac": "0548",
+          "dex_num": "104",
+          "name": "Petilil",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/18/latest/20221118110917/Petilil_icono_EP.png/96px-Petilil_icono_EP.png"
+        },
+        {
+          "nac": "0549",
+          "dex_num": "105",
+          "name": "Lilligant",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/33/latest/20221118111555/Lilligant_icono_EP.png/96px-Lilligant_icono_EP.png"
+        },
+        {
+          "nac": "0285",
+          "dex_num": "106",
+          "name": "Shroomish",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0c/latest/20221118111905/Shroomish_icono_EP.png/96px-Shroomish_icono_EP.png"
+        },
+        {
+          "nac": "0286",
+          "dex_num": "107",
+          "name": "Breloom",
+          "tipo1": "Planta",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/90/latest/20221118111637/Breloom_icono_EP.png/96px-Breloom_icono_EP.png"
+        },
+        {
+          "nac": "0840",
+          "dex_num": "108",
+          "name": "Applin",
+          "tipo1": "Planta",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4a/latest/20221118110841/Applin_icono_EP.png/96px-Applin_icono_EP.png"
+        },
+        {
+          "nac": "0841",
+          "dex_num": "109",
+          "name": "Flapple",
+          "tipo1": "Planta",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2f/latest/20221118111416/Flapple_icono_EP.png/96px-Flapple_icono_EP.png"
+        },
+        {
+          "nac": "0842",
+          "dex_num": "110",
+          "name": "Appletun",
+          "tipo1": "Planta",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c8/latest/20221118111305/Appletun_icono_EP.png/96px-Appletun_icono_EP.png"
+        },
+        {
+          "nac": "0325",
+          "dex_num": "111",
+          "name": "Spoink",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221118111909/Spoink_icono_EP.png/96px-Spoink_icono_EP.png"
+        },
+        {
+          "nac": "0326",
+          "dex_num": "112",
+          "name": "Grumpig",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/13/latest/20221118110521/Grumpig_icono_EP.png/96px-Grumpig_icono_EP.png"
+        },
+        {
+          "nac": "0931",
+          "dex_num": "113",
+          "name": "Squawkabilly verde",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/54/latest/20221119124355/Squawkabilly_verde_icono_EP.png/96px-Squawkabilly_verde_icono_EP.png"
+        },
+        {
+          "nac": "0931",
+          "dex_num": "113",
+          "name": "Squawkabilly azul",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e7/latest/20221203034930/Squawkabilly_azul_icono_EP.png/96px-Squawkabilly_azul_icono_EP.png"
+        },
+        {
+          "nac": "0931",
+          "dex_num": "113",
+          "name": "Squawkabilly amarillo",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/38/latest/20221203035715/Squawkabilly_amarillo_icono_EP.png/96px-Squawkabilly_amarillo_icono_EP.png"
+        },
+        {
+          "nac": "0931",
+          "dex_num": "113",
+          "name": "Squawkabilly blanco",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c3/latest/20221203035136/Squawkabilly_blanco_icono_EP.png/96px-Squawkabilly_blanco_icono_EP.png"
+        },
+        {
+          "nac": "0200",
+          "dex_num": "114",
+          "name": "Misdreavus",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20221118111104/Misdreavus_icono_EP.png/96px-Misdreavus_icono_EP.png"
+        },
+        {
+          "nac": "0429",
+          "dex_num": "115",
+          "name": "Mismagius",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9f/latest/20221118111531/Mismagius_icono_EP.png/96px-Mismagius_icono_EP.png"
+        },
+        {
+          "nac": "0296",
+          "dex_num": "116",
+          "name": "Makuhita",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1a/latest/20221118112222/Makuhita_icono_EP.png/96px-Makuhita_icono_EP.png"
+        },
+        {
+          "nac": "0297",
+          "dex_num": "117",
+          "name": "Hariyama",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a7/latest/20221118111001/Hariyama_icono_EP.png/96px-Hariyama_icono_EP.png"
+        },
+        {
+          "nac": "0739",
+          "dex_num": "118",
+          "name": "Crabrawler",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cb/latest/20221118111629/Crabrawler_icono_EP.png/96px-Crabrawler_icono_EP.png"
+        },
+        {
+          "nac": "0740",
+          "dex_num": "119",
+          "name": "Crabominable",
+          "tipo1": "Lucha",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7e/latest/20221118110823/Crabominable_icono_EP.png/96px-Crabominable_icono_EP.png"
+        },
+        {
+          "nac": "0757",
+          "dex_num": "120",
+          "name": "Salandit",
+          "tipo1": "Veneno",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20221118112000/Salandit_icono_EP.png/96px-Salandit_icono_EP.png"
+        },
+        {
+          "nac": "0758",
+          "dex_num": "121",
+          "name": "Salazzle",
+          "tipo1": "Veneno",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/df/latest/20221118111841/Salazzle_icono_EP.png/96px-Salazzle_icono_EP.png"
+        },
+        {
+          "nac": "0231",
+          "dex_num": "122",
+          "name": "Phanpy",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b0/latest/20221118111315/Phanpy_icono_EP.png/96px-Phanpy_icono_EP.png"
+        },
+        {
+          "nac": "0232",
+          "dex_num": "123",
+          "name": "Donphan",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4d/latest/20221118111117/Donphan_icono_EP.png/96px-Donphan_icono_EP.png"
+        },
+        {
+          "nac": "0878",
+          "dex_num": "124",
+          "name": "Cufant",
+          "tipo1": "Acero",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f5/latest/20221118110753/Cufant_icono_EP.png/96px-Cufant_icono_EP.png"
+        },
+        {
+          "nac": "0879",
+          "dex_num": "125",
+          "name": "Copperajah",
+          "tipo1": "Acero",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/61/latest/20221118110201/Copperajah_icono_EP.png/96px-Copperajah_icono_EP.png"
+        },
+        {
+          "nac": "0443",
+          "dex_num": "126",
+          "name": "Gible",
+          "tipo1": "Dragón",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/85/latest/20221118110224/Gible_icono_EP.png/96px-Gible_icono_EP.png"
+        },
+        {
+          "nac": "0444",
+          "dex_num": "127",
+          "name": "Gabite",
+          "tipo1": "Dragón",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/20/latest/20221118111035/Gabite_icono_EP.png/96px-Gabite_icono_EP.png"
+        },
+        {
+          "nac": "0445",
+          "dex_num": "128",
+          "name": "Garchomp",
+          "tipo1": "Dragón",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cf/latest/20221118112308/Garchomp_icono_EP.png/96px-Garchomp_icono_EP.png"
+        },
+        {
+          "nac": "0932",
+          "dex_num": "129",
+          "name": "Nacli",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/37/latest/20221118111550/Nacli_icono_EP.png/96px-Nacli_icono_EP.png"
+        },
+        {
+          "nac": "0933",
+          "dex_num": "130",
+          "name": "Naclstack",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bc/latest/20221118110747/Naclstack_icono_EP.png/96px-Naclstack_icono_EP.png"
+        },
+        {
+          "nac": "0934",
+          "dex_num": "131",
+          "name": "Garganacl",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221118110459/Garganacl_icono_EP.png/96px-Garganacl_icono_EP.png"
+        },
+        {
+          "nac": "0278",
+          "dex_num": "132",
+          "name": "Wingull",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/28/latest/20221118111155/Wingull_icono_EP.png/96px-Wingull_icono_EP.png"
+        },
+        {
+          "nac": "0279",
+          "dex_num": "133",
+          "name": "Pelipper",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2f/latest/20221118111318/Pelipper_icono_EP.png/96px-Pelipper_icono_EP.png"
+        },
+        {
+          "nac": "0129",
+          "dex_num": "134",
+          "name": "Magikarp",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/97/latest/20221118003546/Magikarp_icono_EP.png/96px-Magikarp_icono_EP.png"
+        },
+        {
+          "nac": "0130",
+          "dex_num": "135",
+          "name": "Gyarados",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f1/latest/20221118003606/Gyarados_icono_EP.png/96px-Gyarados_icono_EP.png"
+        },
+        {
+          "nac": "0846",
+          "dex_num": "136",
+          "name": "Arrokuda",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f2/latest/20221118112031/Arrokuda_icono_EP.png/96px-Arrokuda_icono_EP.png"
+        },
+        {
+          "nac": "0847",
+          "dex_num": "137",
+          "name": "Barraskewda",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e2/latest/20221118112117/Barraskewda_icono_EP.png/96px-Barraskewda_icono_EP.png"
+        },
+        {
+          "nac": "0550",
+          "dex_num": "138",
+          "name": "Basculin roja",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/58/latest/20221118110355/Basculin_roja_icono_EP.png/96px-Basculin_roja_icono_EP.png"
+        },
+        {
+          "nac": "0550",
+          "dex_num": "138",
+          "name": "Basculin azul",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a6/latest/20221118111524/Basculin_azul_icono_EP.png/96px-Basculin_azul_icono_EP.png"
+        },
+        {
+          "nac": "0316",
+          "dex_num": "139",
+          "name": "Gulpin",
+          "tipo1": "Veneno",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/dc/latest/20221118111218/Gulpin_icono_EP.png/96px-Gulpin_icono_EP.png"
+        },
+        {
+          "nac": "0317",
+          "dex_num": "140",
+          "name": "Swalot",
+          "tipo1": "Veneno",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/07/latest/20221118111043/Swalot_icono_EP.png/96px-Swalot_icono_EP.png"
+        },
+        {
+          "nac": "0052",
+          "dex_num": "141",
+          "name": "Meowth",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fd/latest/20221117132540/Meowth_icono_EP.png/96px-Meowth_icono_EP.png"
+        },
+        {
+          "nac": "0053",
+          "dex_num": "142",
+          "name": "Persian",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6d/latest/20221117133012/Persian_icono_EP.png/96px-Persian_icono_EP.png"
+        },
+        {
+          "nac": "0425",
+          "dex_num": "143",
+          "name": "Drifloon",
+          "tipo1": "Fantasma",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a6/latest/20221118110755/Drifloon_icono_EP.png/96px-Drifloon_icono_EP.png"
+        },
+        {
+          "nac": "0426",
+          "dex_num": "144",
+          "name": "Drifblim",
+          "tipo1": "Fantasma",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1a/latest/20221118111512/Drifblim_icono_EP.png/96px-Drifblim_icono_EP.png"
+        },
+        {
+          "nac": "0669",
+          "dex_num": "145",
+          "name": "Flabébé roja",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/82/latest/20221118111322/Flab%C3%A9b%C3%A9_roja_icono_EP.png/96px-Flab%C3%A9b%C3%A9_roja_icono_EP.png"
+        },
+        {
+          "nac": "0669",
+          "dex_num": "145",
+          "name": "Flabébé amarilla",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/da/latest/20221118110504/Flab%C3%A9b%C3%A9_amarilla_icono_EP.png/96px-Flab%C3%A9b%C3%A9_amarilla_icono_EP.png"
+        },
+        {
+          "nac": "0669",
+          "dex_num": "145",
+          "name": "Flabébé naranja",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/56/latest/20221118111924/Flab%C3%A9b%C3%A9_naranja_icono_EP.png/96px-Flab%C3%A9b%C3%A9_naranja_icono_EP.png"
+        },
+        {
+          "nac": "0669",
+          "dex_num": "145",
+          "name": "Flabébé azul",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/76/latest/20221118110347/Flab%C3%A9b%C3%A9_azul_icono_EP.png/96px-Flab%C3%A9b%C3%A9_azul_icono_EP.png"
+        },
+        {
+          "nac": "0669",
+          "dex_num": "145",
+          "name": "Flabébé blanca",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9c/latest/20221118111246/Flab%C3%A9b%C3%A9_blanca_icono_EP.png/96px-Flab%C3%A9b%C3%A9_blanca_icono_EP.png"
+        },
+        {
+          "nac": "0670",
+          "dex_num": "146",
+          "name": "Floette roja",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4b/latest/20221118112106/Floette_roja_icono_EP.png/96px-Floette_roja_icono_EP.png"
+        },
+        {
+          "nac": "0670",
+          "dex_num": "146",
+          "name": "Floette amarilla",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c1/latest/20221118110313/Floette_amarilla_icono_EP.png/96px-Floette_amarilla_icono_EP.png"
+        },
+        {
+          "nac": "0670",
+          "dex_num": "146",
+          "name": "Floette naranja",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c0/latest/20221118112332/Floette_naranja_icono_EP.png/96px-Floette_naranja_icono_EP.png"
+        },
+        {
+          "nac": "0670",
+          "dex_num": "146",
+          "name": "Floette azul",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fa/latest/20221118111845/Floette_azul_icono_EP.png/96px-Floette_azul_icono_EP.png"
+        },
+        {
+          "nac": "0670",
+          "dex_num": "146",
+          "name": "Floette blanca",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/36/latest/20221118110944/Floette_blanca_icono_EP.png/96px-Floette_blanca_icono_EP.png"
+        },
+        {
+          "nac": "0671",
+          "dex_num": "147",
+          "name": "Florges roja",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1b/latest/20221118112152/Florges_roja_icono_EP.png/96px-Florges_roja_icono_EP.png"
+        },
+        {
+          "nac": "0671",
+          "dex_num": "147",
+          "name": "Florges amarilla",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/40/latest/20221118110454/Florges_amarilla_icono_EP.png/96px-Florges_amarilla_icono_EP.png"
+        },
+        {
+          "nac": "0671",
+          "dex_num": "147",
+          "name": "Florges naranja",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f7/latest/20221118112342/Florges_naranja_icono_EP.png/96px-Florges_naranja_icono_EP.png"
+        },
+        {
+          "nac": "0671",
+          "dex_num": "147",
+          "name": "Florges azul",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/46/latest/20221118110946/Florges_azul_icono_EP.png/96px-Florges_azul_icono_EP.png"
+        },
+        {
+          "nac": "0671",
+          "dex_num": "147",
+          "name": "Florges blanca",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b6/latest/20221118111627/Florges_blanca_icono_EP.png/96px-Florges_blanca_icono_EP.png"
+        },
+        {
+          "nac": "0050",
+          "dex_num": "148",
+          "name": "Diglett",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e9/latest/20221117132058/Diglett_icono_EP.png/96px-Diglett_icono_EP.png"
+        },
+        {
+          "nac": "0051",
+          "dex_num": "149",
+          "name": "Dugtrio",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/13/latest/20221117132151/Dugtrio_icono_EP.png/96px-Dugtrio_icono_EP.png"
+        },
+        {
+          "nac": "0324",
+          "dex_num": "150",
+          "name": "Torkoal",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3f/latest/20221118111340/Torkoal_icono_EP.png/96px-Torkoal_icono_EP.png"
+        },
+        {
+          "nac": "0322",
+          "dex_num": "151",
+          "name": "Numel",
+          "tipo1": "Fuego",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6d/latest/20221118111039/Numel_icono_EP.png/96px-Numel_icono_EP.png"
+        },
+        {
+          "nac": "0323",
+          "dex_num": "152",
+          "name": "Camerupt",
+          "tipo1": "Fuego",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b9/latest/20221118111244/Camerupt_icono_EP.png/96px-Camerupt_icono_EP.png"
+        },
+        {
+          "nac": "0436",
+          "dex_num": "153",
+          "name": "Bronzor",
+          "tipo1": "Acero",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5a/latest/20221118110710/Bronzor_icono_EP.png/96px-Bronzor_icono_EP.png"
+        },
+        {
+          "nac": "0437",
+          "dex_num": "154",
+          "name": "Bronzong",
+          "tipo1": "Acero",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2d/latest/20221118112136/Bronzong_icono_EP.png/96px-Bronzong_icono_EP.png"
+        },
+        {
+          "nac": "0610",
+          "dex_num": "155",
+          "name": "Axew",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/19/latest/20221118111548/Axew_icono_EP.png/96px-Axew_icono_EP.png"
+        },
+        {
+          "nac": "0611",
+          "dex_num": "156",
+          "name": "Fraxure",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/97/latest/20221118110605/Fraxure_icono_EP.png/96px-Fraxure_icono_EP.png"
+        },
+        {
+          "nac": "0612",
+          "dex_num": "157",
+          "name": "Haxorus",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/63/latest/20221118112235/Haxorus_icono_EP.png/96px-Haxorus_icono_EP.png"
+        },
+        {
+          "nac": "0056",
+          "dex_num": "158",
+          "name": "Mankey",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e0/latest/20221117133158/Mankey_icono_EP.png/96px-Mankey_icono_EP.png"
+        },
+        {
+          "nac": "0057",
+          "dex_num": "159",
+          "name": "Primeape",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ce/latest/20221117133408/Primeape_icono_EP.png/96px-Primeape_icono_EP.png"
+        },
+        {
+          "nac": "0979",
+          "dex_num": "160",
+          "name": "Annihilape",
+          "tipo1": "Lucha",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6e/latest/20221118110531/Annihilape_icono_EP.png/96px-Annihilape_icono_EP.png"
+        },
+        {
+          "nac": "0307",
+          "dex_num": "161",
+          "name": "Meditite",
+          "tipo1": "Lucha",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/72/latest/20221118111003/Meditite_icono_EP.png/96px-Meditite_icono_EP.png"
+        },
+        {
+          "nac": "0308",
+          "dex_num": "162",
+          "name": "Medicham",
+          "tipo1": "Lucha",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/20/latest/20221118110158/Medicham_icono_EP.png/96px-Medicham_icono_EP.png"
+        },
+        {
+          "nac": "0447",
+          "dex_num": "163",
+          "name": "Riolu",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c9/latest/20221118111622/Riolu_icono_EP.png/96px-Riolu_icono_EP.png"
+        },
+        {
+          "nac": "0448",
+          "dex_num": "164",
+          "name": "Lucario",
+          "tipo1": "Lucha",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e4/latest/20221118110345/Lucario_icono_EP.png/96px-Lucario_icono_EP.png"
+        },
+        {
+          "nac": "0935",
+          "dex_num": "165",
+          "name": "Charcadet",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fb/latest/20221117212503/Charcadet_icono_EP.png/96px-Charcadet_icono_EP.png"
+        },
+        {
+          "nac": "0936",
+          "dex_num": "166",
+          "name": "Armarouge",
+          "tipo1": "Fuego",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/89/latest/20221118112146/Armarouge_icono_EP.png/96px-Armarouge_icono_EP.png"
+        },
+        {
+          "nac": "0937",
+          "dex_num": "167",
+          "name": "Ceruledge",
+          "tipo1": "Fuego",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/de/latest/20221118111008/Ceruledge_icono_EP.png/96px-Ceruledge_icono_EP.png"
+        },
+        {
+          "nac": "0339",
+          "dex_num": "168",
+          "name": "Barboach",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/69/latest/20221118110929/Barboach_icono_EP.png/96px-Barboach_icono_EP.png"
+        },
+        {
+          "nac": "0340",
+          "dex_num": "169",
+          "name": "Whiscash",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8d/latest/20221118111433/Whiscash_icono_EP.png/96px-Whiscash_icono_EP.png"
+        },
+        {
+          "nac": "0938",
+          "dex_num": "170",
+          "name": "Tadbulb",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/17/latest/20221118110231/Tadbulb_icono_EP.png/96px-Tadbulb_icono_EP.png"
+        },
+        {
+          "nac": "0939",
+          "dex_num": "171",
+          "name": "Bellibolt",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6c/latest/20221118112207/Bellibolt_icono_EP.png/96px-Bellibolt_icono_EP.png"
+        },
+        {
+          "nac": "0704",
+          "dex_num": "172",
+          "name": "Goomy",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/54/latest/20221118111107/Goomy_icono_EP.png/96px-Goomy_icono_EP.png"
+        },
+        {
+          "nac": "0705",
+          "dex_num": "173",
+          "name": "Sliggoo",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e9/latest/20221118112311/Sliggoo_icono_EP.png/96px-Sliggoo_icono_EP.png"
+        },
+        {
+          "nac": "0706",
+          "dex_num": "174",
+          "name": "Goodra",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/70/latest/20221118111122/Goodra_icono_EP.png/96px-Goodra_icono_EP.png"
+        },
+        {
+          "nac": "0453",
+          "dex_num": "175",
+          "name": "Croagunk",
+          "tipo1": "Veneno",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/14/latest/20221118110911/Croagunk_icono_EP.png/96px-Croagunk_icono_EP.png"
+        },
+        {
+          "nac": "0454",
+          "dex_num": "176",
+          "name": "Toxicroak",
+          "tipo1": "Veneno",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/50/latest/20221118111343/Toxicroak_icono_EP.png/96px-Toxicroak_icono_EP.png"
+        },
+        {
+          "nac": "0940",
+          "dex_num": "177",
+          "name": "Wattrel",
+          "tipo1": "Eléctrico",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2b/latest/20221118110218/Wattrel_icono_EP.png/96px-Wattrel_icono_EP.png"
+        },
+        {
+          "nac": "0941",
+          "dex_num": "178",
+          "name": "Kilowattrel",
+          "tipo1": "Eléctrico",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/26/latest/20221118110649/Kilowattrel_icono_EP.png/96px-Kilowattrel_icono_EP.png"
+        },
+        {
+          "nac": "0133",
+          "dex_num": "179",
+          "name": "Eevee",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/49/latest/20221118003642/Eevee_icono_EP.png/96px-Eevee_icono_EP.png"
+        },
+        {
+          "nac": "0134",
+          "dex_num": "180",
+          "name": "Vaporeon",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221118003703/Vaporeon_icono_EP.png/96px-Vaporeon_icono_EP.png"
+        },
+        {
+          "nac": "0135",
+          "dex_num": "181",
+          "name": "Jolteon",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e2/latest/20221118003723/Jolteon_icono_EP.png/96px-Jolteon_icono_EP.png"
+        },
+        {
+          "nac": "0136",
+          "dex_num": "182",
+          "name": "Flareon",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/73/latest/20221118003745/Flareon_icono_EP.png/96px-Flareon_icono_EP.png"
+        },
+        {
+          "nac": "0196",
+          "dex_num": "183",
+          "name": "Espeon",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5b/latest/20221118110237/Espeon_icono_EP.png/96px-Espeon_icono_EP.png"
+        },
+        {
+          "nac": "0197",
+          "dex_num": "184",
+          "name": "Umbreon",
+          "tipo1": "Siniestro",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d3/latest/20221118111045/Umbreon_icono_EP.png/96px-Umbreon_icono_EP.png"
+        },
+        {
+          "nac": "0470",
+          "dex_num": "185",
+          "name": "Leafeon",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/03/latest/20221118110248/Leafeon_icono_EP.png/96px-Leafeon_icono_EP.png"
+        },
+        {
+          "nac": "0471",
+          "dex_num": "186",
+          "name": "Glaceon",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e4/latest/20221118112133/Glaceon_icono_EP.png/96px-Glaceon_icono_EP.png"
+        },
+        {
+          "nac": "0700",
+          "dex_num": "187",
+          "name": "Sylveon",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/47/latest/20221118110519/Sylveon_icono_EP.png/96px-Sylveon_icono_EP.png"
+        },
+        {
+          "nac": "0206",
+          "dex_num": "188",
+          "name": "Dunsparce",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9f/latest/20221118110734/Dunsparce_icono_EP.png/96px-Dunsparce_icono_EP.png"
+        },
+        {
+          "nac": "0982",
+          "dex_num": "189",
+          "name": "Dudunsparce binodular",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/18/latest/20221118100632/Dudunsparce_binodular_icono_EP.png/96px-Dudunsparce_binodular_icono_EP.png"
+        },
+        {
+          "nac": "0982",
+          "dex_num": "189",
+          "name": "Dudunsparce trinodular",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/44/latest/20230320191916/Dudunsparce_trinodular_icono_EP.png/96px-Dudunsparce_trinodular_icono_EP.png"
+        },
+        {
+          "nac": "0585",
+          "dex_num": "190",
+          "name": "Deerling primavera",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fd/latest/20221118110700/Deerling_primavera_icono_EP.png/96px-Deerling_primavera_icono_EP.png"
+        },
+        {
+          "nac": "0585",
+          "dex_num": "190",
+          "name": "Deerling verano",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d7/latest/20221118111157/Deerling_verano_icono_EP.png/96px-Deerling_verano_icono_EP.png"
+        },
+        {
+          "nac": "0585",
+          "dex_num": "190",
+          "name": "Deerling otoño",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a8/latest/20221118111635/Deerling_oto%C3%B1o_icono_EP.png/96px-Deerling_oto%C3%B1o_icono_EP.png"
+        },
+        {
+          "nac": "0585",
+          "dex_num": "190",
+          "name": "Deerling invierno",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ea/latest/20221118111320/Deerling_invierno_icono_EP.png/96px-Deerling_invierno_icono_EP.png"
+        },
+        {
+          "nac": "0586",
+          "dex_num": "191",
+          "name": "Sawsbuck primavera",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e1/latest/20221118110742/Sawsbuck_primavera_icono_EP.png/96px-Sawsbuck_primavera_icono_EP.png"
+        },
+        {
+          "nac": "0586",
+          "dex_num": "191",
+          "name": "Sawsbuck verano",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b4/latest/20221118112201/Sawsbuck_verano_icono_EP.png/96px-Sawsbuck_verano_icono_EP.png"
+        },
+        {
+          "nac": "0586",
+          "dex_num": "191",
+          "name": "Sawsbuck otoño",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d2/latest/20221118111111/Sawsbuck_oto%C3%B1o_icono_EP.png/96px-Sawsbuck_oto%C3%B1o_icono_EP.png"
+        },
+        {
+          "nac": "0586",
+          "dex_num": "191",
+          "name": "Sawsbuck invierno",
+          "tipo1": "Normal",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b1/latest/20221118111917/Sawsbuck_invierno_icono_EP.png/96px-Sawsbuck_invierno_icono_EP.png"
+        },
+        {
+          "nac": "0203",
+          "dex_num": "192",
+          "name": "Girafarig",
+          "tipo1": "Normal",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9d/latest/20221118111014/Girafarig_icono_EP.png/96px-Girafarig_icono_EP.png"
+        },
+        {
+          "nac": "0981",
+          "dex_num": "193",
+          "name": "Farigiraf",
+          "tipo1": "Normal",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1a/latest/20221118110154/Farigiraf_icono_EP.png/96px-Farigiraf_icono_EP.png"
+        },
+        {
+          "nac": "0088",
+          "dex_num": "194",
+          "name": "Grimer",
+          "tipo1": "Veneno",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0c/latest/20221118002213/Grimer_icono_EP.png/96px-Grimer_icono_EP.png"
+        },
+        {
+          "nac": "0089",
+          "dex_num": "195",
+          "name": "Muk",
+          "tipo1": "Veneno",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/53/latest/20221118002527/Muk_icono_EP.png/96px-Muk_icono_EP.png"
+        },
+        {
+          "nac": "0942",
+          "dex_num": "196",
+          "name": "Maschiff",
+          "tipo1": "Siniestro",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/ba/latest/20221118111256/Maschiff_icono_EP.png/96px-Maschiff_icono_EP.png"
+        },
+        {
+          "nac": "0943",
+          "dex_num": "197",
+          "name": "Mabosstiff",
+          "tipo1": "Siniestro",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5c/latest/20221118111414/Mabosstiff_icono_EP.png/96px-Mabosstiff_icono_EP.png"
+        },
+        {
+          "nac": "0848",
+          "dex_num": "198",
+          "name": "Toxel",
+          "tipo1": "Eléctrico",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20221118110630/Toxel_icono_EP.png/96px-Toxel_icono_EP.png"
+        },
+        {
+          "nac": "0849",
+          "dex_num": "199",
+          "name": "Toxtricity aguda",
+          "tipo1": "Eléctrico",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/94/latest/20221118112228/Toxtricity_aguda_icono_EP.png/96px-Toxtricity_aguda_icono_EP.png"
+        },
+        {
+          "nac": "0849",
+          "dex_num": "199",
+          "name": "Toxtricity grave",
+          "tipo1": "Eléctrico",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d7/latest/20221118111535/Toxtricity_grave_icono_EP.png/96px-Toxtricity_grave_icono_EP.png"
+        },
+        {
+          "nac": "0702",
+          "dex_num": "200",
+          "name": "Dedenne",
+          "tipo1": "Eléctrico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a7/latest/20221118110757/Dedenne_icono_EP.png/96px-Dedenne_icono_EP.png"
+        },
+        {
+          "nac": "0417",
+          "dex_num": "201",
+          "name": "Pachirisu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/84/latest/20221118111353/Pachirisu_icono_EP.png/96px-Pachirisu_icono_EP.png"
+        },
+        {
+          "nac": "0944",
+          "dex_num": "202",
+          "name": "Shroodle",
+          "tipo1": "Veneno",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20221118112405/Shroodle_icono_EP.png/96px-Shroodle_icono_EP.png"
+        },
+        {
+          "nac": "0945",
+          "dex_num": "203",
+          "name": "Grafaiai",
+          "tipo1": "Veneno",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a5/latest/20221118110948/Grafaiai_icono_EP.png/96px-Grafaiai_icono_EP.png"
+        },
+        {
+          "nac": "0234",
+          "dex_num": "204",
+          "name": "Stantler",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/51/latest/20221118111618/Stantler_icono_EP.png/96px-Stantler_icono_EP.png"
+        },
+        {
+          "nac": "0590",
+          "dex_num": "205",
+          "name": "Foongus",
+          "tipo1": "Planta",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5d/latest/20221118111214/Foongus_icono_EP.png/96px-Foongus_icono_EP.png"
+        },
+        {
+          "nac": "0591",
+          "dex_num": "206",
+          "name": "Amoonguss",
+          "tipo1": "Planta",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c1/latest/20221118112254/Amoonguss_icono_EP.png/96px-Amoonguss_icono_EP.png"
+        },
+        {
+          "nac": "0100",
+          "dex_num": "207",
+          "name": "Voltorb",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a5/latest/20221118002647/Voltorb_icono_EP.png/96px-Voltorb_icono_EP.png"
+        },
+        {
+          "nac": "0101",
+          "dex_num": "208",
+          "name": "Electrode",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2d/latest/20221118002114/Electrode_icono_EP.png/96px-Electrode_icono_EP.png"
+        },
+        {
+          "nac": "0081",
+          "dex_num": "209",
+          "name": "Magnemite",
+          "tipo1": "Eléctrico",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/47/latest/20221118002423/Magnemite_icono_EP.png/96px-Magnemite_icono_EP.png"
+        },
+        {
+          "nac": "0082",
+          "dex_num": "210",
+          "name": "Magneton",
+          "tipo1": "Eléctrico",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/da/latest/20221118002435/Magneton_icono_EP.png/96px-Magneton_icono_EP.png"
+        },
+        {
+          "nac": "0462",
+          "dex_num": "211",
+          "name": "Magnezone",
+          "tipo1": "Eléctrico",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20221118110653/Magnezone_icono_EP.png/96px-Magnezone_icono_EP.png"
+        },
+        {
+          "nac": "0132",
+          "dex_num": "212",
+          "name": "Ditto",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d6/latest/20221118003623/Ditto_icono_EP.png/96px-Ditto_icono_EP.png"
+        },
+        {
+          "nac": "0058",
+          "dex_num": "213",
+          "name": "Growlithe",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f8/latest/20221117133437/Growlithe_icono_EP.png/96px-Growlithe_icono_EP.png"
+        },
+        {
+          "nac": "0059",
+          "dex_num": "214",
+          "name": "Arcanine",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/00/latest/20221117133527/Arcanine_icono_EP.png/96px-Arcanine_icono_EP.png"
+        },
+        {
+          "nac": "0216",
+          "dex_num": "215",
+          "name": "Teddiursa",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3d/latest/20221118111151/Teddiursa_icono_EP.png/96px-Teddiursa_icono_EP.png"
+        },
+        {
+          "nac": "0217",
+          "dex_num": "216",
+          "name": "Ursaring",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20221118112020/Ursaring_icono_EP.png/96px-Ursaring_icono_EP.png"
+        },
+        {
+          "nac": "0335",
+          "dex_num": "217",
+          "name": "Zangoose",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0d/latest/20221118111241/Zangoose_icono_EP.png/96px-Zangoose_icono_EP.png"
+        },
+        {
+          "nac": "0336",
+          "dex_num": "218",
+          "name": "Seviper",
+          "tipo1": "Veneno",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cf/latest/20221118110448/Seviper_icono_EP.png/96px-Seviper_icono_EP.png"
+        },
+        {
+          "nac": "0333",
+          "dex_num": "219",
+          "name": "Swablu",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2c/latest/20221118110540/Swablu_icono_EP.png/96px-Swablu_icono_EP.png"
+        },
+        {
+          "nac": "0334",
+          "dex_num": "220",
+          "name": "Altaria",
+          "tipo1": "Dragón",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/62/latest/20221118110404/Altaria_icono_EP.png/96px-Altaria_icono_EP.png"
+        },
+        {
+          "nac": "0672",
+          "dex_num": "221",
+          "name": "Skiddo",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1e/latest/20221118111403/Skiddo_icono_EP.png/96px-Skiddo_icono_EP.png"
+        },
+        {
+          "nac": "0673",
+          "dex_num": "222",
+          "name": "Gogoat",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e2/latest/20221118112414/Gogoat_icono_EP.png/96px-Gogoat_icono_EP.png"
+        },
+        {
+          "nac": "0128",
+          "dex_num": "223",
+          "name": "Tauros de Paldea",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/87/latest/20221118003453/Tauros_de_Paldea_combatiente_icono_EP.png/96px-Tauros_de_Paldea_combatiente_icono_EP.png"
+        },
+        {
+          "nac": "0128",
+          "dex_num": "223",
+          "name": "Tauros de Paldea ardiente",
+          "tipo1": "Lucha",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/59/latest/20221118003516/Tauros_de_Paldea_ardiente_icono_EP.png/96px-Tauros_de_Paldea_ardiente_icono_EP.png"
+        },
+        {
+          "nac": "0128",
+          "dex_num": "223",
+          "name": "Tauros de Paldea acuática",
+          "tipo1": "Lucha",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a8/latest/20221118003431/Tauros_de_Paldea_acu%C3%A1tica_icono_EP.png/96px-Tauros_de_Paldea_acu%C3%A1tica_icono_EP.png"
+        },
+        {
+          "nac": "0667",
+          "dex_num": "224",
+          "name": "Litleo",
+          "tipo1": "Fuego",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/88/latest/20221118111206/Litleo_icono_EP.png/96px-Litleo_icono_EP.png"
+        },
+        {
+          "nac": "0668",
+          "dex_num": "225",
+          "name": "Pyroar",
+          "tipo1": "Fuego",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/30/latest/20221118110837/Pyroar_icono_EP.png/96px-Pyroar_icono_EP.png"
+        },
+        {
+          "nac": "0668",
+          "dex_num": "225",
+          "name": "Pyroar",
+          "tipo1": "Fuego",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f0/latest/20221206224425/Pyroar_icono_EP_hembra.png/96px-Pyroar_icono_EP_hembra.png"
+        },
+        {
+          "nac": "0434",
+          "dex_num": "226",
+          "name": "Stunky",
+          "tipo1": "Veneno",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/54/latest/20221118111607/Stunky_icono_EP.png/96px-Stunky_icono_EP.png"
+        },
+        {
+          "nac": "0435",
+          "dex_num": "227",
+          "name": "Skuntank",
+          "tipo1": "Veneno",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e0/latest/20221118112445/Skuntank_icono_EP.png/96px-Skuntank_icono_EP.png"
+        },
+        {
+          "nac": "0570",
+          "dex_num": "228",
+          "name": "Zorua",
+          "tipo1": "Siniestro",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/10/latest/20221118112127/Zorua_icono_EP.png/96px-Zorua_icono_EP.png"
+        },
+        {
+          "nac": "0571",
+          "dex_num": "229",
+          "name": "Zoroark",
+          "tipo1": "Siniestro",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/72/latest/20221118112502/Zoroark_icono_EP.png/96px-Zoroark_icono_EP.png"
+        },
+        {
+          "nac": "0215",
+          "dex_num": "230",
+          "name": "Sneasel",
+          "tipo1": "Siniestro",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c4/latest/20221118110305/Sneasel_icono_EP.png/96px-Sneasel_icono_EP.png"
+        },
+        {
+          "nac": "0461",
+          "dex_num": "231",
+          "name": "Weavile",
+          "tipo1": "Siniestro",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/12/latest/20221118111527/Weavile_icono_EP.png/96px-Weavile_icono_EP.png"
+        },
+        {
+          "nac": "0198",
+          "dex_num": "232",
+          "name": "Murkrow",
+          "tipo1": "Siniestro",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f6/latest/20221118110508/Murkrow_icono_EP.png/96px-Murkrow_icono_EP.png"
+        },
+        {
+          "nac": "0430",
+          "dex_num": "233",
+          "name": "Honchkrow",
+          "tipo1": "Siniestro",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9b/latest/20221118112115/Honchkrow_icono_EP.png/96px-Honchkrow_icono_EP.png"
+        },
+        {
+          "nac": "0574",
+          "dex_num": "234",
+          "name": "Gothita",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/ff/latest/20221118111537/Gothita_icono_EP.png/96px-Gothita_icono_EP.png"
+        },
+        {
+          "nac": "0575",
+          "dex_num": "235",
+          "name": "Gothorita",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1d/latest/20221118111048/Gothorita_icono_EP.png/96px-Gothorita_icono_EP.png"
+        },
+        {
+          "nac": "0576",
+          "dex_num": "236",
+          "name": "Gothitelle",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e6/latest/20221118112243/Gothitelle_icono_EP.png/96px-Gothitelle_icono_EP.png"
+        },
+        {
+          "nac": "0854",
+          "dex_num": "237",
+          "name": "Sinistea",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3e/latest/20221118110736/Sinistea_icono_EP.png/96px-Sinistea_icono_EP.png"
+        },
+        {
+          "nac": "0855",
+          "dex_num": "238",
+          "name": "Polteageist",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/ff/latest/20221118110909/Polteageist_icono_EP.png/96px-Polteageist_icono_EP.png"
+        },
+        {
+          "nac": "0778",
+          "dex_num": "239",
+          "name": "Mimikyu",
+          "tipo1": "Fantasma",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20221118112230/Mimikyu_icono_EP.png/96px-Mimikyu_icono_EP.png"
+        },
+        {
+          "nac": "0707",
+          "dex_num": "240",
+          "name": "Klefki",
+          "tipo1": "Acero",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/14/latest/20221118110831/Klefki_icono_EP.png/96px-Klefki_icono_EP.png"
+        },
+        {
+          "nac": "0876",
+          "dex_num": "241",
+          "name": "Indeedee",
+          "tipo1": "Psíquico",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/32/latest/20221118111856/Indeedee_icono_EP.png/96px-Indeedee_icono_EP.png"
+        },
+        {
+          "nac": "0876",
+          "dex_num": "241",
+          "name": "Indeedee",
+          "tipo1": "Psíquico",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/94/latest/20221206224348/Indeedee_icono_EP_hembra.png/96px-Indeedee_icono_EP_hembra.png"
+        },
+        {
+          "nac": "0946",
+          "dex_num": "242",
+          "name": "Bramblin",
+          "tipo1": "Planta",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4f/latest/20221118111326/Bramblin_icono_EP.png/96px-Bramblin_icono_EP.png"
+        },
+        {
+          "nac": "0947",
+          "dex_num": "243",
+          "name": "Brambleghast",
+          "tipo1": "Planta",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/14/latest/20221118111140/Brambleghast_icono_EP.png/96px-Brambleghast_icono_EP.png"
+        },
+        {
+          "nac": "0948",
+          "dex_num": "244",
+          "name": "Toedscool",
+          "tipo1": "Planta",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c3/latest/20221118111301/Toedscool_icono_EP.png/96px-Toedscool_icono_EP.png"
+        },
+        {
+          "nac": "0949",
+          "dex_num": "245",
+          "name": "Toedscruel",
+          "tipo1": "Planta",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fc/latest/20221118112140/Toedscruel_icono_EP.png/96px-Toedscruel_icono_EP.png"
+        },
+        {
+          "nac": "0357",
+          "dex_num": "246",
+          "name": "Tropius",
+          "tipo1": "Planta",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/85/latest/20221118111934/Tropius_icono_EP.png/96px-Tropius_icono_EP.png"
+        },
+        {
+          "nac": "0753",
+          "dex_num": "247",
+          "name": "Fomantis",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20221118110322/Fomantis_icono_EP.png/96px-Fomantis_icono_EP.png"
+        },
+        {
+          "nac": "0754",
+          "dex_num": "248",
+          "name": "Lurantis",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e7/latest/20221118112249/Lurantis_icono_EP.png/96px-Lurantis_icono_EP.png"
+        },
+        {
+          "nac": "0950",
+          "dex_num": "249",
+          "name": "Klawf",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/16/latest/20221118111026/Klawf_icono_EP.png/96px-Klawf_icono_EP.png"
+        },
+        {
+          "nac": "0951",
+          "dex_num": "250",
+          "name": "Capsakid",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/38/latest/20221118111430/Capsakid_icono_EP.png/96px-Capsakid_icono_EP.png"
+        },
+        {
+          "nac": "0952",
+          "dex_num": "251",
+          "name": "Scovillain",
+          "tipo1": "Planta",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/88/latest/20221118111336/Scovillain_icono_EP.png/96px-Scovillain_icono_EP.png"
+        },
+        {
+          "nac": "0331",
+          "dex_num": "252",
+          "name": "Cacnea",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/81/latest/20221118111100/Cacnea_icono_EP.png/96px-Cacnea_icono_EP.png"
+        },
+        {
+          "nac": "0332",
+          "dex_num": "253",
+          "name": "Cacturne",
+          "tipo1": "Planta",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/34/latest/20221118110940/Cacturne_icono_EP.png/96px-Cacturne_icono_EP.png"
+        },
+        {
+          "nac": "0953",
+          "dex_num": "254",
+          "name": "Rellor",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f9/latest/20221118110740/Rellor_icono_EP.png/96px-Rellor_icono_EP.png"
+        },
+        {
+          "nac": "0954",
+          "dex_num": "255",
+          "name": "Rabsca",
+          "tipo1": "Bicho",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221118111922/Rabsca_icono_EP.png/96px-Rabsca_icono_EP.png"
+        },
+        {
+          "nac": "0048",
+          "dex_num": "256",
+          "name": "Venonat",
+          "tipo1": "Bicho",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/23/latest/20221117132001/Venonat_icono_EP.png/96px-Venonat_icono_EP.png"
+        },
+        {
+          "nac": "0049",
+          "dex_num": "257",
+          "name": "Venomoth",
+          "tipo1": "Bicho",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/00/latest/20221117132031/Venomoth_icono_EP.png/96px-Venomoth_icono_EP.png"
+        },
+        {
+          "nac": "0204",
+          "dex_num": "258",
+          "name": "Pineco",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ec/latest/20221118110751/Pineco_icono_EP.png/96px-Pineco_icono_EP.png"
+        },
+        {
+          "nac": "0205",
+          "dex_num": "259",
+          "name": "Forretress",
+          "tipo1": "Bicho",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/02/latest/20221118110408/Forretress_icono_EP.png/96px-Forretress_icono_EP.png"
+        },
+        {
+          "nac": "0123",
+          "dex_num": "260",
+          "name": "Scyther",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/31/latest/20221118002814/Scyther_icono_EP.png/96px-Scyther_icono_EP.png"
+        },
+        {
+          "nac": "0212",
+          "dex_num": "261",
+          "name": "Scizor",
+          "tipo1": "Bicho",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d4/latest/20221118111502/Scizor_icono_EP.png/96px-Scizor_icono_EP.png"
+        },
+        {
+          "nac": "0214",
+          "dex_num": "262",
+          "name": "Heracross",
+          "tipo1": "Bicho",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a5/latest/20221118110808/Heracross_icono_EP.png/96px-Heracross_icono_EP.png"
+        },
+        {
+          "nac": "0955",
+          "dex_num": "263",
+          "name": "Flittle",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4b/latest/20221118111113/Flittle_icono_EP.png/96px-Flittle_icono_EP.png"
+        },
+        {
+          "nac": "0956",
+          "dex_num": "264",
+          "name": "Espathra",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/85/latest/20221118112355/Espathra_icono_EP.png/96px-Espathra_icono_EP.png"
+        },
+        {
+          "nac": "0449",
+          "dex_num": "265",
+          "name": "Hippopotas",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ea/latest/20221118110716/Hippopotas_icono_EP.png/96px-Hippopotas_icono_EP.png"
+        },
+        {
+          "nac": "0450",
+          "dex_num": "266",
+          "name": "Hippowdon",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f6/latest/20221118112435/Hippowdon_icono_EP.png/96px-Hippowdon_icono_EP.png"
+        },
+        {
+          "nac": "0551",
+          "dex_num": "267",
+          "name": "Sandile",
+          "tipo1": "Tierra",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20221118110624/Sandile_icono_EP.png/96px-Sandile_icono_EP.png"
+        },
+        {
+          "nac": "0552",
+          "dex_num": "268",
+          "name": "Krokorok",
+          "tipo1": "Tierra",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ce/latest/20221118111851/Krokorok_icono_EP.png/96px-Krokorok_icono_EP.png"
+        },
+        {
+          "nac": "0553",
+          "dex_num": "269",
+          "name": "Krookodile",
+          "tipo1": "Tierra",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/28/latest/20221118111620/Krookodile_icono_EP.png/96px-Krookodile_icono_EP.png"
+        },
+        {
+          "nac": "0843",
+          "dex_num": "270",
+          "name": "Silicobra",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3e/latest/20221118112433/Silicobra_icono_EP.png/96px-Silicobra_icono_EP.png"
+        },
+        {
+          "nac": "0844",
+          "dex_num": "271",
+          "name": "Sandaconda",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/40/latest/20221118111128/Sandaconda_icono_EP.png/96px-Sandaconda_icono_EP.png"
+        },
+        {
+          "nac": "0749",
+          "dex_num": "272",
+          "name": "Mudbray",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f1/latest/20221118110915/Mudbray_icono_EP.png/96px-Mudbray_icono_EP.png"
+        },
+        {
+          "nac": "0750",
+          "dex_num": "273",
+          "name": "Mudsdale",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/33/latest/20221118110632/Mudsdale_icono_EP.png/96px-Mudsdale_icono_EP.png"
+        },
+        {
+          "nac": "0636",
+          "dex_num": "274",
+          "name": "Larvesta",
+          "tipo1": "Bicho",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d6/latest/20221118112359/Larvesta_icono_EP.png/96px-Larvesta_icono_EP.png"
+        },
+        {
+          "nac": "0637",
+          "dex_num": "275",
+          "name": "Volcarona",
+          "tipo1": "Bicho",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d9/latest/20221118110607/Volcarona_icono_EP.png/96px-Volcarona_icono_EP.png"
+        },
+        {
+          "nac": "0371",
+          "dex_num": "276",
+          "name": "Bagon",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6a/latest/20221118110319/Bagon_icono_EP.png/96px-Bagon_icono_EP.png"
+        },
+        {
+          "nac": "0372",
+          "dex_num": "277",
+          "name": "Shelgon",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2b/latest/20221118112056/Shelgon_icono_EP.png/96px-Shelgon_icono_EP.png"
+        },
+        {
+          "nac": "0373",
+          "dex_num": "278",
+          "name": "Salamence",
+          "tipo1": "Dragón",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9a/latest/20221118111159/Salamence_icono_EP.png/96px-Salamence_icono_EP.png"
+        },
+        {
+          "nac": "0957",
+          "dex_num": "279",
+          "name": "Tinkatink",
+          "tipo1": "Hada",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0f/latest/20221117221413/Tinkatink_icono_EP.png/96px-Tinkatink_icono_EP.png"
+        },
+        {
+          "nac": "0958",
+          "dex_num": "280",
+          "name": "Tinkatuff",
+          "tipo1": "Hada",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/47/latest/20221118110821/Tinkatuff_icono_EP.png/96px-Tinkatuff_icono_EP.png"
+        },
+        {
+          "nac": "0959",
+          "dex_num": "281",
+          "name": "Tinkaton",
+          "tipo1": "Hada",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ef/latest/20221118111949/Tinkaton_icono_EP.png/96px-Tinkaton_icono_EP.png"
+        },
+        {
+          "nac": "0856",
+          "dex_num": "282",
+          "name": "Hatenna",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/11/latest/20221118110357/Hatenna_icono_EP.png/96px-Hatenna_icono_EP.png"
+        },
+        {
+          "nac": "0857",
+          "dex_num": "283",
+          "name": "Hattrem",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/91/latest/20221118112125/Hattrem_icono_EP.png/96px-Hattrem_icono_EP.png"
+        },
+        {
+          "nac": "0858",
+          "dex_num": "284",
+          "name": "Hatterene",
+          "tipo1": "Psíquico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3c/latest/20221118111443/Hatterene_icono_EP.png/96px-Hatterene_icono_EP.png"
+        },
+        {
+          "nac": "0859",
+          "dex_num": "285",
+          "name": "Impidimp",
+          "tipo1": "Siniestro",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/58/latest/20221118112352/Impidimp_icono_EP.png/96px-Impidimp_icono_EP.png"
+        },
+        {
+          "nac": "0860",
+          "dex_num": "286",
+          "name": "Morgrem",
+          "tipo1": "Siniestro",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/75/latest/20221118111947/Morgrem_icono_EP.png/96px-Morgrem_icono_EP.png"
+        },
+        {
+          "nac": "0861",
+          "dex_num": "287",
+          "name": "Grimmsnarl",
+          "tipo1": "Siniestro",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/05/latest/20221118111858/Grimmsnarl_icono_EP.png/96px-Grimmsnarl_icono_EP.png"
+        },
+        {
+          "nac": "0960",
+          "dex_num": "288",
+          "name": "Wiglett",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d0/latest/20221118111552/Wiglett_icono_EP.png/96px-Wiglett_icono_EP.png"
+        },
+        {
+          "nac": "0961",
+          "dex_num": "289",
+          "name": "Wugtrio",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/28/latest/20221117210715/Wugtrio_icono_EP.png/96px-Wugtrio_icono_EP.png"
+        },
+        {
+          "nac": "0962",
+          "dex_num": "290",
+          "name": "Bombirdier",
+          "tipo1": "Volador",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/32/latest/20221117211217/Bombirdier_icono_EP.png/96px-Bombirdier_icono_EP.png"
+        },
+        {
+          "nac": "0963",
+          "dex_num": "291",
+          "name": "Finizen",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b8/latest/20221118110927/Finizen_icono_EP.png/96px-Finizen_icono_EP.png"
+        },
+        {
+          "nac": "0964",
+          "dex_num": "292",
+          "name": "Palafin",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f0/latest/20221119123156/Palafin_ingenua_icono_EP.png/96px-Palafin_ingenua_icono_EP.png"
+        },
+        {
+          "nac": "0965",
+          "dex_num": "293",
+          "name": "Varoom",
+          "tipo1": "Veneno",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9e/latest/20221118110302/Varoom_icono_EP.png/96px-Varoom_icono_EP.png"
+        },
+        {
+          "nac": "0966",
+          "dex_num": "294",
+          "name": "Revavroom",
+          "tipo1": "Veneno",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3d/latest/20221118110457/Revavroom_icono_EP.png/96px-Revavroom_icono_EP.png"
+        },
+        {
+          "nac": "0967",
+          "dex_num": "295",
+          "name": "Cyclizar",
+          "tipo1": "Dragón",
+          "tipo2": "Normal",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/72/latest/20221118111119/Cyclizar_icono_EP.png/96px-Cyclizar_icono_EP.png"
+        },
+        {
+          "nac": "0968",
+          "dex_num": "296",
+          "name": "Orthworm",
+          "tipo1": "Acero",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bb/latest/20221118112121/Orthworm_icono_EP.png/96px-Orthworm_icono_EP.png"
+        },
+        {
+          "nac": "0302",
+          "dex_num": "297",
+          "name": "Sableye",
+          "tipo1": "Siniestro",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/91/latest/20221118111338/Sableye_icono_EP.png/96px-Sableye_icono_EP.png"
+        },
+        {
+          "nac": "0353",
+          "dex_num": "298",
+          "name": "Shuppet",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/90/latest/20221118110727/Shuppet_icono_EP.png/96px-Shuppet_icono_EP.png"
+        },
+        {
+          "nac": "0354",
+          "dex_num": "299",
+          "name": "Banette",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c3/latest/20221118111138/Banette_icono_EP.png/96px-Banette_icono_EP.png"
+        },
+        {
+          "nac": "0870",
+          "dex_num": "300",
+          "name": "Falinks",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/ba/latest/20221118111601/Falinks_icono_EP.png/96px-Falinks_icono_EP.png"
+        },
+        {
+          "nac": "0701",
+          "dex_num": "301",
+          "name": "Hawlucha",
+          "tipo1": "Lucha",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/97/latest/20221118110336/Hawlucha_icono_EP.png/96px-Hawlucha_icono_EP.png"
+        },
+        {
+          "nac": "0442",
+          "dex_num": "302",
+          "name": "Spiritomb",
+          "tipo1": "Fantasma",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4a/latest/20221118111037/Spiritomb_icono_EP.png/96px-Spiritomb_icono_EP.png"
+        },
+        {
+          "nac": "0714",
+          "dex_num": "303",
+          "name": "Noibat",
+          "tipo1": "Volador",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/19/latest/20221118111204/Noibat_icono_EP.png/96px-Noibat_icono_EP.png"
+        },
+        {
+          "nac": "0715",
+          "dex_num": "304",
+          "name": "Noivern",
+          "tipo1": "Volador",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c0/latest/20221118110203/Noivern_icono_EP.png/96px-Noivern_icono_EP.png"
+        },
+        {
+          "nac": "0885",
+          "dex_num": "305",
+          "name": "Dreepy",
+          "tipo1": "Dragón",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/88/latest/20221118111145/Dreepy_icono_EP.png/96px-Dreepy_icono_EP.png"
+        },
+        {
+          "nac": "0886",
+          "dex_num": "306",
+          "name": "Drakloak",
+          "tipo1": "Dragón",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/56/latest/20221118110732/Drakloak_icono_EP.png/96px-Drakloak_icono_EP.png"
+        },
+        {
+          "nac": "0887",
+          "dex_num": "307",
+          "name": "Dragapult",
+          "tipo1": "Dragón",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/aa/latest/20221118111303/Dragapult_icono_EP.png/96px-Dragapult_icono_EP.png"
+        },
+        {
+          "nac": "0969",
+          "dex_num": "308",
+          "name": "Glimmet",
+          "tipo1": "Veneno",
+          "tipo2": "Roca",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e9/latest/20221118111124/Glimmet_icono_EP.png/96px-Glimmet_icono_EP.png"
+        },
+        {
+          "nac": "0970",
+          "dex_num": "309",
+          "name": "Glimmora",
+          "tipo1": "Veneno",
+          "tipo2": "Roca",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c4/latest/20221118112131/Glimmora_icono_EP.png/96px-Glimmora_icono_EP.png"
+        },
+        {
+          "nac": "0479",
+          "dex_num": "310",
+          "name": "Rotom",
+          "tipo1": "Eléctrico",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e7/latest/20221118111459/Rotom_icono_EP.png/96px-Rotom_icono_EP.png"
+        },
+        {
+          "nac": "0479",
+          "dex_num": "310",
+          "name": "Rotom calor",
+          "tipo1": "Eléctrico",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9b/latest/20221118110718/Rotom_calor_icono_EP.png/96px-Rotom_calor_icono_EP.png"
+        },
+        {
+          "nac": "0479",
+          "dex_num": "310",
+          "name": "Rotom lavado",
+          "tipo1": "Eléctrico",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/87/latest/20221118110514/Rotom_lavado_icono_EP.png/96px-Rotom_lavado_icono_EP.png"
+        },
+        {
+          "nac": "0479",
+          "dex_num": "310",
+          "name": "Rotom frío",
+          "tipo1": "Eléctrico",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cc/latest/20221118112437/Rotom_fr%C3%ADo_icono_EP.png/96px-Rotom_fr%C3%ADo_icono_EP.png"
+        },
+        {
+          "nac": "0479",
+          "dex_num": "310",
+          "name": "Rotom ventilador",
+          "tipo1": "Eléctrico",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3e/latest/20221118112100/Rotom_ventilador_icono_EP.png/96px-Rotom_ventilador_icono_EP.png"
+        },
+        {
+          "nac": "0479",
+          "dex_num": "310",
+          "name": "Rotom corte",
+          "tipo1": "Eléctrico",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/05/latest/20221118110749/Rotom_corte_icono_EP.png/96px-Rotom_corte_icono_EP.png"
+        },
+        {
+          "nac": "0971",
+          "dex_num": "311",
+          "name": "Greavard",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/21/latest/20221118110421/Greavard_icono_EP.png/96px-Greavard_icono_EP.png"
+        },
+        {
+          "nac": "0972",
+          "dex_num": "312",
+          "name": "Houndstone",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/16/latest/20221118112306/Houndstone_icono_EP.png/96px-Houndstone_icono_EP.png"
+        },
+        {
+          "nac": "0765",
+          "dex_num": "313",
+          "name": "Oranguru",
+          "tipo1": "Normal",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8b/latest/20221118110353/Oranguru_icono_EP.png/96px-Oranguru_icono_EP.png"
+        },
+        {
+          "nac": "0766",
+          "dex_num": "314",
+          "name": "Passimian",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f0/latest/20221118112123/Passimian_icono_EP.png/96px-Passimian_icono_EP.png"
+        },
+        {
+          "nac": "0775",
+          "dex_num": "315",
+          "name": "Komala",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/40/latest/20221118110258/Komala_icono_EP.png/96px-Komala_icono_EP.png"
+        },
+        {
+          "nac": "0246",
+          "dex_num": "316",
+          "name": "Larvitar",
+          "tipo1": "Roca",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bb/latest/20221118112233/Larvitar_icono_EP.png/96px-Larvitar_icono_EP.png"
+        },
+        {
+          "nac": "0247",
+          "dex_num": "317",
+          "name": "Pupitar",
+          "tipo1": "Roca",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bd/latest/20221118112500/Pupitar_icono_EP.png/96px-Pupitar_icono_EP.png"
+        },
+        {
+          "nac": "0248",
+          "dex_num": "318",
+          "name": "Tyranitar",
+          "tipo1": "Roca",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/64/latest/20221118110351/Tyranitar_icono_EP.png/96px-Tyranitar_icono_EP.png"
+        },
+        {
+          "nac": "0874",
+          "dex_num": "319",
+          "name": "Stonjourner",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f6/latest/20221118112448/Stonjourner_icono_EP.png/96px-Stonjourner_icono_EP.png"
+        },
+        {
+          "nac": "0875",
+          "dex_num": "320",
+          "name": "Eiscue",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/36/latest/20221118110546/Eiscue_cara_de_hielo_icono_EP.png/96px-Eiscue_cara_de_hielo_icono_EP.png"
+        },
+        {
+          "nac": "0871",
+          "dex_num": "321",
+          "name": "Pincurchin",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2b/latest/20221118112456/Pincurchin_icono_EP.png/96px-Pincurchin_icono_EP.png"
+        },
+        {
+          "nac": "0769",
+          "dex_num": "322",
+          "name": "Sandygast",
+          "tipo1": "Fantasma",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/94/latest/20221118112454/Sandygast_icono_EP.png/96px-Sandygast_icono_EP.png"
+        },
+        {
+          "nac": "0770",
+          "dex_num": "323",
+          "name": "Palossand",
+          "tipo1": "Fantasma",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/72/latest/20221118110439/Palossand_icono_EP.png/96px-Palossand_icono_EP.png"
+        },
+        {
+          "nac": "0079",
+          "dex_num": "324",
+          "name": "Slowpoke",
+          "tipo1": "Agua",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/df/latest/20221117133618/Slowpoke_icono_EP.png/96px-Slowpoke_icono_EP.png"
+        },
+        {
+          "nac": "0080",
+          "dex_num": "325",
+          "name": "Slowbro",
+          "tipo1": "Agua",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2f/latest/20221117133715/Slowbro_icono_EP.png/96px-Slowbro_icono_EP.png"
+        },
+        {
+          "nac": "0199",
+          "dex_num": "326",
+          "name": "Slowking",
+          "tipo1": "Agua",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c0/latest/20221118110442/Slowking_icono_EP.png/96px-Slowking_icono_EP.png"
+        },
+        {
+          "nac": "0422",
+          "dex_num": "327",
+          "name": "Shellos oeste",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a6/latest/20221118111930/Shellos_oeste_icono_EP.png/96px-Shellos_oeste_icono_EP.png"
+        },
+        {
+          "nac": "0422",
+          "dex_num": "327",
+          "name": "Shellos este",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5c/latest/20221118110645/Shellos_este_icono_EP.png/96px-Shellos_este_icono_EP.png"
+        },
+        {
+          "nac": "0423",
+          "dex_num": "328",
+          "name": "Gastrodon oeste",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/15/latest/20221118110804/Gastrodon_oeste_icono_EP.png/96px-Gastrodon_oeste_icono_EP.png"
+        },
+        {
+          "nac": "0423",
+          "dex_num": "328",
+          "name": "Gastrodon este",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/57/latest/20221118110738/Gastrodon_este_icono_EP.png/96px-Gastrodon_este_icono_EP.png"
+        },
+        {
+          "nac": "0090",
+          "dex_num": "329",
+          "name": "Shellder",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cf/latest/20221118002545/Shellder_icono_EP.png/96px-Shellder_icono_EP.png"
+        },
+        {
+          "nac": "0091",
+          "dex_num": "330",
+          "name": "Cloyster",
+          "tipo1": "Agua",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fa/latest/20221118002016/Cloyster_icono_EP.png/96px-Cloyster_icono_EP.png"
+        },
+        {
+          "nac": "0211",
+          "dex_num": "331",
+          "name": "Qwilfish",
+          "tipo1": "Agua",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/93/latest/20221118112104/Qwilfish_icono_EP.png/96px-Qwilfish_icono_EP.png"
+        },
+        {
+          "nac": "0370",
+          "dex_num": "332",
+          "name": "Luvdisc",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6a/latest/20221118110300/Luvdisc_icono_EP.png/96px-Luvdisc_icono_EP.png"
+        },
+        {
+          "nac": "0456",
+          "dex_num": "333",
+          "name": "Finneon",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cf/latest/20221118110243/Finneon_icono_EP.png/96px-Finneon_icono_EP.png"
+        },
+        {
+          "nac": "0457",
+          "dex_num": "334",
+          "name": "Lumineon",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b4/latest/20221118112350/Lumineon_icono_EP.png/96px-Lumineon_icono_EP.png"
+        },
+        {
+          "nac": "0779",
+          "dex_num": "335",
+          "name": "Bruxish",
+          "tipo1": "Agua",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0f/latest/20221118112313/Bruxish_icono_EP.png/96px-Bruxish_icono_EP.png"
+        },
+        {
+          "nac": "0594",
+          "dex_num": "336",
+          "name": "Alomomola",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d2/latest/20221118110226/Alomomola_icono_EP.png/96px-Alomomola_icono_EP.png"
+        },
+        {
+          "nac": "0690",
+          "dex_num": "337",
+          "name": "Skrelp",
+          "tipo1": "Veneno",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/de/latest/20221118111533/Skrelp_icono_EP.png/96px-Skrelp_icono_EP.png"
+        },
+        {
+          "nac": "0691",
+          "dex_num": "338",
+          "name": "Dragalge",
+          "tipo1": "Veneno",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5a/latest/20221118111212/Dragalge_icono_EP.png/96px-Dragalge_icono_EP.png"
+        },
+        {
+          "nac": "0692",
+          "dex_num": "339",
+          "name": "Clauncher",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6d/latest/20221118112325/Clauncher_icono_EP.png/96px-Clauncher_icono_EP.png"
+        },
+        {
+          "nac": "0693",
+          "dex_num": "340",
+          "name": "Clawitzer",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4a/latest/20221118111953/Clawitzer_icono_EP.png/96px-Clawitzer_icono_EP.png"
+        },
+        {
+          "nac": "0602",
+          "dex_num": "341",
+          "name": "Tynamo",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5e/latest/20221118111843/Tynamo_icono_EP.png/96px-Tynamo_icono_EP.png"
+        },
+        {
+          "nac": "0603",
+          "dex_num": "342",
+          "name": "Eelektrik",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ed/latest/20221118110523/Eelektrik_icono_EP.png/96px-Eelektrik_icono_EP.png"
+        },
+        {
+          "nac": "0604",
+          "dex_num": "343",
+          "name": "Eelektross",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bb/latest/20221118112022/Eelektross_icono_EP.png/96px-Eelektross_icono_EP.png"
+        },
+        {
+          "nac": "0747",
+          "dex_num": "344",
+          "name": "Mareanie",
+          "tipo1": "Veneno",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0c/latest/20221118110209/Mareanie_icono_EP.png/96px-Mareanie_icono_EP.png"
+        },
+        {
+          "nac": "0748",
+          "dex_num": "345",
+          "name": "Toxapex",
+          "tipo1": "Veneno",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/30/latest/20221118112315/Toxapex_icono_EP.png/96px-Toxapex_icono_EP.png"
+        },
+        {
+          "nac": "0973",
+          "dex_num": "346",
+          "name": "Flamigo",
+          "tipo1": "Volador",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e4/latest/20221117211716/Flamigo_icono_EP.png/96px-Flamigo_icono_EP.png"
+        },
+        {
+          "nac": "0147",
+          "dex_num": "347",
+          "name": "Dratini",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fc/latest/20221118003915/Dratini_icono_EP.png/96px-Dratini_icono_EP.png"
+        },
+        {
+          "nac": "0148",
+          "dex_num": "348",
+          "name": "Dragonair",
+          "tipo1": "Dragón",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8b/latest/20221118003935/Dragonair_icono_EP.png/96px-Dragonair_icono_EP.png"
+        },
+        {
+          "nac": "0149",
+          "dex_num": "349",
+          "name": "Dragonite",
+          "tipo1": "Dragón",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b8/latest/20221118003955/Dragonite_icono_EP.png/96px-Dragonite_icono_EP.png"
+        },
+        {
+          "nac": "0872",
+          "dex_num": "350",
+          "name": "Snom",
+          "tipo1": "Hielo",
+          "tipo2": "Bicho",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f3/latest/20221118110812/Snom_icono_EP.png/96px-Snom_icono_EP.png"
+        },
+        {
+          "nac": "0873",
+          "dex_num": "351",
+          "name": "Frosmoth",
+          "tipo1": "Hielo",
+          "tipo2": "Bicho",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bc/latest/20221118112209/Frosmoth_icono_EP.png/96px-Frosmoth_icono_EP.png"
+        },
+        {
+          "nac": "0459",
+          "dex_num": "352",
+          "name": "Snover",
+          "tipo1": "Planta",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/71/latest/20221118110425/Snover_icono_EP.png/96px-Snover_icono_EP.png"
+        },
+        {
+          "nac": "0460",
+          "dex_num": "353",
+          "name": "Abomasnow",
+          "tipo1": "Planta",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d1/latest/20221118110942/Abomasnow_icono_EP.png/96px-Abomasnow_icono_EP.png"
+        },
+        {
+          "nac": "0225",
+          "dex_num": "354",
+          "name": "Delibird",
+          "tipo1": "Hielo",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3f/latest/20221118111109/Delibird_icono_EP.png/96px-Delibird_icono_EP.png"
+        },
+        {
+          "nac": "0613",
+          "dex_num": "355",
+          "name": "Cubchoo",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/ab/latest/20221118110932/Cubchoo_icono_EP.png/96px-Cubchoo_icono_EP.png"
+        },
+        {
+          "nac": "0614",
+          "dex_num": "356",
+          "name": "Beartic",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2d/latest/20221118110657/Beartic_icono_EP.png/96px-Beartic_icono_EP.png"
+        },
+        {
+          "nac": "0361",
+          "dex_num": "357",
+          "name": "Snorunt",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/70/latest/20221118111307/Snorunt_icono_EP.png/96px-Snorunt_icono_EP.png"
+        },
+        {
+          "nac": "0362",
+          "dex_num": "358",
+          "name": "Glalie",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b5/latest/20221118112037/Glalie_icono_EP.png/96px-Glalie_icono_EP.png"
+        },
+        {
+          "nac": "0478",
+          "dex_num": "359",
+          "name": "Froslass",
+          "tipo1": "Hielo",
+          "tipo2": "Fantasma",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c8/latest/20221118111610/Froslass_icono_EP.png/96px-Froslass_icono_EP.png"
+        },
+        {
+          "nac": "0615",
+          "dex_num": "360",
+          "name": "Cryogonal",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9b/latest/20221118112006/Cryogonal_icono_EP.png/96px-Cryogonal_icono_EP.png"
+        },
+        {
+          "nac": "0974",
+          "dex_num": "361",
+          "name": "Cetoddle",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6a/latest/20221118110810/Cetoddle_icono_EP.png/96px-Cetoddle_icono_EP.png"
+        },
+        {
+          "nac": "0975",
+          "dex_num": "362",
+          "name": "Cetitan",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0a/latest/20221118110706/Cetitan_icono_EP.png/96px-Cetitan_icono_EP.png"
+        },
+        {
+          "nac": "0712",
+          "dex_num": "363",
+          "name": "Bergmite",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/50/latest/20221118111313/Bergmite_icono_EP.png/96px-Bergmite_icono_EP.png"
+        },
+        {
+          "nac": "0713",
+          "dex_num": "364",
+          "name": "Avalugg",
+          "tipo1": "Hielo",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/40/latest/20221118112226/Avalugg_icono_EP.png/96px-Avalugg_icono_EP.png"
+        },
+        {
+          "nac": "0627",
+          "dex_num": "365",
+          "name": "Rufflet",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221118111012/Rufflet_icono_EP.png/96px-Rufflet_icono_EP.png"
+        },
+        {
+          "nac": "0628",
+          "dex_num": "366",
+          "name": "Braviary",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/43/latest/20221118112214/Braviary_icono_EP.png/96px-Braviary_icono_EP.png"
+        },
+        {
+          "nac": "0624",
+          "dex_num": "367",
+          "name": "Pawniard",
+          "tipo1": "Siniestro",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/75/latest/20221118111612/Pawniard_icono_EP.png/96px-Pawniard_icono_EP.png"
+        },
+        {
+          "nac": "0625",
+          "dex_num": "368",
+          "name": "Bisharp",
+          "tipo1": "Siniestro",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5e/latest/20221118112302/Bisharp_icono_EP.png/96px-Bisharp_icono_EP.png"
+        },
+        {
+          "nac": "0983",
+          "dex_num": "369",
+          "name": "Kingambit",
+          "tipo1": "Siniestro",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a4/latest/20230112180613/Kingambit_icono_EP.png/96px-Kingambit_icono_EP.png"
+        },
+        {
+          "nac": "0633",
+          "dex_num": "370",
+          "name": "Deino",
+          "tipo1": "Siniestro",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/50/latest/20221118110959/Deino_icono_EP.png/96px-Deino_icono_EP.png"
+        },
+        {
+          "nac": "0634",
+          "dex_num": "371",
+          "name": "Zweilous",
+          "tipo1": "Siniestro",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d1/latest/20221118112058/Zweilous_icono_EP.png/96px-Zweilous_icono_EP.png"
+        },
+        {
+          "nac": "0635",
+          "dex_num": "372",
+          "name": "Hydreigon",
+          "tipo1": "Siniestro",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/08/latest/20221118111847/Hydreigon_icono_EP.png/96px-Hydreigon_icono_EP.png"
+        },
+        {
+          "nac": "0976",
+          "dex_num": "373",
+          "name": "Veluza",
+          "tipo1": "Agua",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/78/latest/20230112180327/Veluza_icono_EP.png/96px-Veluza_icono_EP.png"
+        },
+        {
+          "nac": "0977",
+          "dex_num": "374",
+          "name": "Dondozo",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f8/latest/20221118111054/Dondozo_icono_EP.png/96px-Dondozo_icono_EP.png"
+        },
+        {
+          "nac": "0978",
+          "dex_num": "375",
+          "name": "Tatsugiri",
+          "tipo1": "Dragón",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/97/latest/20221118110553/Tatsugiri_curvada_icono_EP.png/96px-Tatsugiri_curvada_icono_EP.png"
+        },
+        {
+          "nac": "0978",
+          "dex_num": "375",
+          "name": "Tatsugiri lánguida",
+          "tipo1": "Dragón",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c6/latest/20221120214156/Tatsugiri_l%C3%A1nguida_icono_EP.png/96px-Tatsugiri_l%C3%A1nguida_icono_EP.png"
+        },
+        {
+          "nac": "0978",
+          "dex_num": "375",
+          "name": "Tatsugiri recta",
+          "tipo1": "Dragón",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a0/latest/20221118110235/Tatsugiri_recta_icono_EP.png/96px-Tatsugiri_recta_icono_EP.png"
+        },
+        {
+          "nac": "0984",
+          "dex_num": "376",
+          "name": "Colmilargo",
+          "tipo1": "Tierra",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/63/latest/20221118110854/Colmilargo_icono_EP.png/96px-Colmilargo_icono_EP.png"
+        },
+        {
+          "nac": "0985",
+          "dex_num": "377",
+          "name": "Colagrito",
+          "tipo1": "Hada",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/38/latest/20221118112304/Colagrito_icono_EP.png/96px-Colagrito_icono_EP.png"
+        },
+        {
+          "nac": "0986",
+          "dex_num": "378",
+          "name": "Furioseta",
+          "tipo1": "Planta",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/48/latest/20221118110818/Furioseta_icono_EP.png/96px-Furioseta_icono_EP.png"
+        },
+        {
+          "nac": "0987",
+          "dex_num": "379",
+          "name": "Melenaleteo",
+          "tipo1": "Fantasma",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/64/latest/20221118110721/Melenaleteo_icono_EP.png/96px-Melenaleteo_icono_EP.png"
+        },
+        {
+          "nac": "0988",
+          "dex_num": "380",
+          "name": "Reptalada",
+          "tipo1": "Bicho",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/98/latest/20221118111351/Reptalada_icono_EP.png/96px-Reptalada_icono_EP.png"
+        },
+        {
+          "nac": "0989",
+          "dex_num": "381",
+          "name": "Pelarena",
+          "tipo1": "Eléctrico",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/17/latest/20221118110730/Pelarena_icono_EP.png/96px-Pelarena_icono_EP.png"
+        },
+        {
+          "nac": "0990",
+          "dex_num": "382",
+          "name": "Ferrodada",
+          "tipo1": "Tierra",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d3/latest/20221118111643/Ferrodada_icono_EP.png/96px-Ferrodada_icono_EP.png"
+        },
+        {
+          "nac": "0991",
+          "dex_num": "383",
+          "name": "Ferrosaco",
+          "tipo1": "Hielo",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/94/latest/20221118110525/Ferrosaco_icono_EP.png/96px-Ferrosaco_icono_EP.png"
+        },
+        {
+          "nac": "0992",
+          "dex_num": "384",
+          "name": "Ferropalmas",
+          "tipo1": "Lucha",
+          "tipo2": "Eléctrico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c6/latest/20221118111941/Ferropalmas_icono_EP.png/96px-Ferropalmas_icono_EP.png"
+        },
+        {
+          "nac": "0993",
+          "dex_num": "385",
+          "name": "Ferrocuello",
+          "tipo1": "Siniestro",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/85/latest/20221118110723/Ferrocuello_icono_EP.png/96px-Ferrocuello_icono_EP.png"
+        },
+        {
+          "nac": "0994",
+          "dex_num": "386",
+          "name": "Ferropolilla",
+          "tipo1": "Fuego",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8a/latest/20221118110533/Ferropolilla_icono_EP.png/96px-Ferropolilla_icono_EP.png"
+        },
+        {
+          "nac": "0995",
+          "dex_num": "387",
+          "name": "Ferropúas",
+          "tipo1": "Roca",
+          "tipo2": "Eléctrico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/33/latest/20221118112016/Ferrop%C3%BAas_icono_EP.png/96px-Ferrop%C3%BAas_icono_EP.png"
+        },
+        {
+          "nac": "0996",
+          "dex_num": "388",
+          "name": "Frigibax",
+          "tipo1": "Dragón",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c7/latest/20221118111115/Frigibax_icono_EP.png/96px-Frigibax_icono_EP.png"
+        },
+        {
+          "nac": "0997",
+          "dex_num": "389",
+          "name": "Arctibax",
+          "tipo1": "Dragón",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/46/latest/20221118110233/Arctibax_icono_EP.png/96px-Arctibax_icono_EP.png"
+        },
+        {
+          "nac": "0998",
+          "dex_num": "390",
+          "name": "Baxcalibur",
+          "tipo1": "Dragón",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/35/latest/20221118111546/Baxcalibur_icono_EP.png/96px-Baxcalibur_icono_EP.png"
+        },
+        {
+          "nac": "0999",
+          "dex_num": "391",
+          "name": "Gimmighoul cofre",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6f/latest/20230112180230/Gimmighoul_cofre_icono_EP.png/96px-Gimmighoul_cofre_icono_EP.png"
+        },
+        {
+          "nac": "0999",
+          "dex_num": "391",
+          "name": "Gimmighoul andante",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/53/latest/20230112180221/Gimmighoul_andante_icono_EP.png/96px-Gimmighoul_andante_icono_EP.png"
+        },
+        {
+          "nac": "1000",
+          "dex_num": "392",
+          "name": "Gholdengo",
+          "tipo1": "Fantasma",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5e/latest/20221118111853/Gholdengo_icono_EP.png/96px-Gholdengo_icono_EP.png"
+        },
+        {
+          "nac": "1001",
+          "dex_num": "393",
+          "name": "Wo-Chien",
+          "tipo1": "Siniestro",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fc/latest/20230112180536/Wo-Chien_icono_EP.png/96px-Wo-Chien_icono_EP.png"
+        },
+        {
+          "nac": "1002",
+          "dex_num": "394",
+          "name": "Chien-Pao",
+          "tipo1": "Siniestro",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/32/latest/20230112181221/Chien-Pao_icono_EP.png/96px-Chien-Pao_icono_EP.png"
+        },
+        {
+          "nac": "1003",
+          "dex_num": "395",
+          "name": "Ting-Lu",
+          "tipo1": "Siniestro",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/66/latest/20230112180518/Ting-Lu_icono_EP.png/96px-Ting-Lu_icono_EP.png"
+        },
+        {
+          "nac": "1004",
+          "dex_num": "396",
+          "name": "Chi-Yu",
+          "tipo1": "Siniestro",
+          "tipo2": "Fuego",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fb/latest/20230112180418/Chi-Yu_icono_EP.png/96px-Chi-Yu_icono_EP.png"
+        },
+        {
+          "nac": "1005",
+          "dex_num": "397",
+          "name": "Bramaluna",
+          "tipo1": "Dragón",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1c/latest/20221117153557/Bramaluna_icono_EP.png/96px-Bramaluna_icono_EP.png"
+        },
+        {
+          "nac": "1006",
+          "dex_num": "398",
+          "name": "Ferropaladín",
+          "tipo1": "Hada",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/33/latest/20221201122534/Ferropalad%C3%ADn_icono_EP.png/96px-Ferropalad%C3%ADn_icono_EP.png"
+        },
+        {
+          "nac": "1007",
+          "dex_num": "399",
+          "name": "Koraidon montura",
+          "tipo1": "Lucha",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/21/latest/20221204202412/Koraidon_montura_icono_EP.png/96px-Koraidon_montura_icono_EP.png"
+        },
+        {
+          "nac": "1007",
+          "dex_num": "399",
+          "name": "Koraidon",
+          "tipo1": "Lucha",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/48/latest/20221117220124/Koraidon_icono_EP.png/96px-Koraidon_icono_EP.png"
+        },
+        {
+          "nac": "1008",
+          "dex_num": "400",
+          "name": "Miraidon montura",
+          "tipo1": "Eléctrico",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f2/latest/20221204204536/Miraidon_montura_icono_EP.png/96px-Miraidon_montura_icono_EP.png"
+        },
+        {
+          "nac": "1008",
+          "dex_num": "400",
+          "name": "Miraidon",
+          "tipo1": "Eléctrico",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6e/latest/20221117220138/Miraidon_icono_EP.png/96px-Miraidon_icono_EP.png"
+        }
+      ]
+    }
+  ]
+}
