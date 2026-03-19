@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend/data:/app/data   # persists pokemon.json + pokemon.db
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - BACKEND_URL=http://backend:3000
+    depends_on:
+      - backend
+    restart: unless-stopped

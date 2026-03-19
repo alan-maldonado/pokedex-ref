@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# SQLite database (regenerated from JSON on startup)
+backend/data/pokemon.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Build output
+frontend/dist/
+
+# Env files
+.env
+.env.local
+
+# macOS
+.DS_Store
