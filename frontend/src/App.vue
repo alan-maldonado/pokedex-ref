@@ -179,9 +179,20 @@
                 <img v-if="p.icon_url" :src="p.icon_url" :alt="p.name"
                   class="w-10 h-10 object-contain inline-block" loading="lazy" />
               </td>
-              <td class="px-3 py-1.5 font-medium"
+              <td class="px-3 py-1.5 font-medium group"
                 :class="p.caught ? 'text-gray-400 line-through' : 'text-gray-800'">
                 {{ p.name }}
+                <a
+                  :href="'https://www.wikidex.net/wiki/' + encodeURIComponent(p.name.replace(/ /g, '_'))"
+                  target="_blank"
+                  rel="noopener"
+                  class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
+                  @click.stop
+                >
+                  <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-8.5M19 5l-7 7m0-5h5v5"/>
+                  </svg>
+                </a>
               </td>
               <td class="px-3 py-1.5">
                 <div class="flex gap-1 flex-wrap">
