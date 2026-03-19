@@ -85,8 +85,8 @@ docker-compose up --build
 
 | Service  | URL |
 |----------|-----|
-| Frontend | http://localhost:5173 |
-| Backend  | http://localhost:3000 |
+| App      | http://localhost:4001 |
+| API      | http://localhost:4001/api |
 
 The `backend/data/` directory is mounted as a volume, so the SQLite database
 and JSON files persist between container restarts.
