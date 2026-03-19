@@ -94,6 +94,23 @@
         </div>
         <span class="text-sm text-gray-600 select-none">Hide caught</span>
       </label>
+
+      <!-- Hide forms toggle -->
+      <label class="flex items-center gap-2 cursor-pointer flex-shrink-0">
+        <div
+          @click="hideForms = !hideForms"
+          :class="[
+            'relative w-10 h-5 rounded-full transition-colors cursor-pointer',
+            hideForms ? 'bg-blue-500' : 'bg-gray-300'
+          ]"
+        >
+          <div :class="[
+            'absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform',
+            hideForms ? 'translate-x-5' : 'translate-x-0.5'
+          ]" />
+        </div>
+        <span class="text-sm text-gray-600 select-none">Hide forms</span>
+      </label>
     </div>
 
     <!-- Table -->
@@ -190,6 +207,7 @@ const selectedDex      = ref(null)
 const pokemon          = ref([])
 const loading          = ref(false)
 const hideCaught       = ref(false)
+const hideForms        = ref(false)
 const search           = ref('')
 
 // ── Derived ────────────────────────────────────────────────────────────────────
@@ -200,6 +218,15 @@ const selectedGame = computed(() =>
 const filtered = computed(() => {
   let list = pokemon.value
   if (hideCaught.value) list = list.filter(p => !p.caught)
+  if (hideForms.value) {
+    const seen = new Set()
+    list = list.filter(p => {
+      const key = p.nac || p.dex_num
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+  }
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(p => p.name?.toLowerCase().includes(q))
