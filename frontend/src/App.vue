@@ -74,7 +74,7 @@
           />
         </div>
         <span class="text-xs text-gray-500 whitespace-nowrap">
-          {{ caughtCount }} / {{ pokemon.length }} caught
+          {{ caughtCount }} / {{ baseList.length }} caught
         </span>
       </div>
 
@@ -206,9 +206,9 @@ const selectedGameSlug = ref(null)
 const selectedDex      = ref(null)
 const pokemon          = ref([])
 const loading          = ref(false)
-const hideCaught       = ref(false)
-const hideForms        = ref(false)
-const search           = ref('')
+const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
+const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
+const search           = ref(sessionStorage.getItem('search') ?? '')
 
 // ── Derived ────────────────────────────────────────────────────────────────────
 const selectedGame = computed(() =>
@@ -216,17 +216,8 @@ const selectedGame = computed(() =>
 )
 
 const filtered = computed(() => {
-  let list = pokemon.value
+  let list = baseList.value
   if (hideCaught.value) list = list.filter(p => !p.caught)
-  if (hideForms.value) {
-    const seen = new Set()
-    list = list.filter(p => {
-      const key = p.nac || p.dex_num
-      if (seen.has(key)) return false
-      seen.add(key)
-      return true
-    })
-  }
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(p => p.name?.toLowerCase().includes(q))
@@ -234,10 +225,21 @@ const filtered = computed(() => {
   return list
 })
 
-const caughtCount = computed(() => pokemon.value.filter(p => p.caught).length)
+const baseList = computed(() => {
+  if (!hideForms.value) return pokemon.value
+  const seen = new Set()
+  return pokemon.value.filter(p => {
+    const key = p.nac || p.dex_num
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+})
+
+const caughtCount = computed(() => baseList.value.filter(p => p.caught).length)
 
 const progressPct = computed(() =>
-  pokemon.value.length ? Math.round((caughtCount.value / pokemon.value.length) * 100) : 0
+  baseList.value.length ? Math.round((caughtCount.value / baseList.value.length) * 100) : 0
 )
 
 // ── Actions ────────────────────────────────────────────────────────────────────
@@ -279,6 +281,10 @@ async function toggleCaught(p) {
 }
 
 // ── Watchers ───────────────────────────────────────────────────────────────────
+watch(hideCaught, v => sessionStorage.setItem('hideCaught', v))
+watch(hideForms,  v => sessionStorage.setItem('hideForms',  v))
+watch(search,     v => sessionStorage.setItem('search',     v))
+
 watch(selectedGameSlug, () => {
   if (selectedGame.value) selectedDex.value = selectedGame.value.dexes[0] ?? null
 })
