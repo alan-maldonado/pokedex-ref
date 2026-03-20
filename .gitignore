@@ -11,6 +11,9 @@ __pycache__/
 # Build output
 frontend/dist/
 
+# Vite / PWA cache
+frontend/.vite/
+
 # Env files
 .env
 .env.local
