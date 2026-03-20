@@ -513,8 +513,7 @@ function doUndo() {
   catching.value.delete(p.id)
   catching.value = new Set(catching.value)
 
-  // Static: revert localStorage to previous state
-  if (STATIC) persistCaught(p)
+  persistCaught(p)
 }
 
 function exportData() {
