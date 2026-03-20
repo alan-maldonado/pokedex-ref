@@ -89,83 +89,76 @@
     </header>
 
     <!-- Controls bar -->
-    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col gap-2">
 
-      <!-- Search -->
-      <div class="relative flex-1 max-w-xs">
-        <svg class="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
-          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-        </svg>
-        <input
-          v-model="search"
-          type="text"
-          placeholder="Search…"
-          class="w-full pl-8 pr-8 py-1.5 text-sm bg-white dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent"
-        />
-        <button
-          v-if="search"
-          @click="search = ''"
-          class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-        >✕</button>
-      </div>
-
-      <!-- Progress bar -->
-      <div class="flex items-center gap-2 flex-1 min-w-0">
-        <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-          <div
-            class="h-full bg-green-500 rounded-full transition-all duration-300"
-            :style="{ width: progressPct + '%' }"
+      <!-- Row 1: search + export/import -->
+      <div class="flex items-center gap-2">
+        <div class="relative flex-1">
+          <svg class="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input
+            v-model="search"
+            type="text"
+            placeholder="Search…"
+            class="w-full pl-8 pr-8 py-1.5 text-sm bg-white dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent"
           />
+          <button
+            v-if="search"
+            @click="search = ''"
+            class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          >✕</button>
         </div>
-        <span class="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
-          {{ caughtCount }} / {{ baseList.length }} caught
-        </span>
+
+        <template v-if="STATIC">
+          <button @click="exportData" title="Export progress"
+            class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </button>
+          <label title="Import progress"
+            class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+            </svg>
+            <input type="file" accept=".json" class="hidden" @change="importData" />
+          </label>
+        </template>
       </div>
 
-      <!-- Hide caught toggle -->
-      <label class="flex items-center gap-2 cursor-pointer flex-shrink-0">
-        <div
-          @click="hideCaught = !hideCaught"
-          :class="['relative w-10 h-5 rounded-full transition-colors cursor-pointer', hideCaught ? 'bg-red-500' : 'bg-gray-300 dark:bg-gray-600']"
-        >
-          <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideCaught ? 'translate-x-5' : 'translate-x-0.5']" />
-        </div>
-        <span class="text-sm text-gray-600 dark:text-gray-400 select-none">Hide caught</span>
-      </label>
+      <!-- Row 2: progress + toggles -->
+      <div class="flex items-center gap-3 flex-wrap">
 
-      <!-- Hide forms toggle -->
-      <label class="flex items-center gap-2 cursor-pointer flex-shrink-0">
-        <div
-          @click="hideForms = !hideForms"
-          :class="['relative w-10 h-5 rounded-full transition-colors cursor-pointer', hideForms ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600']"
-        >
-          <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideForms ? 'translate-x-5' : 'translate-x-0.5']" />
+        <!-- Progress bar -->
+        <div class="flex items-center gap-2 flex-1 min-w-0">
+          <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+            <div class="h-full bg-green-500 rounded-full transition-all duration-300" :style="{ width: progressPct + '%' }" />
+          </div>
+          <span class="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
+            {{ caughtCount }} / {{ baseList.length }} caught
+          </span>
         </div>
-        <span class="text-sm text-gray-600 dark:text-gray-400 select-none">Hide forms</span>
-      </label>
 
-      <!-- Export / Import (static mode only) -->
-      <template v-if="STATIC">
-        <button
-          @click="exportData"
-          title="Export progress"
-          class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-          </svg>
-        </button>
-        <label
-          title="Import progress"
-          class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
-          </svg>
-          <input type="file" accept=".json" class="hidden" @change="importData" />
+        <!-- Hide caught toggle -->
+        <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+          <div @click="hideCaught = !hideCaught"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideCaught ? 'bg-red-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideCaught ? 'translate-x-4' : 'translate-x-0.5']" />
+          </div>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Caught</span>
         </label>
-      </template>
+
+        <!-- Hide forms toggle -->
+        <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+          <div @click="hideForms = !hideForms"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideForms ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideForms ? 'translate-x-4' : 'translate-x-0.5']" />
+          </div>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Forms</span>
+        </label>
+      </div>
     </div>
 
     <!-- Table -->
@@ -183,7 +176,7 @@
         <table v-else class="w-full text-sm">
           <thead>
             <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-              <th class="px-3 py-2.5 text-right">#NAT</th>
+              <th class="px-3 py-2.5 text-right hidden sm:table-cell">#NAT</th>
               <th class="px-3 py-2.5 text-right">#{{ selectedDex?.col_label }}</th>
               <th class="px-2 py-2.5 w-12"></th>
               <th class="px-3 py-2.5 text-left">Name</th>
@@ -197,7 +190,7 @@
               :key="p.id"
               :class="['border-b dark:border-gray-700 last:border-0 transition-colors', p.caught ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-gray-50 dark:hover:bg-gray-700/40']"
             >
-              <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums">{{ p.nac }}</td>
+              <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums hidden sm:table-cell">{{ p.nac }}</td>
               <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums">{{ p.dex_num }}</td>
               <td class="px-1 py-1 w-12 text-center">
                 <img v-if="p.icon_url" :src="p.icon_url" :alt="p.name"
