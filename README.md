@@ -37,6 +37,32 @@ Runs with a backend (Express + SQLite) served via Docker. Progress is stored in 
 
 ---
 
+## Install as app (PWA)
+
+The app can be installed on your device and used like a native app.
+
+### Android (Chrome)
+
+1. Open the app in Chrome
+2. Tap the **"Add to home screen"** banner, or open the menu (⋮) and tap **"Add to home screen"**
+3. Confirm and tap **Add**
+
+### iOS (Safari)
+
+1. Open the app in **Safari** (must be Safari, not Chrome or other browsers)
+2. Tap the **Share** button (square with arrow, bottom toolbar)
+3. Scroll down and tap **"Add to Home Screen"**
+4. Confirm the name and tap **Add**
+
+> On iOS, the app cache may be cleared by the system if the app is not used for 7+ days.
+
+### Desktop (Chrome / Edge)
+
+1. Open the app
+2. Click the install icon in the address bar (or open the browser menu and look for **"Install app"**)
+
+---
+
 ## Project structure
 
 ```
