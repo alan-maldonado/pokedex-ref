@@ -267,7 +267,7 @@
           class="text-sm font-bold text-red-400 hover:text-red-300 transition-colors"
         >Undo</button>
         <div class="w-16 h-1 bg-gray-600 rounded-full overflow-hidden">
-          <div class="h-full bg-red-400 rounded-full" :style="{ width: undoProgress + '%', transition: 'width 2s linear' }" />
+          <div class="h-full bg-red-400 rounded-full" :style="{ width: undoProgress + '%', transition: 'width 3s linear' }" />
         </div>
       </div>
     </transition>
@@ -378,7 +378,7 @@ function toggleCaught(p) {
   if (undoToast.value) clearTimeout(undoToast.value.timer)
 
   undoProgress.value = 100
-  const timer = setTimeout(() => commitUndo(undoToast.value), 2000)
+  const timer = setTimeout(() => commitUndo(undoToast.value), 3000)
   undoToast.value = { pokemon: p, prevCaught, dex, timer }
   // Trigger progress bar animation on next tick
   requestAnimationFrame(() => { undoProgress.value = 0 })
