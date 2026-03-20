@@ -165,10 +165,10 @@ def main():
             "year": 2019,
         },
         "dexes": [
-            {"slug": "galar",    "name": "Pokédex de Galar",            "col_label": "GAL", "pokemon": galar},
-            {"slug": "armadura", "name": "Pokédex de la Isla Armadura", "col_label": "ARM", "pokemon": armadura},
-            {"slug": "corona",   "name": "Pokédex de la Tundra Corona", "col_label": "COR", "pokemon": corona},
-            {"slug": "otros",    "name": "Otros Pokémon",               "col_label": "NAC", "pokemon": otros},
+            {"slug": "galar",    "name": "Galar",         "col_label": "GAL", "pokemon": galar},
+            {"slug": "armadura", "name": "Isla Armadura", "col_label": "ARM", "pokemon": armadura},
+            {"slug": "corona",   "name": "Tundra Corona", "col_label": "COR", "pokemon": corona},
+            {"slug": "otros",    "name": "Otros",         "col_label": "NAC", "pokemon": otros},
         ],
     }
 

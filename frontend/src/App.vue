@@ -55,13 +55,13 @@
         </div>
 
         <!-- Dex tabs -->
-        <div class="flex gap-1" v-if="selectedGame">
+        <div class="flex gap-1 overflow-x-auto" v-if="selectedGame">
           <button
             v-for="dex in selectedGame.dexes"
             :key="dex.id"
             @click="selectDex(dex)"
             :class="[
-              'px-5 py-2 text-sm font-semibold rounded-t-lg transition-colors',
+              'px-5 py-2 text-sm font-semibold rounded-t-lg transition-colors whitespace-nowrap flex-shrink-0',
               selectedDex?.id === dex.id
                 ? 'bg-gray-100 text-red-600'
                 : 'text-white/80 hover:text-white hover:bg-red-700'
