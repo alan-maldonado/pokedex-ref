@@ -454,10 +454,12 @@ function toggleCaught(p) {
 
   if (undoToast.value) clearTimeout(undoToast.value.timer)
 
+  // Save immediately — undo will make a second request to revert
+  persistCaught(p)
+
   undoProgress.value = 100
-  const timer = setTimeout(() => commitUndo(undoToast.value), 3000)
+  const timer = setTimeout(() => { undoToast.value = null }, 3000)
   undoToast.value = { pokemon: p, prevCaught, dex, timer }
-  // Trigger progress bar animation on next tick
   requestAnimationFrame(() => { undoProgress.value = 0 })
 }
 
@@ -478,11 +480,10 @@ async function persistCaught(p) {
   }
 }
 
-async function commitUndo(toast) {
+function commitUndo(toast) {
   if (!toast) return
   if (undoToast.value?.timer === toast.timer) undoToast.value = null
   clearTimeout(toast.timer)
-  await persistCaught(toast.pokemon)
 }
 
 function doUndo() {
@@ -494,6 +495,9 @@ function doUndo() {
   const wasCaught = !!p.caught
   p.caught = prevCaught
   if (dex) dex.caught += wasCaught ? -1 : 1
+
+  // Static: revert localStorage to previous state
+  if (STATIC) persistCaught(p)
 }
 
 function exportData() {
