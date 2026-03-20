@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Scraper for Pokémon Legends: Z-A (WikiDex).
-Downloads the Ciudad Luminalia and Dimensional Pokédexes, including regional
-variants and alternate forms.
-Output: backend/data/games/legends-za.json  (see scrapers/README.md)
+Scraper for Pokémon Legends: Arceus (WikiDex).
+Downloads the Hisui Pokédex including regional variants and alternate forms.
+Output: backend/data/games/legends-arceus.json  (see scrapers/README.md)
 """
 
 import json
@@ -12,9 +11,9 @@ import re
 import urllib.request
 
 
-SOURCE_URL = "https://www.wikidex.net/wiki/Lista_de_Pok%C3%A9mon_seg%C3%BAn_la_Pok%C3%A9dex_de_Ciudad_Luminalia"
+SOURCE_URL = "https://www.wikidex.net/wiki/Lista_de_Pok%C3%A9mon_seg%C3%BAn_la_Pok%C3%A9dex_de_Hisui"
 OUTPUT_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                           "backend", "data", "games", "legends-za.json")
+                           "backend", "data", "games", "legends-arceus.json")
 
 
 def download(url):
@@ -25,23 +24,7 @@ def download(url):
         return r.read()
 
 
-def get_icon_url(cell_html):
-    """Returns the highest-res URL from the FIRST <img> in the cell."""
-    img_match = re.search(r'<img([^>]+)>', cell_html)
-    if not img_match:
-        return None
-    attrs = img_match.group(1)
-    srcset = re.search(r'srcset="([^"]+)"', attrs)
-    if srcset:
-        last = srcset.group(1).split(",")[-1].strip().split(" ")[0]
-        if last:
-            return last
-    src = re.search(r'src="([^"]+)"', attrs)
-    return src.group(1) if src else None
-
-
 def get_all_icons(cell_html):
-    """Returns list of (alt_name, url) for every <img> in the cell."""
     results = []
     for img_match in re.finditer(r'<img([^>]+)>', cell_html):
         attrs = img_match.group(1)
@@ -58,7 +41,6 @@ def get_all_icons(cell_html):
 
 
 def get_icon_name(cell_html):
-    """Returns the alt text of the first <img> (name fallback for rowspanned name cells)."""
     m = re.search(r'<img[^>]+alt="([^"]+)"', cell_html)
     return m.group(1) if m else ""
 
@@ -75,16 +57,14 @@ def get_types(cells_html):
 
 
 def parse_table(table_html):
-    # Keep full cell tags so we can read rowspan attributes
     rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL)
 
     entries = []
     pending_nac  = None
-    pending_lum  = None
-    pending_name = None  # set when the name cell itself has rowspan
+    pending_his  = None
+    pending_name = None
 
     for row in rows:
-        # Capture (opening_tag, inner_content) for each cell
         cells = re.findall(r'(<t[dh][^>]*>)(.*?)</t[dh]>', row, re.DOTALL)
         if not cells:
             continue
@@ -93,17 +73,15 @@ def parse_table(table_html):
         first_content = cell_text(cells[0][1])
 
         if re.match(r'^\d+$', first_content) and n >= 4:
-            # Normal row: has national number and dex number
             nac = first_content
-            lum = cell_text(cells[1][1])
+            his = cell_text(cells[1][1])
 
             rowspan_match = re.search(r'rowspan="(\d+)"', cells[0][0])
             if rowspan_match and int(rowspan_match.group(1)) > 1:
-                pending_nac, pending_lum = nac, lum
+                pending_nac, pending_his = nac, his
             else:
-                pending_nac = pending_lum = pending_name = None
+                pending_nac = pending_his = pending_name = None
 
-            # If the name cell also has rowspan, save it for upcoming variant rows
             name = cell_text(cells[3][1])
             name_rowspan = re.search(r'rowspan="(\d+)"', cells[3][0])
             pending_name = name if (name_rowspan and int(name_rowspan.group(1)) > 1) else None
@@ -112,81 +90,74 @@ def parse_table(table_html):
             icons = get_all_icons(cells[2][1])
 
             if len(icons) > 1:
-                # Multiple forms packed into one row (e.g. Floette, Flabébé)
                 for form_name, icon_url in icons:
                     entries.append({
-                        "nac": nac, "dex_num": lum,
+                        "nac": nac, "dex_num": his,
                         "name": form_name or name,
                         "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
                     })
             else:
                 icon_url = icons[0][1] if icons else None
                 entries.append({
-                    "nac": nac, "dex_num": lum, "name": name,
+                    "nac": nac, "dex_num": his, "name": name,
                     "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
                 })
 
         elif n <= 4 and pending_nac:
-            # Variant row: national/dex numbers come from the rowspan above
-            icon_url = get_icon_url(cells[0][1])
+            icons = get_all_icons(cells[0][1])
 
             if n >= 3 and 'alt="Tipo ' not in cells[1][1]:
-                # [icon, name, type] — e.g. Raichu de Alola
                 name = cell_text(cells[1][1])
                 tipo1, tipo2 = get_types([c[1] for c in cells[1:]])
             else:
-                # [icon, type] or [icon, type1, type2] — name lives in the icon alt
                 name = get_icon_name(cells[0][1]) or pending_name
                 tipo1, tipo2 = get_types([c[1] for c in cells])
 
-            entries.append({
-                "nac": pending_nac, "dex_num": pending_lum, "name": name,
-                "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
-            })
+            if len(icons) > 1:
+                for form_name, icon_url in icons:
+                    entries.append({
+                        "nac": pending_nac, "dex_num": pending_his,
+                        "name": form_name or name,
+                        "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
+                    })
+            else:
+                icon_url = icons[0][1] if icons else None
+                entries.append({
+                    "nac": pending_nac, "dex_num": pending_his, "name": name,
+                    "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
+                })
 
     return [e for e in entries if not e['name'].startswith('Tipo ')]
-
-
-def parse_all_tables(html):
-    tables = re.findall(
-        r'<table class="sortable tabpokemon"[^>]*>(.*?)</table>',
-        html, re.DOTALL
-    )
-    return [parse_table(t) for t in tables]
 
 
 def main():
     print("Downloading page...")
     html = download(SOURCE_URL).decode("utf-8")
 
-    print("Parsing tables...")
-    all_entries = parse_all_tables(html)
-    if len(all_entries) < 2:
-        print(f"Error: expected 2 tables, found {len(all_entries)}.")
+    print("Parsing table...")
+    tables = re.findall(
+        r'<table class="sortable tabpokemon"[^>]*>(.*?)</table>',
+        html, re.DOTALL
+    )
+    if not tables:
+        print("Error: table not found.")
         return
 
-    luminalia, dimensional = all_entries[0], all_entries[1]
-    print(f"  Luminalia:   {len(luminalia)} entries (including variants)")
-    print(f"  Dimensional: {len(dimensional)} entries (including variants)")
+    hisui = parse_table(tables[0])
+    print(f"  Hisui: {len(hisui)} entries (including variants)")
 
     data = {
         "game": {
-            "slug": "legends-za",
-            "name": "Pokémon Legends: Z-A",
-            "year": 2025,
+            "slug": "legends-arceus",
+            "name": "Pokémon Legends: Arceus",
+            "year": 2022,
         },
         "dexes": [
             {
-                "slug":      "luminalia",
-                "name":      "Pokédex de Ciudad Luminalia",
-                "col_label": "LUM",
-                "pokemon":   luminalia,
-            },
-            {
-                "slug":      "dimensional",
-                "name":      "Pokédex Dimensional",
-                "col_label": "DIM",
-                "pokemon":   dimensional,
+                "slug":      "hisui",
+                "name":      "Pokédex de Hisui",
+                "col_label": "HIS",
+                "pokemon":   hisui,
             },
         ],
     }

@@ -136,7 +136,7 @@ def parse_table(table_html, has_dex_num=True):
                     "tipo1": tipo1, "tipo2": tipo2 or "", "icon_url": icon_url,
                 })
 
-    return entries
+    return [e for e in entries if not e['name'].startswith('Tipo ')]
 
 
 def main():
