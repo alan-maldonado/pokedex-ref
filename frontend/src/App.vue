@@ -144,6 +144,28 @@
         </div>
         <span class="text-sm text-gray-600 dark:text-gray-400 select-none">Hide forms</span>
       </label>
+
+      <!-- Export / Import (static mode only) -->
+      <template v-if="STATIC">
+        <button
+          @click="exportData"
+          title="Export progress"
+          class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+        </button>
+        <label
+          title="Import progress"
+          class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+          </svg>
+          <input type="file" accept=".json" class="hidden" @change="importData" />
+        </label>
+      </template>
     </div>
 
     <!-- Table -->
@@ -472,6 +494,40 @@ function doUndo() {
   const wasCaught = !!p.caught
   p.caught = prevCaught
   if (dex) dex.caught += wasCaught ? -1 : 1
+}
+
+function exportData() {
+  const caught = {}
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    if (key.startsWith('pokedex:caught:')) {
+      caught[key] = JSON.parse(localStorage.getItem(key))
+    }
+  }
+  const blob = new Blob([JSON.stringify({ version: 1, exported: new Date().toISOString(), caught }, null, 2)], { type: 'application/json' })
+  const a = document.createElement('a')
+  a.href = URL.createObjectURL(blob)
+  a.download = `pokedex-progress-${new Date().toISOString().slice(0, 10)}.json`
+  a.click()
+  URL.revokeObjectURL(a.href)
+}
+
+async function importData(e) {
+  const file = e.target.files[0]
+  if (!file) return
+  try {
+    const text = await file.text()
+    const { caught } = JSON.parse(text)
+    if (!caught || typeof caught !== 'object') throw new Error()
+    Object.entries(caught).forEach(([key, val]) => {
+      if (key.startsWith('pokedex:caught:')) localStorage.setItem(key, JSON.stringify(val))
+    })
+    await loadGames()
+    await loadPokemon()
+  } catch {
+    alert('Invalid file.')
+  }
+  e.target.value = ''
 }
 
 // ── Watchers ───────────────────────────────────────────────────────────────────

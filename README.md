@@ -1,10 +1,39 @@
-# Pokédex Reference App
+# Pokédex Tracker
 
-A personal Pokédex tracker built with Vue 3 + Vite + Tailwind (frontend) and Express + SQLite (backend). Tracks caught Pokémon across multiple games and regional Pokédexes.
+Track your caught Pokémon across multiple games and Pokédexes.
 
-Currently includes **Pokémon Legends: Z-A**:
-- Pokédex de Ciudad Luminalia (256 entries)
-- Pokédex Dimensional (152 entries)
+**Live demo:** https://alan-maldonado.github.io/pokedex-ref
+
+---
+
+## Modes
+
+### Static (GitHub Pages)
+The live demo runs entirely in the browser — no server required. Game data is bundled at build time and caught progress is saved in your browser's `localStorage`.
+
+- No setup required
+- Progress is saved per browser/device and is not synced across devices
+- Clearing browser data will reset your progress
+
+### Self-hosted
+Runs with a backend (Express + SQLite) served via Docker. Progress is stored in a database and persists independently of the browser.
+
+- Progress syncs across all devices on the same network
+- Data survives browser clears
+- Supports resetting or editing progress via the database
+
+---
+
+## Games included
+
+| Game | Pokédexes |
+|------|-----------|
+| Pokémon Legends: Z-A | Luminalia, Dimensional |
+| Pokémon Scarlet & Violet | Paldea, Noroteo, Arándano, Otros |
+| Pokémon Sword & Shield | Galar, Isla Armadura, Tundra Corona, Otros |
+| Pokémon Legends: Arceus | Hisui |
+| Pokémon Brilliant Diamond & Shining Pearl | Sinnoh |
+| Pokémon: Let's Go, Pikachu! & Let's Go, Eevee! | Kanto |
 
 ---
 
@@ -17,111 +46,68 @@ pokedex-ref/
 │   └── data/
 │       └── games/        JSON data files, one per game
 ├── frontend/             Vue 3 + Vite + Tailwind
-│   └── src/App.vue
-├── scrapers/             Data scraper scripts
-│   ├── legends_za.py     Scraper for Pokémon Legends: Z-A
-│   └── README.md         Guide for adding new games
+│   └── src/
+│       ├── App.vue
+│       └── data/         Game JSONs bundled for static mode
+├── scrapers/             Data scraper scripts (Python)
 └── docker-compose.yml
 ```
 
 ---
 
-## Running locally (Node)
+## Self-hosted setup
 
-### Prerequisites
-- Node.js 20+
-- Python 3.9+ (only needed to regenerate data)
-
-### 1. Generate the game data
+Requires Docker.
 
 ```bash
-python3 scrapers/legends_za.py
-# Outputs: backend/data/games/legends-za.json
+git clone https://github.com/alan-maldonado/pokedex-ref.git
+cd pokedex-ref
+docker compose up -d --build
 ```
 
-> Skip this step if `backend/data/games/legends-za.json` already exists.
+Open `http://localhost:4001`
 
-### 2. Start the backend
+### Adding a new game
+
+Run the scraper, then restart the backend:
 
 ```bash
-cd backend
-npm install
-node server.js
-# API running on http://localhost:3000
+python3 scrapers/scarlet_violet.py
+docker compose restart backend
 ```
 
-The backend seeds the SQLite database from the JSON files on first run.
+Available scrapers in `scrapers/`.
 
-### 3. Start the frontend
+### Resetting progress for a specific dex
 
 ```bash
-cd frontend
-npm install
-npm run dev
-# App running on http://localhost:5173
+docker compose stop backend
+sqlite3 backend/data/pokemon.db "DELETE FROM pokemon WHERE dex_id = (SELECT id FROM dexes WHERE slug = 'dex-slug');"
+docker compose start backend
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+### Resetting all progress
+
+Delete `backend/data/pokemon.db` and restart — the database will be re-seeded from the JSON files.
 
 ---
 
-## Running with Docker Compose
-
-### Prerequisites
-- Docker Desktop
-
-### 1. Generate the game data
+## Running locally (without Docker)
 
 ```bash
-python3 scrapers/legends_za.py
-# Outputs: backend/data/games/legends-za.json
-```
+# Backend
+cd backend && npm install && node server.js
 
-### 2. Build and start
-
-```bash
-docker-compose up --build
-```
-
-| Service  | URL |
-|----------|-----|
-| App      | http://localhost:4001 |
-| API      | http://localhost:4001/api |
-
-The `backend/data/` directory is mounted as a volume, so the SQLite database
-and JSON files persist between container restarts.
-
-### Stop
-
-```bash
-docker-compose down
+# Frontend (separate terminal)
+cd frontend && npm install && npm run dev
 ```
 
 ---
 
-## API reference
+## API
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/api/games` | All games with dexes and caught/total counts |
-| `GET` | `/api/dexes/:id/pokemon` | All Pokémon for a specific dex |
-| `PUT` | `/api/pokemon/:id/caught` | Toggle caught status `{ caught: true\|false }` |
-
----
-
-## Adding a new game
-
-See **[scrapers/README.md](scrapers/README.md)** for the full guide.
-
-Short version:
-1. Copy the scraper template from `scrapers/README.md`
-2. Save it as `scrapers/<game-slug>.py` and fill in the config
-3. Run it — outputs to `backend/data/games/<game-slug>.json`
-4. Restart the backend — the new game appears automatically in the app
-
----
-
-## Resetting caught progress
-
-Delete `backend/data/pokemon.db` and restart the backend. The database will be
-re-seeded from the JSON files with all caught statuses reset to zero.
+| `GET` | `/api/dexes/:id/pokemon` | All Pokémon for a dex |
+| `PUT` | `/api/pokemon/:id/caught` | Toggle caught `{ caught: true\|false }` |
