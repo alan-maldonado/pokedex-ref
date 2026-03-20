@@ -147,7 +147,7 @@
             :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideCaught ? 'bg-red-500' : 'bg-gray-300 dark:bg-gray-600']">
             <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideCaught ? 'translate-x-4' : 'translate-x-0.5']" />
           </div>
-          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Caught</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide caught</span>
         </label>
 
         <!-- Hide forms toggle -->
@@ -156,7 +156,7 @@
             :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideForms ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600']">
             <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideForms ? 'translate-x-4' : 'translate-x-0.5']" />
           </div>
-          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Forms</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide forms</span>
         </label>
       </div>
     </div>
