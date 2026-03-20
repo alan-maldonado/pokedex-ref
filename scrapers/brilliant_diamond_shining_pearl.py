@@ -140,15 +140,12 @@ def main():
         r'<table class="sortable tabpokemon"[^>]*>(.*?)</table>',
         html, re.DOTALL
     )
-    if len(tables) < 2:
-        print(f"Error: expected 2 tables, found {len(tables)}.")
+    if not tables:
+        print("Error: table not found.")
         return
 
-    sinnoh    = parse_table(tables[0])
-    extendida = parse_table(tables[1])
-
-    print(f"  Sinnoh:            {len(sinnoh)} entries")
-    print(f"  Sinnoh Extendida:  {len(extendida)} entries")
+    sinnoh = parse_table(tables[0])
+    print(f"  Sinnoh: {len(sinnoh)} entries")
 
     data = {
         "game": {
@@ -157,8 +154,7 @@ def main():
             "year": 2021,
         },
         "dexes": [
-            {"slug": "sinnoh",    "name": "Pokédex de Sinnoh",           "col_label": "SIN",  "pokemon": sinnoh},
-            {"slug": "extendida", "name": "Pokédex de Sinnoh Extendida", "col_label": "SIN+", "pokemon": extendida},
+            {"slug": "sinnoh", "name": "Pokédex de Sinnoh", "col_label": "SIN", "pokemon": sinnoh},
         ],
     }
 
