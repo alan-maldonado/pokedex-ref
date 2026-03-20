@@ -245,6 +245,33 @@
     </div>
 
   </div>
+    <!-- Undo toast -->
+    <transition
+      enter-active-class="transition-all duration-200 ease-out"
+      enter-from-class="opacity-0 translate-y-4"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition-all duration-200 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-4"
+    >
+      <div
+        v-if="undoToast"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-gray-900 dark:bg-gray-700 text-white px-4 py-3 rounded-xl shadow-xl"
+      >
+        <span class="text-sm">
+          <span class="font-semibold">{{ undoToast.pokemon.name }}</span>
+          {{ undoToast.pokemon.caught ? ' caught' : ' uncaught' }}
+        </span>
+        <button
+          @click="doUndo"
+          class="text-sm font-bold text-red-400 hover:text-red-300 transition-colors"
+        >Undo</button>
+        <div class="w-16 h-1 bg-gray-600 rounded-full overflow-hidden">
+          <div class="h-full bg-red-400 rounded-full" :style="{ width: undoProgress + '%', transition: 'width 2s linear' }" />
+        </div>
+      </div>
+    </transition>
+
   </div>
 </template>
 
@@ -269,6 +296,8 @@ const pokemon          = ref([])
 const loading          = ref(false)
 const gameDropdownOpen = ref(false)
 const gameDropdownRef  = ref(null)
+const undoToast        = ref(null)
+const undoProgress     = ref(100)
 const darkMode         = ref(localStorage.getItem('darkMode') === 'true')
 const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
 const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
@@ -333,18 +362,48 @@ function selectDex(dex) {
   selectedDex.value = dex
 }
 
-async function toggleCaught(p) {
+function toggleCaught(p) {
+  // Commit any previous pending toast immediately
+  if (undoToast.value && undoToast.value.pokemon.id !== p.id) {
+    commitUndo(undoToast.value)
+  }
+
+  const prevCaught = p.caught
   const newVal = !p.caught
   p.caught = newVal ? 1 : 0
 
   const dex = selectedGame.value?.dexes.find(d => d.id === selectedDex.value?.id)
   if (dex) dex.caught += newVal ? 1 : -1
 
-  await fetch(`/api/pokemon/${p.id}/caught`, {
+  if (undoToast.value) clearTimeout(undoToast.value.timer)
+
+  undoProgress.value = 100
+  const timer = setTimeout(() => commitUndo(undoToast.value), 2000)
+  undoToast.value = { pokemon: p, prevCaught, dex, timer }
+  // Trigger progress bar animation on next tick
+  requestAnimationFrame(() => { undoProgress.value = 0 })
+}
+
+async function commitUndo(toast) {
+  if (!toast) return
+  if (undoToast.value?.timer === toast.timer) undoToast.value = null
+  clearTimeout(toast.timer)
+  await fetch(`/api/pokemon/${toast.pokemon.id}/caught`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ caught: newVal }),
+    body: JSON.stringify({ caught: !!toast.pokemon.caught }),
   })
+}
+
+function doUndo() {
+  if (!undoToast.value) return
+  const { pokemon: p, prevCaught, dex, timer } = undoToast.value
+  clearTimeout(timer)
+  undoToast.value = null
+
+  const wasCaught = !!p.caught
+  p.caught = prevCaught
+  if (dex) dex.caught += wasCaught ? -1 : 1
 }
 
 // ── Watchers ───────────────────────────────────────────────────────────────────
