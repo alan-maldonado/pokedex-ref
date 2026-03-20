@@ -209,8 +209,26 @@
                 </div>
               </td>
               <td class="px-3 py-1.5 text-center">
-                <input type="checkbox" :checked="!!p.caught" @change="toggleCaught(p)"
-                  class="w-4 h-4 cursor-pointer accent-green-500 rounded" />
+                <button @click="toggleCaught(p)" class="inline-flex items-center justify-center w-8 h-8 rounded-full transition-transform hover:scale-110 active:scale-95">
+                  <svg viewBox="0 0 100 100" class="w-7 h-7">
+                    <template v-if="p.caught">
+                      <!-- Caught: full Pokéball -->
+                      <circle cx="50" cy="50" r="47" fill="#dc2626" stroke="#1f2937" stroke-width="5"/>
+                      <rect x="3" y="45" width="94" height="10" fill="#1f2937"/>
+                      <circle cx="50" cy="50" r="15" fill="white" stroke="#1f2937" stroke-width="5"/>
+                      <circle cx="50" cy="50" r="7" fill="#1f2937"/>
+                    </template>
+                    <template v-else>
+                      <!-- Not caught: outline Pokéball -->
+                      <circle cx="50" cy="50" r="47" fill="none" stroke="#d1d5db" stroke-width="5"/>
+                      <path d="M3 50 Q3 3 50 3" stroke="#d1d5db" stroke-width="5" fill="none"/>
+                      <path d="M50 3 Q97 3 97 50" stroke="#d1d5db" stroke-width="5" fill="none"/>
+                      <rect x="3" y="45" width="94" height="10" fill="#d1d5db"/>
+                      <circle cx="50" cy="50" r="15" fill="none" stroke="#d1d5db" stroke-width="5"/>
+                      <circle cx="50" cy="50" r="7" fill="#d1d5db"/>
+                    </template>
+                  </svg>
+                </button>
               </td>
             </tr>
 
