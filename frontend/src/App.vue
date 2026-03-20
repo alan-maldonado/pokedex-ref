@@ -226,7 +226,7 @@
                 </div>
               </td>
               <td class="px-3 py-1.5 text-center">
-                <button @click="toggleCaught(p)" class="inline-flex items-center justify-center w-8 h-8 rounded-full transition-transform hover:scale-110 active:scale-95">
+                <button @click="toggleCaught(p)" :class="['inline-flex items-center justify-center w-8 h-8 rounded-full', catching.has(p.id) ? 'pokeball-catch' : 'transition-transform hover:scale-110 active:scale-95']">
                   <svg viewBox="0 0 100 100" class="w-7 h-7">
                     <template v-if="p.caught">
                       <circle cx="50" cy="50" r="47" fill="#dc2626" stroke="#1f2937" stroke-width="5"/>
@@ -342,6 +342,7 @@ const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
 const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
 const search           = ref(sessionStorage.getItem('search') ?? '')
 const fadingOut        = ref(new Set())
+const catching         = ref(new Set())
 
 // ── Derived ────────────────────────────────────────────────────────────────────
 const selectedGame = computed(() =>
@@ -443,6 +444,15 @@ function toggleCaught(p) {
   const newVal = !p.caught
   p.caught = newVal ? 1 : 0
 
+  if (newVal) {
+    catching.value.add(p.id)
+    catching.value = new Set(catching.value)
+    setTimeout(() => {
+      catching.value.delete(p.id)
+      catching.value = new Set(catching.value)
+    }, 850)
+  }
+
   if (newVal && hideCaught.value) {
     fadingOut.value.add(p.id)
     fadingOut.value = new Set(fadingOut.value)
@@ -500,6 +510,8 @@ function doUndo() {
   if (dex) dex.caught += wasCaught ? -1 : 1
   fadingOut.value.delete(p.id)
   fadingOut.value = new Set(fadingOut.value)
+  catching.value.delete(p.id)
+  catching.value = new Set(catching.value)
 
   // Static: revert localStorage to previous state
   if (STATIC) persistCaught(p)

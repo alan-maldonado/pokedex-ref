@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes pokeball-catch {
+  0%   { transform: scale(1)    rotate(0deg);   }
+  8%   { transform: scale(1.45) rotate(0deg);   }
+  22%  { transform: scale(1.25) rotate(-28deg); }
+  36%  { transform: scale(1.25) rotate(28deg);  }
+  50%  { transform: scale(1.2)  rotate(-22deg); }
+  64%  { transform: scale(1.2)  rotate(22deg);  }
+  78%  { transform: scale(1.1)  rotate(-10deg); }
+  90%  { transform: scale(1.05) rotate(5deg);   }
+  100% { transform: scale(1)    rotate(0deg);   }
+}
+
+.pokeball-catch {
+  animation: pokeball-catch 0.85s ease-out forwards;
+}
+
 @keyframes caught-fade-out {
   0%   { opacity: 1; transform: translateX(0); }
   60%  { opacity: 0.4; transform: translateX(6px); }
