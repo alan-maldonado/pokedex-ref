@@ -8,7 +8,7 @@
         <!-- Game title + selector -->
         <div class="flex items-center gap-3 mb-3">
           <div class="w-8 h-8 rounded-full bg-white border-4 border-gray-800 flex-shrink-0" />
-          <div class="relative">
+          <div class="relative" ref="gameDropdownRef">
             <p class="text-white/60 text-xs uppercase tracking-widest leading-none mb-0.5">Pokédex</p>
 
             <!-- Single game: plain title -->
@@ -249,6 +249,7 @@ const selectedDex      = ref(null)
 const pokemon          = ref([])
 const loading          = ref(false)
 const gameDropdownOpen = ref(false)
+const gameDropdownRef  = ref(null)
 const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
 const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
 const search           = ref(sessionStorage.getItem('search') ?? '')
@@ -346,7 +347,9 @@ watch(selectedDex, (dex) => {
 onMounted(() => {
   loadGames()
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.relative')) gameDropdownOpen.value = false
+    if (gameDropdownRef.value && !gameDropdownRef.value.contains(e.target)) {
+      gameDropdownOpen.value = false
+    }
   })
 })
 </script>
