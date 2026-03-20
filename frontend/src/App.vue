@@ -77,7 +77,7 @@
             :class="[
               'px-5 py-2 text-sm font-semibold rounded-t-lg transition-colors whitespace-nowrap flex-shrink-0',
               selectedDex?.id === dex.id
-                ? 'bg-gray-100 dark:bg-gray-900 text-red-600'
+                ? 'bg-gray-100 dark:bg-gray-900 text-red-600 dark:text-white'
                 : 'text-white/80 hover:text-white hover:bg-red-700'
             ]"
           >
