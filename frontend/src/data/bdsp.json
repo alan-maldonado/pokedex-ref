@@ -1,0 +1,1280 @@
+{
+  "game": {
+    "slug": "bdsp",
+    "name": "Pokémon Brilliant Diamond & Shining Pearl",
+    "year": 2021
+  },
+  "dexes": [
+    {
+      "slug": "sinnoh",
+      "name": "Pokédex de Sinnoh",
+      "col_label": "SIN",
+      "pokemon": [
+        {
+          "nac": "0387",
+          "dex_num": "001",
+          "name": "Turtwig",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3e/latest/20221207213124/Turtwig_icono_DBPR.png/96px-Turtwig_icono_DBPR.png"
+        },
+        {
+          "nac": "0388",
+          "dex_num": "002",
+          "name": "Grotle",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20221207213146/Grotle_icono_DBPR.png/96px-Grotle_icono_DBPR.png"
+        },
+        {
+          "nac": "0389",
+          "dex_num": "003",
+          "name": "Torterra",
+          "tipo1": "Planta",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c6/latest/20221207212610/Torterra_icono_DBPR.png/96px-Torterra_icono_DBPR.png"
+        },
+        {
+          "nac": "0390",
+          "dex_num": "004",
+          "name": "Chimchar",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20221207213008/Chimchar_icono_DBPR.png/96px-Chimchar_icono_DBPR.png"
+        },
+        {
+          "nac": "0391",
+          "dex_num": "005",
+          "name": "Monferno",
+          "tipo1": "Fuego",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e2/latest/20221207212744/Monferno_icono_DBPR.png/96px-Monferno_icono_DBPR.png"
+        },
+        {
+          "nac": "0392",
+          "dex_num": "006",
+          "name": "Infernape",
+          "tipo1": "Fuego",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/84/latest/20221207213141/Infernape_icono_DBPR.png/96px-Infernape_icono_DBPR.png"
+        },
+        {
+          "nac": "0393",
+          "dex_num": "007",
+          "name": "Piplup",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f3/latest/20221207212900/Piplup_icono_DBPR.png/96px-Piplup_icono_DBPR.png"
+        },
+        {
+          "nac": "0394",
+          "dex_num": "008",
+          "name": "Prinplup",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a7/latest/20221207212919/Prinplup_icono_DBPR.png/96px-Prinplup_icono_DBPR.png"
+        },
+        {
+          "nac": "0395",
+          "dex_num": "009",
+          "name": "Empoleon",
+          "tipo1": "Agua",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/23/latest/20221207212922/Empoleon_icono_DBPR.png/96px-Empoleon_icono_DBPR.png"
+        },
+        {
+          "nac": "0396",
+          "dex_num": "010",
+          "name": "Starly",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c2/latest/20230412205910/Starly_icono_DBPR.png/96px-Starly_icono_DBPR.png"
+        },
+        {
+          "nac": "0397",
+          "dex_num": "011",
+          "name": "Staravia",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8e/latest/20230412210309/Staravia_icono_DBPR.png/96px-Staravia_icono_DBPR.png"
+        },
+        {
+          "nac": "0398",
+          "dex_num": "012",
+          "name": "Staraptor",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bb/latest/20230412210210/Staraptor_icono_DBPR.png/96px-Staraptor_icono_DBPR.png"
+        },
+        {
+          "nac": "0399",
+          "dex_num": "013",
+          "name": "Bidoof",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/be/latest/20221207212936/Bidoof_icono_DBPR.png/96px-Bidoof_icono_DBPR.png"
+        },
+        {
+          "nac": "0400",
+          "dex_num": "014",
+          "name": "Bibarel",
+          "tipo1": "Normal",
+          "tipo2": "Agua",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cb/latest/20221207212955/Bibarel_icono_DBPR.png/96px-Bibarel_icono_DBPR.png"
+        },
+        {
+          "nac": "0401",
+          "dex_num": "015",
+          "name": "Kricketot",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5c/latest/20230412210048/Kricketot_icono_DBPR.png/96px-Kricketot_icono_DBPR.png"
+        },
+        {
+          "nac": "0402",
+          "dex_num": "016",
+          "name": "Kricketune",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20230412210126/Kricketune_icono_DBPR.png/96px-Kricketune_icono_DBPR.png"
+        },
+        {
+          "nac": "0403",
+          "dex_num": "017",
+          "name": "Shinx",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/31/latest/20230412205923/Shinx_icono_DBPR.png/96px-Shinx_icono_DBPR.png"
+        },
+        {
+          "nac": "0404",
+          "dex_num": "018",
+          "name": "Luxio",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7d/latest/20230412210247/Luxio_icono_DBPR.png/96px-Luxio_icono_DBPR.png"
+        },
+        {
+          "nac": "0405",
+          "dex_num": "019",
+          "name": "Luxray",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c5/latest/20230412205647/Luxray_icono_DBPR.png/96px-Luxray_icono_DBPR.png"
+        },
+        {
+          "nac": "0063",
+          "dex_num": "020",
+          "name": "Abra",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6f/latest/20221118010228/Abra_icono_DBPR.png/96px-Abra_icono_DBPR.png"
+        },
+        {
+          "nac": "0064",
+          "dex_num": "021",
+          "name": "Kadabra",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7e/latest/20221118005735/Kadabra_icono_DBPR.png/96px-Kadabra_icono_DBPR.png"
+        },
+        {
+          "nac": "0065",
+          "dex_num": "022",
+          "name": "Alakazam",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2a/latest/20221118010216/Alakazam_icono_DBPR.png/96px-Alakazam_icono_DBPR.png"
+        },
+        {
+          "nac": "0129",
+          "dex_num": "023",
+          "name": "Magikarp",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/53/latest/20230412210144/Magikarp_icono_DBPR.png/96px-Magikarp_icono_DBPR.png"
+        },
+        {
+          "nac": "0130",
+          "dex_num": "024",
+          "name": "Gyarados",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/75/latest/20230412210242/Gyarados_icono_DBPR.png/96px-Gyarados_icono_DBPR.png"
+        },
+        {
+          "nac": "0406",
+          "dex_num": "025",
+          "name": "Budew",
+          "tipo1": "Planta",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e3/latest/20221207213139/Budew_icono_DBPR.png/96px-Budew_icono_DBPR.png"
+        },
+        {
+          "nac": "0315",
+          "dex_num": "026",
+          "name": "Roselia",
+          "tipo1": "Planta",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f7/latest/20221207212722/Roselia_icono_DBPR.png/96px-Roselia_icono_DBPR.png"
+        },
+        {
+          "nac": "0407",
+          "dex_num": "027",
+          "name": "Roserade",
+          "tipo1": "Planta",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/43/latest/20221207213103/Roserade_icono_DBPR.png/96px-Roserade_icono_DBPR.png"
+        },
+        {
+          "nac": "0041",
+          "dex_num": "028",
+          "name": "Zubat",
+          "tipo1": "Veneno",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20221118004651/Zubat_icono_DBPR.png/96px-Zubat_icono_DBPR.png"
+        },
+        {
+          "nac": "0042",
+          "dex_num": "029",
+          "name": "Golbat",
+          "tipo1": "Veneno",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e1/latest/20221118005852/Golbat_icono_DBPR.png/96px-Golbat_icono_DBPR.png"
+        },
+        {
+          "nac": "0169",
+          "dex_num": "030",
+          "name": "Crobat",
+          "tipo1": "Veneno",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/10/latest/20221207003215/Crobat_icono_DBPR.png/96px-Crobat_icono_DBPR.png"
+        },
+        {
+          "nac": "0074",
+          "dex_num": "031",
+          "name": "Geodude",
+          "tipo1": "Roca",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/90/latest/20221118005924/Geodude_icono_DBPR.png/96px-Geodude_icono_DBPR.png"
+        },
+        {
+          "nac": "0075",
+          "dex_num": "032",
+          "name": "Graveler",
+          "tipo1": "Roca",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/73/latest/20221118005817/Graveler_icono_DBPR.png/96px-Graveler_icono_DBPR.png"
+        },
+        {
+          "nac": "0076",
+          "dex_num": "033",
+          "name": "Golem",
+          "tipo1": "Roca",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20221118005834/Golem_icono_DBPR.png/96px-Golem_icono_DBPR.png"
+        },
+        {
+          "nac": "0095",
+          "dex_num": "034",
+          "name": "Onix",
+          "tipo1": "Roca",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8e/latest/20221118005135/Onix_icono_DBPR.png/96px-Onix_icono_DBPR.png"
+        },
+        {
+          "nac": "0208",
+          "dex_num": "035",
+          "name": "Steelix",
+          "tipo1": "Acero",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8d/latest/20221207004126/Steelix_icono_DBPR.png/96px-Steelix_icono_DBPR.png"
+        },
+        {
+          "nac": "0408",
+          "dex_num": "036",
+          "name": "Cranidos",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a0/latest/20221207212907/Cranidos_icono_DBPR.png/96px-Cranidos_icono_DBPR.png"
+        },
+        {
+          "nac": "0409",
+          "dex_num": "037",
+          "name": "Rampardos",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d6/latest/20221207212912/Rampardos_icono_DBPR.png/96px-Rampardos_icono_DBPR.png"
+        },
+        {
+          "nac": "0410",
+          "dex_num": "038",
+          "name": "Shieldon",
+          "tipo1": "Roca",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/11/latest/20221207212725/Shieldon_icono_DBPR.png/96px-Shieldon_icono_DBPR.png"
+        },
+        {
+          "nac": "0411",
+          "dex_num": "039",
+          "name": "Bastiodon",
+          "tipo1": "Roca",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/51/latest/20221207213101/Bastiodon_icono_DBPR.png/96px-Bastiodon_icono_DBPR.png"
+        },
+        {
+          "nac": "0066",
+          "dex_num": "040",
+          "name": "Machop",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/76/latest/20221118005536/Machop_icono_DBPR.png/96px-Machop_icono_DBPR.png"
+        },
+        {
+          "nac": "0067",
+          "dex_num": "041",
+          "name": "Machoke",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6c/latest/20221118005606/Machoke_icono_DBPR.png/96px-Machoke_icono_DBPR.png"
+        },
+        {
+          "nac": "0068",
+          "dex_num": "042",
+          "name": "Machamp",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e6/latest/20221118005620/Machamp_icono_DBPR.png/96px-Machamp_icono_DBPR.png"
+        },
+        {
+          "nac": "0054",
+          "dex_num": "043",
+          "name": "Psyduck",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/dc/latest/20230412205856/Psyduck_icono_DBPR.png/96px-Psyduck_icono_DBPR.png"
+        },
+        {
+          "nac": "0055",
+          "dex_num": "044",
+          "name": "Golduck",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ca/latest/20230412205625/Golduck_icono_DBPR.png/96px-Golduck_icono_DBPR.png"
+        },
+        {
+          "nac": "0412",
+          "dex_num": "045",
+          "name": "Burmy",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/eb/latest/20221207212739/Burmy_planta_icono_DBPR.png/96px-Burmy_planta_icono_DBPR.png"
+        },
+        {
+          "nac": "0412",
+          "dex_num": "045",
+          "name": "Burmy arena",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7a/latest/20221207212836/Burmy_arena_icono_DBPR.png/96px-Burmy_arena_icono_DBPR.png"
+        },
+        {
+          "nac": "0412",
+          "dex_num": "045",
+          "name": "Burmy basura",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/61/latest/20221207212938/Burmy_basura_icono_DBPR.png/96px-Burmy_basura_icono_DBPR.png"
+        },
+        {
+          "nac": "0413",
+          "dex_num": "046",
+          "name": "Wormadam",
+          "tipo1": "Bicho",
+          "tipo2": "Planta",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e0/latest/20221207213021/Wormadam_planta_icono_DBPR.png/96px-Wormadam_planta_icono_DBPR.png"
+        },
+        {
+          "nac": "0413",
+          "dex_num": "046",
+          "name": "Wormadam arena",
+          "tipo1": "Bicho",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/da/latest/20221207212727/Wormadam_arena_icono_DBPR.png/96px-Wormadam_arena_icono_DBPR.png"
+        },
+        {
+          "nac": "0413",
+          "dex_num": "046",
+          "name": "Wormadam basura",
+          "tipo1": "Bicho",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e2/latest/20221207213152/Wormadam_basura_icono_DBPR.png/96px-Wormadam_basura_icono_DBPR.png"
+        },
+        {
+          "nac": "0414",
+          "dex_num": "047",
+          "name": "Mothim",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/01/latest/20221207212825/Mothim_icono_DBPR.png/96px-Mothim_icono_DBPR.png"
+        },
+        {
+          "nac": "0265",
+          "dex_num": "048",
+          "name": "Wurmple",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/13/latest/20221207212748/Wurmple_icono_DBPR.png/96px-Wurmple_icono_DBPR.png"
+        },
+        {
+          "nac": "0266",
+          "dex_num": "049",
+          "name": "Silcoon",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f6/latest/20221207213006/Silcoon_icono_DBPR.png/96px-Silcoon_icono_DBPR.png"
+        },
+        {
+          "nac": "0267",
+          "dex_num": "050",
+          "name": "Beautifly",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/04/latest/20221207212707/Beautifly_icono_DBPR.png/96px-Beautifly_icono_DBPR.png"
+        },
+        {
+          "nac": "0268",
+          "dex_num": "051",
+          "name": "Cascoon",
+          "tipo1": "Bicho",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a7/latest/20221207213106/Cascoon_icono_DBPR.png/96px-Cascoon_icono_DBPR.png"
+        },
+        {
+          "nac": "0269",
+          "dex_num": "052",
+          "name": "Dustox",
+          "tipo1": "Bicho",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e0/latest/20221207212704/Dustox_icono_DBPR.png/96px-Dustox_icono_DBPR.png"
+        },
+        {
+          "nac": "0415",
+          "dex_num": "053",
+          "name": "Combee",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d4/latest/20221207100623/Combee_icono_DBPR.png/96px-Combee_icono_DBPR.png"
+        },
+        {
+          "nac": "0416",
+          "dex_num": "054",
+          "name": "Vespiquen",
+          "tipo1": "Bicho",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2b/latest/20230412210133/Vespiquen_icono_DBPR.png/96px-Vespiquen_icono_DBPR.png"
+        },
+        {
+          "nac": "0417",
+          "dex_num": "055",
+          "name": "Pachirisu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6d/latest/20230412210033/Pachirisu_icono_DBPR.png/96px-Pachirisu_icono_DBPR.png"
+        },
+        {
+          "nac": "0418",
+          "dex_num": "056",
+          "name": "Buizel",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/80/latest/20230412210238/Buizel_icono_DBPR.png/96px-Buizel_icono_DBPR.png"
+        },
+        {
+          "nac": "0419",
+          "dex_num": "057",
+          "name": "Floatzel",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/07/latest/20230412210021/Floatzel_icono_DBPR.png/96px-Floatzel_icono_DBPR.png"
+        },
+        {
+          "nac": "0420",
+          "dex_num": "058",
+          "name": "Cherubi",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/21/latest/20221207212651/Cherubi_icono_DBPR.png/96px-Cherubi_icono_DBPR.png"
+        },
+        {
+          "nac": "0421",
+          "dex_num": "059",
+          "name": "Cherrim",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e8/latest/20221207213136/Cherrim_encapotado_icono_DBPR.png/96px-Cherrim_encapotado_icono_DBPR.png"
+        },
+        {
+          "nac": "0421",
+          "dex_num": "059",
+          "name": "Cherrim soleado",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/db/latest/20221207212844/Cherrim_soleado_icono_DBPR.png/96px-Cherrim_soleado_icono_DBPR.png"
+        },
+        {
+          "nac": "0422",
+          "dex_num": "060",
+          "name": "Shellos oeste",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/29/latest/20230412210053/Shellos_oeste_icono_DBPR.png/96px-Shellos_oeste_icono_DBPR.png"
+        },
+        {
+          "nac": "0422",
+          "dex_num": "060",
+          "name": "Shellos este",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/06/latest/20230412205609/Shellos_este_icono_DBPR.png/96px-Shellos_este_icono_DBPR.png"
+        },
+        {
+          "nac": "0423",
+          "dex_num": "061",
+          "name": "Gastrodon oeste",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0d/latest/20230412210305/Gastrodon_oeste_icono_DBPR.png/96px-Gastrodon_oeste_icono_DBPR.png"
+        },
+        {
+          "nac": "0423",
+          "dex_num": "061",
+          "name": "Gastrodon este",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/41/latest/20230412205805/Gastrodon_este_icono_DBPR.png/96px-Gastrodon_este_icono_DBPR.png"
+        },
+        {
+          "nac": "0214",
+          "dex_num": "062",
+          "name": "Heracross",
+          "tipo1": "Bicho",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/38/latest/20230412210003/Heracross_icono_DBPR.png/96px-Heracross_icono_DBPR.png"
+        },
+        {
+          "nac": "0190",
+          "dex_num": "063",
+          "name": "Aipom",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fa/latest/20221207003713/Aipom_icono_DBPR.png/96px-Aipom_icono_DBPR.png"
+        },
+        {
+          "nac": "0424",
+          "dex_num": "064",
+          "name": "Ambipom",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/74/latest/20221207212833/Ambipom_icono_DBPR.png/96px-Ambipom_icono_DBPR.png"
+        },
+        {
+          "nac": "0425",
+          "dex_num": "065",
+          "name": "Drifloon",
+          "tipo1": "Fantasma",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20230412205630/Drifloon_icono_DBPR.png/96px-Drifloon_icono_DBPR.png"
+        },
+        {
+          "nac": "0426",
+          "dex_num": "066",
+          "name": "Drifblim",
+          "tipo1": "Fantasma",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/53/latest/20230412205814/Drifblim_icono_DBPR.png/96px-Drifblim_icono_DBPR.png"
+        },
+        {
+          "nac": "0427",
+          "dex_num": "067",
+          "name": "Buneary",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7a/latest/20221207212521/Buneary_icono_DBPR.png/96px-Buneary_icono_DBPR.png"
+        },
+        {
+          "nac": "0428",
+          "dex_num": "068",
+          "name": "Lopunny",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/12/latest/20221207213031/Lopunny_icono_DBPR.png/96px-Lopunny_icono_DBPR.png"
+        },
+        {
+          "nac": "0092",
+          "dex_num": "069",
+          "name": "Gastly",
+          "tipo1": "Fantasma",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a4/latest/20230412205943/Gastly_icono_DBPR.png/96px-Gastly_icono_DBPR.png"
+        },
+        {
+          "nac": "0093",
+          "dex_num": "070",
+          "name": "Haunter",
+          "tipo1": "Fantasma",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5e/latest/20230412205623/Haunter_icono_DBPR.png/96px-Haunter_icono_DBPR.png"
+        },
+        {
+          "nac": "0094",
+          "dex_num": "071",
+          "name": "Gengar",
+          "tipo1": "Fantasma",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/82/latest/20230412205956/Gengar_icono_DBPR.png/96px-Gengar_icono_DBPR.png"
+        },
+        {
+          "nac": "0200",
+          "dex_num": "072",
+          "name": "Misdreavus",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3e/latest/20230412205747/Misdreavus_icono_DBPR.png/96px-Misdreavus_icono_DBPR.png"
+        },
+        {
+          "nac": "0429",
+          "dex_num": "073",
+          "name": "Mismagius",
+          "tipo1": "Fantasma",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/86/latest/20230412205702/Mismagius_icono_DBPR.png/96px-Mismagius_icono_DBPR.png"
+        },
+        {
+          "nac": "0198",
+          "dex_num": "074",
+          "name": "Murkrow",
+          "tipo1": "Siniestro",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a1/latest/20230412210117/Murkrow_icono_DBPR.png/96px-Murkrow_icono_DBPR.png"
+        },
+        {
+          "nac": "0430",
+          "dex_num": "075",
+          "name": "Honchkrow",
+          "tipo1": "Siniestro",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0d/latest/20230412205756/Honchkrow_icono_DBPR.png/96px-Honchkrow_icono_DBPR.png"
+        },
+        {
+          "nac": "0431",
+          "dex_num": "076",
+          "name": "Glameow",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/71/latest/20221207213051/Glameow_icono_DBPR.png/96px-Glameow_icono_DBPR.png"
+        },
+        {
+          "nac": "0432",
+          "dex_num": "077",
+          "name": "Purugly",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20221207212904/Purugly_icono_DBPR.png/96px-Purugly_icono_DBPR.png"
+        },
+        {
+          "nac": "0118",
+          "dex_num": "078",
+          "name": "Goldeen",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8b/latest/20221118011319/Goldeen_icono_DBPR.png/96px-Goldeen_icono_DBPR.png"
+        },
+        {
+          "nac": "0119",
+          "dex_num": "079",
+          "name": "Seaking",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/14/latest/20221118011348/Seaking_icono_DBPR.png/96px-Seaking_icono_DBPR.png"
+        },
+        {
+          "nac": "0339",
+          "dex_num": "080",
+          "name": "Barboach",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f4/latest/20230412205845/Barboach_icono_DBPR.png/96px-Barboach_icono_DBPR.png"
+        },
+        {
+          "nac": "0340",
+          "dex_num": "081",
+          "name": "Whiscash",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f7/latest/20230412205644/Whiscash_icono_DBPR.png/96px-Whiscash_icono_DBPR.png"
+        },
+        {
+          "nac": "0433",
+          "dex_num": "082",
+          "name": "Chingling",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9f/latest/20221207212628/Chingling_icono_DBPR.png/96px-Chingling_icono_DBPR.png"
+        },
+        {
+          "nac": "0358",
+          "dex_num": "083",
+          "name": "Chimecho",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/ac/latest/20221207212924/Chimecho_icono_DBPR.png/96px-Chimecho_icono_DBPR.png"
+        },
+        {
+          "nac": "0434",
+          "dex_num": "084",
+          "name": "Stunky",
+          "tipo1": "Veneno",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2f/latest/20230412205822/Stunky_icono_DBPR.png/96px-Stunky_icono_DBPR.png"
+        },
+        {
+          "nac": "0435",
+          "dex_num": "085",
+          "name": "Skuntank",
+          "tipo1": "Veneno",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/69/latest/20230412205735/Skuntank_icono_DBPR.png/96px-Skuntank_icono_DBPR.png"
+        },
+        {
+          "nac": "0307",
+          "dex_num": "086",
+          "name": "Meditite",
+          "tipo1": "Lucha",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ca/latest/20230412210335/Meditite_icono_DBPR.png/96px-Meditite_icono_DBPR.png"
+        },
+        {
+          "nac": "0308",
+          "dex_num": "087",
+          "name": "Medicham",
+          "tipo1": "Lucha",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d9/latest/20230412205946/Medicham_icono_DBPR.png/96px-Medicham_icono_DBPR.png"
+        },
+        {
+          "nac": "0436",
+          "dex_num": "088",
+          "name": "Bronzor",
+          "tipo1": "Acero",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/67/latest/20230412205829/Bronzor_icono_DBPR.png/96px-Bronzor_icono_DBPR.png"
+        },
+        {
+          "nac": "0437",
+          "dex_num": "089",
+          "name": "Bronzong",
+          "tipo1": "Acero",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a8/latest/20230412210217/Bronzong_icono_DBPR.png/96px-Bronzong_icono_DBPR.png"
+        },
+        {
+          "nac": "0077",
+          "dex_num": "090",
+          "name": "Ponyta",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/35/latest/20221118005005/Ponyta_icono_DBPR.png/96px-Ponyta_icono_DBPR.png"
+        },
+        {
+          "nac": "0078",
+          "dex_num": "091",
+          "name": "Rapidash",
+          "tipo1": "Fuego",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/dc/latest/20221118004954/Rapidash_icono_DBPR.png/96px-Rapidash_icono_DBPR.png"
+        },
+        {
+          "nac": "0438",
+          "dex_num": "092",
+          "name": "Bonsly",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/95/latest/20230412205659/Bonsly_icono_DBPR.png/96px-Bonsly_icono_DBPR.png"
+        },
+        {
+          "nac": "0185",
+          "dex_num": "093",
+          "name": "Sudowoodo",
+          "tipo1": "Roca",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1c/latest/20230412210203/Sudowoodo_icono_DBPR.png/96px-Sudowoodo_icono_DBPR.png"
+        },
+        {
+          "nac": "0439",
+          "dex_num": "094",
+          "name": "Mime Jr.",
+          "tipo1": "Psíquico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ed/latest/20221207212848/Mime_Jr._icono_DBPR.png/96px-Mime_Jr._icono_DBPR.png"
+        },
+        {
+          "nac": "0122",
+          "dex_num": "095",
+          "name": "Mr. Mime",
+          "tipo1": "Psíquico",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ed/latest/20221118011507/Mr._Mime_icono_DBPR.png/96px-Mr._Mime_icono_DBPR.png"
+        },
+        {
+          "nac": "0440",
+          "dex_num": "096",
+          "name": "Happiny",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9c/latest/20230412210135/Happiny_icono_DBPR.png/96px-Happiny_icono_DBPR.png"
+        },
+        {
+          "nac": "0113",
+          "dex_num": "097",
+          "name": "Chansey",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9d/latest/20230412205759/Chansey_icono_DBPR.png/96px-Chansey_icono_DBPR.png"
+        },
+        {
+          "nac": "0242",
+          "dex_num": "098",
+          "name": "Blissey",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/27/latest/20230412205642/Blissey_icono_DBPR.png/96px-Blissey_icono_DBPR.png"
+        },
+        {
+          "nac": "0173",
+          "dex_num": "099",
+          "name": "Cleffa",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/48/latest/20221207003328/Cleffa_icono_DBPR.png/96px-Cleffa_icono_DBPR.png"
+        },
+        {
+          "nac": "0035",
+          "dex_num": "100",
+          "name": "Clefairy",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7a/latest/20221118010135/Clefairy_icono_DBPR.png/96px-Clefairy_icono_DBPR.png"
+        },
+        {
+          "nac": "0036",
+          "dex_num": "101",
+          "name": "Clefable",
+          "tipo1": "Hada",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/43/latest/20221118010149/Clefable_icono_DBPR.png/96px-Clefable_icono_DBPR.png"
+        },
+        {
+          "nac": "0441",
+          "dex_num": "102",
+          "name": "Chatot",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/30/latest/20221207212811/Chatot_icono_DBPR.png/96px-Chatot_icono_DBPR.png"
+        },
+        {
+          "nac": "0172",
+          "dex_num": "103",
+          "name": "Pichu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/67/latest/20230412205616/Pichu_icono_DBPR.png/96px-Pichu_icono_DBPR.png"
+        },
+        {
+          "nac": "0025",
+          "dex_num": "104",
+          "name": "Pikachu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/98/latest/20230412205751/Pikachu_icono_DBPR.png/96px-Pikachu_icono_DBPR.png"
+        },
+        {
+          "nac": "0026",
+          "dex_num": "105",
+          "name": "Raichu",
+          "tipo1": "Eléctrico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5c/latest/20230412205858/Raichu_icono_DBPR.png/96px-Raichu_icono_DBPR.png"
+        },
+        {
+          "nac": "0163",
+          "dex_num": "106",
+          "name": "Hoothoot",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7a/latest/20221207002940/Hoothoot_icono_DBPR.png/96px-Hoothoot_icono_DBPR.png"
+        },
+        {
+          "nac": "0164",
+          "dex_num": "107",
+          "name": "Noctowl",
+          "tipo1": "Normal",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/29/latest/20221207003002/Noctowl_icono_DBPR.png/96px-Noctowl_icono_DBPR.png"
+        },
+        {
+          "nac": "0442",
+          "dex_num": "108",
+          "name": "Spiritomb",
+          "tipo1": "Fantasma",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20230412210212/Spiritomb_icono_DBPR.png/96px-Spiritomb_icono_DBPR.png"
+        },
+        {
+          "nac": "0443",
+          "dex_num": "109",
+          "name": "Gible",
+          "tipo1": "Dragón",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d1/latest/20230412210100/Gible_icono_DBPR.png/96px-Gible_icono_DBPR.png"
+        },
+        {
+          "nac": "0444",
+          "dex_num": "110",
+          "name": "Gabite",
+          "tipo1": "Dragón",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cd/latest/20230412205621/Gabite_icono_DBPR.png/96px-Gabite_icono_DBPR.png"
+        },
+        {
+          "nac": "0445",
+          "dex_num": "111",
+          "name": "Garchomp",
+          "tipo1": "Dragón",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c9/latest/20230412205807/Garchomp_icono_DBPR.png/96px-Garchomp_icono_DBPR.png"
+        },
+        {
+          "nac": "0446",
+          "dex_num": "112",
+          "name": "Munchlax",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/18/latest/20221207213013/Munchlax_icono_DBPR.png/96px-Munchlax_icono_DBPR.png"
+        },
+        {
+          "nac": "0143",
+          "dex_num": "113",
+          "name": "Snorlax",
+          "tipo1": "Normal",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/79/latest/20221118012007/Snorlax_icono_DBPR.png/96px-Snorlax_icono_DBPR.png"
+        },
+        {
+          "nac": "0201",
+          "dex_num": "114",
+          "name": "Unown",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/39/latest/20221207003823/Unown_A_icono_DBPR.png/96px-Unown_A_icono_DBPR.png"
+        },
+        {
+          "nac": "0447",
+          "dex_num": "115",
+          "name": "Riolu",
+          "tipo1": "Lucha",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/36/latest/20230412205744/Riolu_icono_DBPR.png/96px-Riolu_icono_DBPR.png"
+        },
+        {
+          "nac": "0448",
+          "dex_num": "116",
+          "name": "Lucario",
+          "tipo1": "Lucha",
+          "tipo2": "Acero",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/02/latest/20230412205915/Lucario_icono_DBPR.png/96px-Lucario_icono_DBPR.png"
+        },
+        {
+          "nac": "0194",
+          "dex_num": "117",
+          "name": "Wooper",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20230412210254/Wooper_icono_DBPR.png/96px-Wooper_icono_DBPR.png"
+        },
+        {
+          "nac": "0195",
+          "dex_num": "118",
+          "name": "Quagsire",
+          "tipo1": "Agua",
+          "tipo2": "Tierra",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1b/latest/20230412210044/Quagsire_icono_DBPR.png/96px-Quagsire_icono_DBPR.png"
+        },
+        {
+          "nac": "0278",
+          "dex_num": "119",
+          "name": "Wingull",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20230412210249/Wingull_icono_DBPR.png/96px-Wingull_icono_DBPR.png"
+        },
+        {
+          "nac": "0279",
+          "dex_num": "120",
+          "name": "Pelipper",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d3/latest/20230412210300/Pelipper_icono_DBPR.png/96px-Pelipper_icono_DBPR.png"
+        },
+        {
+          "nac": "0203",
+          "dex_num": "121",
+          "name": "Girafarig",
+          "tipo1": "Normal",
+          "tipo2": "Psíquico",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3d/latest/20230412210229/Girafarig_icono_DBPR.png/96px-Girafarig_icono_DBPR.png"
+        },
+        {
+          "nac": "0449",
+          "dex_num": "122",
+          "name": "Hippopotas",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/53/latest/20230412205801/Hippopotas_icono_DBPR.png/96px-Hippopotas_icono_DBPR.png"
+        },
+        {
+          "nac": "0450",
+          "dex_num": "123",
+          "name": "Hippowdon",
+          "tipo1": "Tierra",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5f/latest/20230412205706/Hippowdon_icono_DBPR.png/96px-Hippowdon_icono_DBPR.png"
+        },
+        {
+          "nac": "0298",
+          "dex_num": "124",
+          "name": "Azurill",
+          "tipo1": "Normal",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5d/latest/20230412205849/Azurill_icono_DBPR.png/96px-Azurill_icono_DBPR.png"
+        },
+        {
+          "nac": "0183",
+          "dex_num": "125",
+          "name": "Marill",
+          "tipo1": "Agua",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/86/latest/20230412210333/Marill_icono_DBPR.png/96px-Marill_icono_DBPR.png"
+        },
+        {
+          "nac": "0184",
+          "dex_num": "126",
+          "name": "Azumarill",
+          "tipo1": "Agua",
+          "tipo2": "Hada",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/72/latest/20230412205720/Azumarill_icono_DBPR.png/96px-Azumarill_icono_DBPR.png"
+        },
+        {
+          "nac": "0451",
+          "dex_num": "127",
+          "name": "Skorupi",
+          "tipo1": "Veneno",
+          "tipo2": "Bicho",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/02/latest/20221207212958/Skorupi_icono_DBPR.png/96px-Skorupi_icono_DBPR.png"
+        },
+        {
+          "nac": "0452",
+          "dex_num": "128",
+          "name": "Drapion",
+          "tipo1": "Veneno",
+          "tipo2": "Siniestro",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fd/latest/20221207212639/Drapion_icono_DBPR.png/96px-Drapion_icono_DBPR.png"
+        },
+        {
+          "nac": "0453",
+          "dex_num": "129",
+          "name": "Croagunk",
+          "tipo1": "Veneno",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/76/latest/20230412210124/Croagunk_icono_DBPR.png/96px-Croagunk_icono_DBPR.png"
+        },
+        {
+          "nac": "0454",
+          "dex_num": "130",
+          "name": "Toxicroak",
+          "tipo1": "Veneno",
+          "tipo2": "Lucha",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/91/latest/20230412205833/Toxicroak_icono_DBPR.png/96px-Toxicroak_icono_DBPR.png"
+        },
+        {
+          "nac": "0455",
+          "dex_num": "131",
+          "name": "Carnivine",
+          "tipo1": "Planta",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8a/latest/20221207213049/Carnivine_icono_DBPR.png/96px-Carnivine_icono_DBPR.png"
+        },
+        {
+          "nac": "0223",
+          "dex_num": "132",
+          "name": "Remoraid",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fc/latest/20221207004652/Remoraid_icono_DBPR.png/96px-Remoraid_icono_DBPR.png"
+        },
+        {
+          "nac": "0224",
+          "dex_num": "133",
+          "name": "Octillery",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/75/latest/20221207004717/Octillery_icono_DBPR.png/96px-Octillery_icono_DBPR.png"
+        },
+        {
+          "nac": "0456",
+          "dex_num": "134",
+          "name": "Finneon",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0a/latest/20230412210331/Finneon_icono_DBPR.png/96px-Finneon_icono_DBPR.png"
+        },
+        {
+          "nac": "0457",
+          "dex_num": "135",
+          "name": "Lumineon",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/eb/latest/20230412210319/Lumineon_icono_DBPR.png/96px-Lumineon_icono_DBPR.png"
+        },
+        {
+          "nac": "0072",
+          "dex_num": "136",
+          "name": "Tentacool",
+          "tipo1": "Agua",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a5/latest/20221118004816/Tentacool_icono_DBPR.png/96px-Tentacool_icono_DBPR.png"
+        },
+        {
+          "nac": "0073",
+          "dex_num": "137",
+          "name": "Tentacruel",
+          "tipo1": "Agua",
+          "tipo2": "Veneno",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/18/latest/20221118004807/Tentacruel_icono_DBPR.png/96px-Tentacruel_icono_DBPR.png"
+        },
+        {
+          "nac": "0349",
+          "dex_num": "138",
+          "name": "Feebas",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fc/latest/20221207212626/Feebas_icono_DBPR.png/96px-Feebas_icono_DBPR.png"
+        },
+        {
+          "nac": "0350",
+          "dex_num": "139",
+          "name": "Milotic",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/29/latest/20221207212550/Milotic_icono_DBPR.png/96px-Milotic_icono_DBPR.png"
+        },
+        {
+          "nac": "0458",
+          "dex_num": "140",
+          "name": "Mantyke",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/25/latest/20221207212941/Mantyke_icono_DBPR.png/96px-Mantyke_icono_DBPR.png"
+        },
+        {
+          "nac": "0226",
+          "dex_num": "141",
+          "name": "Mantine",
+          "tipo1": "Agua",
+          "tipo2": "Volador",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e1/latest/20221207004739/Mantine_icono_DBPR.png/96px-Mantine_icono_DBPR.png"
+        },
+        {
+          "nac": "0459",
+          "dex_num": "142",
+          "name": "Snover",
+          "tipo1": "Planta",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7e/latest/20230412210106/Snover_icono_DBPR.png/96px-Snover_icono_DBPR.png"
+        },
+        {
+          "nac": "0460",
+          "dex_num": "143",
+          "name": "Abomasnow",
+          "tipo1": "Planta",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/db/latest/20230412205903/Abomasnow_icono_DBPR.png/96px-Abomasnow_icono_DBPR.png"
+        },
+        {
+          "nac": "0215",
+          "dex_num": "144",
+          "name": "Sneasel",
+          "tipo1": "Siniestro",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0d/latest/20230412210307/Sneasel_icono_DBPR.png/96px-Sneasel_icono_DBPR.png"
+        },
+        {
+          "nac": "0461",
+          "dex_num": "145",
+          "name": "Weavile",
+          "tipo1": "Siniestro",
+          "tipo2": "Hielo",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/78/latest/20230412205851/Weavile_icono_DBPR.png/96px-Weavile_icono_DBPR.png"
+        },
+        {
+          "nac": "0480",
+          "dex_num": "146",
+          "name": "Uxie",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3f/latest/20230412214504/Uxie_icono_DBPR.png/96px-Uxie_icono_DBPR.png"
+        },
+        {
+          "nac": "0481",
+          "dex_num": "147",
+          "name": "Mesprit",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7b/latest/20230412210317/Mesprit_icono_DBPR.png/96px-Mesprit_icono_DBPR.png"
+        },
+        {
+          "nac": "0482",
+          "dex_num": "148",
+          "name": "Azelf",
+          "tipo1": "Psíquico",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8f/latest/20230412210039/Azelf_icono_DBPR.png/96px-Azelf_icono_DBPR.png"
+        },
+        {
+          "nac": "0483",
+          "dex_num": "149",
+          "name": "Dialga",
+          "tipo1": "Acero",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20230412210137/Dialga_icono_DBPR.png/96px-Dialga_icono_DBPR.png"
+        },
+        {
+          "nac": "0484",
+          "dex_num": "150",
+          "name": "Palkia",
+          "tipo1": "Agua",
+          "tipo2": "Dragón",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d1/latest/20230412210051/Palkia_icono_DBPR.png/96px-Palkia_icono_DBPR.png"
+        },
+        {
+          "nac": "0490",
+          "dex_num": "151",
+          "name": "Manaphy",
+          "tipo1": "Agua",
+          "tipo2": "",
+          "icon_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e6/latest/20221207212806/Manaphy_icono_DBPR.png/96px-Manaphy_icono_DBPR.png"
+        }
+      ]
+    }
+  ]
+}

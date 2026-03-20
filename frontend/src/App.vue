@@ -278,6 +278,30 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue'
 
+const STATIC = import.meta.env.VITE_STATIC_MODE === 'true'
+
+// ── Static mode helpers ────────────────────────────────────────────────────────
+const GAME_FILES = {
+  'legends-za':      () => import('./data/legends-za.json'),
+  'legends-arceus':  () => import('./data/legends-arceus.json'),
+  'scarlet-violet':  () => import('./data/scarlet-violet.json'),
+  'sword-shield':    () => import('./data/sword-shield.json'),
+  'bdsp':            () => import('./data/bdsp.json'),
+  'lets-go':         () => import('./data/lets-go.json'),
+}
+const staticPokemonStore = {}
+
+function staticKey(p) { return `${p.nac}||${p.name}` }
+
+function staticCaughtSet(gameSlug, dexSlug) {
+  const raw = localStorage.getItem(`pokedex:caught:${gameSlug}:${dexSlug}`)
+  return new Set(raw ? JSON.parse(raw) : [])
+}
+
+function staticSaveCaught(gameSlug, dexSlug, set) {
+  localStorage.setItem(`pokedex:caught:${gameSlug}:${dexSlug}`, JSON.stringify([...set]))
+}
+
 const TYPE_COLORS = {
   'Normal':    '#A8A878', 'Fuego':     '#F08030', 'Agua':      '#6890F0',
   'Planta':    '#78C850', 'Eléctrico': '#F8D030', 'Hielo':     '#98D8D8',
@@ -337,8 +361,35 @@ const progressPct = computed(() =>
 
 // ── Actions ────────────────────────────────────────────────────────────────────
 async function loadGames() {
-  const res = await fetch('/api/games')
-  games.value = await res.json()
+  if (STATIC) {
+    let dexId = 1
+    const allData = await Promise.all(Object.values(GAME_FILES).map(f => f()))
+    games.value = allData
+      .map(m => m.default)
+      .sort((a, b) => b.game.year - a.game.year || a.game.name.localeCompare(b.game.name))
+      .map((data, gi) => {
+        const dexes = data.dexes.map(dex => {
+          const id = dexId++
+          const caught = staticCaughtSet(data.game.slug, dex.slug)
+          staticPokemonStore[id] = dex.pokemon.map((p, i) => ({
+            id: id * 100000 + i, dex_id: id,
+            nac: p.nac, dex_num: p.dex_num, name: p.name,
+            tipo1: p.tipo1, tipo2: p.tipo2, icon_url: p.icon_url,
+            caught: caught.has(staticKey(p)) ? 1 : 0,
+          }))
+          return {
+            id, game_id: gi + 1, slug: dex.slug, name: dex.name, col_label: dex.col_label,
+            total: dex.pokemon.length,
+            caught: staticPokemonStore[id].filter(p => p.caught).length,
+            _gameSlug: data.game.slug,
+          }
+        })
+        return { id: gi + 1, slug: data.game.slug, name: data.game.name, year: data.game.year, dexes }
+      })
+  } else {
+    const res = await fetch('/api/games')
+    games.value = await res.json()
+  }
   if (!games.value.length) return
 
   const savedSlug  = localStorage.getItem('selectedGameSlug')
@@ -353,8 +404,12 @@ async function loadPokemon() {
   if (!selectedDex.value) return
   loading.value = true
   search.value = ''
-  const res = await fetch(`/api/dexes/${selectedDex.value.id}/pokemon`)
-  pokemon.value = await res.json()
+  if (STATIC) {
+    pokemon.value = staticPokemonStore[selectedDex.value.id] || []
+  } else {
+    const res = await fetch(`/api/dexes/${selectedDex.value.id}/pokemon`)
+    pokemon.value = await res.json()
+  }
   loading.value = false
 }
 
@@ -384,15 +439,28 @@ function toggleCaught(p) {
   requestAnimationFrame(() => { undoProgress.value = 0 })
 }
 
+async function persistCaught(p) {
+  if (STATIC) {
+    const dex = selectedGame.value?.dexes.find(d => d.id === selectedDex.value?.id)
+    const gameSlug = dex?._gameSlug ?? selectedGame.value?.slug
+    const set = staticCaughtSet(gameSlug, dex?.slug)
+    const key = staticKey(p)
+    if (p.caught) set.add(key); else set.delete(key)
+    staticSaveCaught(gameSlug, dex?.slug, set)
+  } else {
+    await fetch(`/api/pokemon/${p.id}/caught`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ caught: !!p.caught }),
+    })
+  }
+}
+
 async function commitUndo(toast) {
   if (!toast) return
   if (undoToast.value?.timer === toast.timer) undoToast.value = null
   clearTimeout(toast.timer)
-  await fetch(`/api/pokemon/${toast.pokemon.id}/caught`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ caught: !!toast.pokemon.caught }),
-  })
+  await persistCaught(toast.pokemon)
 }
 
 function doUndo() {
