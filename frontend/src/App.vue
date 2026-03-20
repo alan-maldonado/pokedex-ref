@@ -188,7 +188,7 @@
             <tr
               v-for="p in filtered"
               :key="p.id"
-              :class="['border-b dark:border-gray-700 last:border-0 transition-colors', p.caught ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-gray-50 dark:hover:bg-gray-700/40']"
+              :class="['border-b dark:border-gray-700 last:border-0 transition-colors', p.caught ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-gray-50 dark:hover:bg-gray-700/40', fadingOut.has(p.id) ? 'caught-fade-out' : '']"
             >
               <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums hidden sm:table-cell">{{ p.nac }}</td>
               <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums">{{ p.dex_num }}</td>
@@ -341,6 +341,7 @@ const darkMode         = ref(localStorage.getItem('darkMode') === 'true')
 const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
 const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
 const search           = ref(sessionStorage.getItem('search') ?? '')
+const fadingOut        = ref(new Set())
 
 // ── Derived ────────────────────────────────────────────────────────────────────
 const selectedGame = computed(() =>
@@ -349,7 +350,7 @@ const selectedGame = computed(() =>
 
 const filtered = computed(() => {
   let list = baseList.value
-  if (hideCaught.value) list = list.filter(p => !p.caught)
+  if (hideCaught.value) list = list.filter(p => !p.caught || fadingOut.value.has(p.id))
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(p => p.name?.toLowerCase().includes(q))
@@ -442,6 +443,15 @@ function toggleCaught(p) {
   const newVal = !p.caught
   p.caught = newVal ? 1 : 0
 
+  if (newVal && hideCaught.value) {
+    fadingOut.value.add(p.id)
+    fadingOut.value = new Set(fadingOut.value)
+    setTimeout(() => {
+      fadingOut.value.delete(p.id)
+      fadingOut.value = new Set(fadingOut.value)
+    }, 600)
+  }
+
   const dex = selectedGame.value?.dexes.find(d => d.id === selectedDex.value?.id)
   if (dex) dex.caught += newVal ? 1 : -1
 
@@ -488,6 +498,8 @@ function doUndo() {
   const wasCaught = !!p.caught
   p.caught = prevCaught
   if (dex) dex.caught += wasCaught ? -1 : 1
+  fadingOut.value.delete(p.id)
+  fadingOut.value = new Set(fadingOut.value)
 
   // Static: revert localStorage to previous state
   if (STATIC) persistCaught(p)

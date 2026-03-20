@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes caught-fade-out {
+  0%   { opacity: 1; transform: translateX(0); }
+  60%  { opacity: 0.4; transform: translateX(6px); }
+  100% { opacity: 0; transform: translateX(12px); }
+}
+
+.caught-fade-out {
+  animation: caught-fade-out 0.55s ease-in forwards;
+  pointer-events: none;
+}
