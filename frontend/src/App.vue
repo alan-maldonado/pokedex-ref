@@ -82,7 +82,7 @@
             ]"
           >
             {{ dex.name }}
-            <span class="ml-1 text-xs opacity-60">({{ dex.id === selectedDex?.id ? baseList.length : dex.total }})</span>
+            <span class="ml-1 text-xs opacity-60">({{ dexTotal(dex) }})</span>
           </button>
         </div>
 
@@ -99,7 +99,7 @@
               :value="dex.id"
               class="text-gray-900"
             >
-              {{ dex.name }} ({{ dex.id === selectedDex?.id ? baseList.length : dex.total }})
+              {{ dex.name }} ({{ dexTotal(dex) }})
             </option>
           </select>
         </div>
@@ -361,6 +361,7 @@ const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
 const search           = ref(sessionStorage.getItem('search') ?? '')
 const fadingOut        = ref(new Set())
 const catching         = ref(new Set())
+const dexStats         = ref({})
 
 // ── Derived ────────────────────────────────────────────────────────────────────
 const selectedGame = computed(() =>
@@ -389,6 +390,24 @@ const baseList = computed(() => {
 })
 
 const caughtCount = computed(() => baseList.value.filter(p => p.caught).length)
+
+function dexTotal(dex) {
+  if (dex.id === selectedDex.value?.id) return baseList.value.length
+  if (!hideForms.value) return dex.total
+  // modo estático: calcular desde store en memoria
+  const list = staticPokemonStore[dex.id]
+  if (list) {
+    const seen = new Set()
+    let count = 0
+    for (const p of list) {
+      const key = p.nac || p.dex_num
+      if (!seen.has(key)) { seen.add(key); count++ }
+    }
+    return count
+  }
+  // modo servidor: usar stats pre-calculados al boot
+  return dexStats.value[dex.id]?.total_no_forms ?? dex.total
+}
 
 const progressPct = computed(() =>
   baseList.value.length ? Math.round((caughtCount.value / baseList.value.length) * 100) : 0
@@ -585,6 +604,7 @@ watch(selectedDex, (dex) => {
 })
 
 onMounted(() => {
+  if (!STATIC) fetch('/api/dex-stats').then(r => r.json()).then(d => { dexStats.value = d })
   loadGames()
   document.addEventListener('click', (e) => {
     if (gameDropdownRef.value && !gameDropdownRef.value.contains(e.target)) {

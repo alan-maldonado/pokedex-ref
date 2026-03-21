@@ -83,7 +83,28 @@ if (gameFiles.length === 0) {
   }
 }
 
+// ── Generate dex-stats.json at boot ────────────────────────────────────────────
+function generateDexStats() {
+  const rows = db.prepare(`
+    SELECT dex_id,
+      COUNT(*) AS total,
+      COUNT(DISTINCT COALESCE(NULLIF(nac, ''), dex_num)) AS total_no_forms
+    FROM pokemon GROUP BY dex_id
+  `).all()
+  const stats = Object.fromEntries(
+    rows.map(r => [r.dex_id, { total: r.total, total_no_forms: r.total_no_forms }])
+  )
+  fs.writeFileSync(path.join(DATA_DIR, 'dex-stats.json'), JSON.stringify(stats))
+  console.log('✓ dex-stats.json generated')
+}
+generateDexStats()
+
 // ── Routes ─────────────────────────────────────────────────────────────────────
+
+// Dex stats (total_no_forms per dex, pre-computed at boot)
+app.get('/api/dex-stats', (req, res) => {
+  res.sendFile(path.join(DATA_DIR, 'dex-stats.json'))
+})
 
 // List all games with their dexes and caught/total counts
 app.get('/api/games', (req, res) => {
