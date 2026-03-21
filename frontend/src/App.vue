@@ -90,7 +90,7 @@
         <div class="sm:hidden px-1 pb-2" v-if="selectedGame">
           <select
             :value="selectedDex?.id"
-            @change="selectDex(selectedGame.dexes.find(d => d.id === $event.target.value))"
+            @change="selectDex(selectedGame.dexes.find(d => d.id === Number($event.target.value)))"
             class="w-full rounded-lg px-3 py-2 text-sm font-semibold bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
           >
             <option
