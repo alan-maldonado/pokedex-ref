@@ -68,8 +68,8 @@
           </button>
         </div>
 
-        <!-- Dex tabs -->
-        <div class="flex gap-1 overflow-x-auto" v-if="selectedGame">
+        <!-- Dex tabs — desktop -->
+        <div class="hidden sm:flex gap-1 overflow-x-auto" v-if="selectedGame">
           <button
             v-for="dex in selectedGame.dexes"
             :key="dex.id"
@@ -82,8 +82,26 @@
             ]"
           >
             {{ dex.name }}
-            <span class="ml-1 text-xs opacity-60">({{ dex.total }})</span>
+            <span class="ml-1 text-xs opacity-60">({{ dex.id === selectedDex?.id ? baseList.length : dex.total }})</span>
           </button>
+        </div>
+
+        <!-- Dex selector — mobile -->
+        <div class="sm:hidden px-1 pb-2" v-if="selectedGame">
+          <select
+            :value="selectedDex?.id"
+            @change="selectDex(selectedGame.dexes.find(d => d.id === $event.target.value))"
+            class="w-full rounded-lg px-3 py-2 text-sm font-semibold bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
+          >
+            <option
+              v-for="dex in selectedGame.dexes"
+              :key="dex.id"
+              :value="dex.id"
+              class="text-gray-900"
+            >
+              {{ dex.name }} ({{ dex.id === selectedDex?.id ? baseList.length : dex.total }})
+            </option>
+          </select>
         </div>
       </div>
     </header>
