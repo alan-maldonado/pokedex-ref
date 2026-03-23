@@ -47,6 +47,25 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_pokemon_dex ON pokemon (dex_id);
 `)
 
+// ── Migrations ─────────────────────────────────────────────────────────────────
+const existingCols = db.prepare('PRAGMA table_info(pokemon)').all().map(c => c.name)
+if (!existingCols.includes('sort_order')) {
+  db.exec('ALTER TABLE pokemon ADD COLUMN sort_order INTEGER')
+  // Initialize using dex_num order to preserve existing display order
+  db.exec(`
+    UPDATE pokemon SET sort_order = (
+      SELECT COUNT(*) FROM pokemon p2
+      WHERE p2.dex_id = pokemon.dex_id
+        AND CAST(COALESCE(NULLIF(p2.dex_num,''), '0') AS INTEGER)
+           <= CAST(COALESCE(NULLIF(pokemon.dex_num,''), '0') AS INTEGER)
+        AND p2.id <= pokemon.id
+    )
+  `)
+}
+if (!existingCols.includes('custom')) {
+  db.exec('ALTER TABLE pokemon ADD COLUMN custom INTEGER NOT NULL DEFAULT 0')
+}
+
 // ── Seed from backend/data/games/*.json (skips already-loaded slugs) ──────────
 const insertGame    = db.prepare('INSERT OR IGNORE INTO games (slug, name, year) VALUES (@slug, @name, @year)')
 const insertDex     = db.prepare('INSERT OR IGNORE INTO dexes (game_id, slug, name, col_label) VALUES (@game_id, @slug, @name, @col_label)')
@@ -131,7 +150,7 @@ app.get('/api/games', (req, res) => {
 // Get all Pokémon for a dex
 app.get('/api/dexes/:id/pokemon', (req, res) => {
   const rows = db.prepare(
-    'SELECT * FROM pokemon WHERE dex_id = ? ORDER BY CAST(dex_num AS INTEGER)'
+    'SELECT * FROM pokemon WHERE dex_id = ? ORDER BY COALESCE(sort_order, id)'
   ).all(Number(req.params.id))
   res.json(rows)
 })
@@ -140,6 +159,38 @@ app.get('/api/dexes/:id/pokemon', (req, res) => {
 app.put('/api/pokemon/:id/caught', (req, res) => {
   const { caught } = req.body
   db.prepare('UPDATE pokemon SET caught = ? WHERE id = ?').run(caught ? 1 : 0, Number(req.params.id))
+  res.json({ ok: true })
+})
+
+// Create custom pokemon
+app.post('/api/dexes/:id/pokemon', (req, res) => {
+  const dexId = Number(req.params.id)
+  const { nac, dex_num, name, tipo1, tipo2, icon_url } = req.body
+  if (!name?.trim()) return res.status(400).json({ error: 'name required' })
+  const maxOrder = db.prepare('SELECT MAX(sort_order) AS m FROM pokemon WHERE dex_id = ?').get(dexId)?.m ?? 0
+  const result = db.prepare(`
+    INSERT INTO pokemon (dex_id, nac, dex_num, name, tipo1, tipo2, icon_url, custom, sort_order)
+    VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?)
+  `).run(dexId, nac || null, dex_num || null, name.trim(), tipo1 || null, tipo2 || null, icon_url || null, maxOrder + 1)
+  generateDexStats()
+  res.json({ id: Number(result.lastInsertRowid) })
+})
+
+// Delete custom pokemon
+app.delete('/api/pokemon/:id', (req, res) => {
+  const info = db.prepare('DELETE FROM pokemon WHERE id = ? AND custom = 1').run(Number(req.params.id))
+  if (info.changes === 0) return res.status(403).json({ error: 'not a custom entry' })
+  generateDexStats()
+  res.json({ ok: true })
+})
+
+// Reorder pokemon in a dex
+app.put('/api/dexes/:id/order', (req, res) => {
+  const dexId = Number(req.params.id)
+  const { order } = req.body
+  if (!Array.isArray(order)) return res.status(400).json({ error: 'order must be array' })
+  const update = db.prepare('UPDATE pokemon SET sort_order = ? WHERE id = ? AND dex_id = ?')
+  db.transaction(() => order.forEach((id, i) => update.run(i, id, dexId)))()
   res.json({ ok: true })
 })
 

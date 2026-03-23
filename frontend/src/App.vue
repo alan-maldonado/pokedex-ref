@@ -144,6 +144,22 @@
             <input type="file" accept=".json" class="hidden" @change="importData" />
           </label>
         </template>
+
+        <!-- Add entry -->
+        <button @click="showAddModal = true" title="Add entry"
+          class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+          </svg>
+        </button>
+
+        <!-- Reorder toggle -->
+        <button @click="reorderMode = !reorderMode" :title="reorderMode ? 'Exit reorder' : 'Reorder'"
+          :class="['flex-shrink-0 p-1.5 rounded-lg transition-colors', reorderMode ? 'bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700']">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l4-4 4 4M7 5v14M21 15l-4 4-4-4m4 4V5"/>
+          </svg>
+        </button>
       </div>
 
       <!-- Row 2: progress + toggles -->
@@ -194,6 +210,7 @@
         <table v-else class="w-full text-sm">
           <thead>
             <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
+              <th v-if="reorderMode" class="px-1 py-2.5 w-8"></th>
               <th class="px-3 py-2.5 text-right hidden sm:table-cell">#NAT</th>
               <th class="px-3 py-2.5 text-right">#{{ selectedDex?.col_label }}</th>
               <th class="px-2 py-2.5 w-12"></th>
@@ -206,8 +223,25 @@
             <tr
               v-for="p in filtered"
               :key="p.id"
-              :class="['border-b dark:border-gray-700 last:border-0 transition-colors', p.caught ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-gray-50 dark:hover:bg-gray-700/40', fadingOut.has(p.id) ? 'caught-fade-out' : '']"
+              :draggable="reorderMode"
+              @dragstart="reorderMode && onDragStart($event, p)"
+              @dragover="reorderMode && onDragOver($event, p)"
+              @drop="reorderMode && onDrop($event, p)"
+              @dragend="onDragEnd"
+              :class="['border-b dark:border-gray-700 last:border-0 transition-colors',
+                p.caught ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-gray-50 dark:hover:bg-gray-700/40',
+                fadingOut.has(p.id) ? 'caught-fade-out' : '',
+                reorderMode ? 'cursor-grab active:cursor-grabbing select-none' : '',
+                dragOverId === p.id ? 'outline outline-2 outline-blue-400 outline-offset-[-2px]' : '']"
             >
+              <!-- Drag handle -->
+              <td v-if="reorderMode" class="px-1 py-1.5 w-8 text-center text-gray-300 dark:text-gray-600">
+                <svg class="w-4 h-4 inline" fill="currentColor" viewBox="0 0 24 24">
+                  <circle cx="9" cy="5" r="1.5"/><circle cx="15" cy="5" r="1.5"/>
+                  <circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/>
+                  <circle cx="9" cy="19" r="1.5"/><circle cx="15" cy="19" r="1.5"/>
+                </svg>
+              </td>
               <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums hidden sm:table-cell">{{ p.nac }}</td>
               <td class="px-3 py-1.5 text-right text-gray-400 dark:text-gray-500 text-xs tabular-nums">{{ p.dex_num }}</td>
               <td class="px-1 py-1 w-12 text-center">
@@ -228,6 +262,16 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-8.5M19 5l-7 7m0-5h5v5"/>
                   </svg>
                 </a>
+                <button
+                  v-if="p.custom"
+                  @click.stop="deleteEntry(p)"
+                  title="Delete"
+                  class="opacity-0 group-hover:opacity-60 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle text-red-400 hover:text-red-600"
+                >
+                  <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                </button>
               </td>
               <td class="px-3 py-1.5">
                 <div class="flex gap-1 flex-wrap">
@@ -266,7 +310,7 @@
             </tr>
 
             <tr v-if="filtered.length === 0">
-              <td colspan="6" class="text-center py-10 text-gray-400 dark:text-gray-600">
+              <td :colspan="reorderMode ? 7 : 6" class="text-center py-10 text-gray-400 dark:text-gray-600">
                 <template v-if="search">No results for "{{ search }}"</template>
                 <template v-else-if="hideCaught">All caught! 🎉</template>
                 <template v-else>No Pokémon to show.</template>
@@ -278,6 +322,74 @@
     </div>
 
   </div>
+    <!-- Add Entry Modal -->
+    <div v-if="showAddModal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4"
+      @click.self="showAddModal = false">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md">
+        <div class="px-6 py-4 border-b dark:border-gray-700 flex items-center justify-between">
+          <h2 class="text-base font-bold text-gray-900 dark:text-white">Add Entry</h2>
+          <button @click="showAddModal = false" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-lg leading-none">✕</button>
+        </div>
+        <form @submit.prevent="addEntry" class="px-6 py-4 space-y-3">
+          <!-- Name -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Name *</label>
+            <input v-model="addForm.name" type="text" required autofocus
+              class="w-full px-3 py-2 text-sm bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+          <!-- Types -->
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Type 1</label>
+              <select v-model="addForm.tipo1"
+                class="w-full px-3 py-2 text-sm bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+                <option value="">—</option>
+                <option v-for="t in typeList" :key="t" :value="t">{{ t }}</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Type 2</label>
+              <select v-model="addForm.tipo2"
+                class="w-full px-3 py-2 text-sm bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+                <option value="">—</option>
+                <option v-for="t in typeList" :key="t" :value="t">{{ t }}</option>
+              </select>
+            </div>
+          </div>
+          <!-- Numbers -->
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Dex #</label>
+              <input v-model="addForm.dex_num" type="text"
+                class="w-full px-3 py-2 text-sm bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">National #</label>
+              <input v-model="addForm.nac" type="text"
+                class="w-full px-3 py-2 text-sm bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
+            </div>
+          </div>
+          <!-- Icon URL -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Icon URL</label>
+            <input v-model="addForm.icon_url" type="text" placeholder="https://…"
+              class="w-full px-3 py-2 text-sm bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+          <!-- Actions -->
+          <div class="flex gap-3 pt-1">
+            <button type="button" @click="showAddModal = false"
+              class="flex-1 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
+              Cancel
+            </button>
+            <button type="submit" :disabled="addLoading || !addForm.name.trim()"
+              class="flex-1 px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 disabled:opacity-40 rounded-lg transition-colors">
+              {{ addLoading ? 'Adding…' : 'Add' }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Undo toast -->
     <transition
       enter-active-class="transition-all duration-200 ease-out"
@@ -362,6 +474,12 @@ const search           = ref(sessionStorage.getItem('search') ?? '')
 const fadingOut        = ref(new Set())
 const catching         = ref(new Set())
 const dexStats         = ref({})
+const showAddModal     = ref(false)
+const reorderMode      = ref(false)
+const addForm          = ref({ name: '', dex_num: '', nac: '', tipo1: '', tipo2: '', icon_url: '' })
+const addLoading       = ref(false)
+const dragOverId       = ref(null)
+let   dragSrcItem      = null
 
 // ── Derived ────────────────────────────────────────────────────────────────────
 const selectedGame = computed(() =>
@@ -382,7 +500,7 @@ const baseList = computed(() => {
   if (!hideForms.value) return pokemon.value
   const seen = new Set()
   return pokemon.value.filter(p => {
-    const key = p.nac || p.dex_num
+    const key = p.nac || p.dex_num || String(p.id)
     if (seen.has(key)) return false
     seen.add(key)
     return true
@@ -412,6 +530,8 @@ function dexTotal(dex) {
 const progressPct = computed(() =>
   baseList.value.length ? Math.round((caughtCount.value / baseList.value.length) * 100) : 0
 )
+
+const typeList = computed(() => Object.keys(TYPE_COLORS).sort())
 
 // ── Actions ────────────────────────────────────────────────────────────────────
 async function loadGames() {
@@ -454,12 +574,63 @@ async function loadGames() {
   selectedDex.value = game.dexes.find(d => d.id === savedDexId) ?? game.dexes[0] ?? null
 }
 
+function currentGameSlug() {
+  const d = selectedGame.value?.dexes.find(d => d.id === selectedDex.value?.id)
+  return d?._gameSlug ?? selectedGame.value?.slug
+}
+
+function staticCustomKey(dexId)  { return `pokedex:custom:${dexId}` }
+function staticOrderKey(dexId)   { return `pokedex:order:${dexId}` }
+
+function loadStaticCustom(dexId) {
+  const raw = localStorage.getItem(staticCustomKey(dexId))
+  if (!raw) return []
+  const gameSlug = currentGameSlug()
+  const dexSlug  = selectedDex.value?.slug
+  const caught   = staticCaughtSet(gameSlug, dexSlug)
+  return JSON.parse(raw).map(p => ({ ...p, caught: caught.has(staticKey(p)) ? 1 : 0, custom: 1 }))
+}
+
+function saveStaticCustom(dexId, entries) {
+  localStorage.setItem(staticCustomKey(dexId), JSON.stringify(
+    entries.map(({ id, dex_id, nac, dex_num, name, tipo1, tipo2, icon_url }) =>
+      ({ id, dex_id, nac, dex_num, name, tipo1, tipo2, icon_url })
+    )
+  ))
+}
+
+function applyStaticOrder(list, dexId) {
+  const raw = localStorage.getItem(staticOrderKey(dexId))
+  if (!raw) return list
+  const order = JSON.parse(raw)
+  const byId  = Object.fromEntries(list.map(p => [p.id, p]))
+  const inOrder = new Set(order)
+  return [
+    ...order.map(id => byId[id]).filter(Boolean),
+    ...list.filter(p => !inOrder.has(p.id)),
+  ]
+}
+
+function saveStaticOrder() {
+  localStorage.setItem(staticOrderKey(selectedDex.value.id), JSON.stringify(pokemon.value.map(p => p.id)))
+}
+
+async function saveServerOrder() {
+  await fetch(`/api/dexes/${selectedDex.value.id}/order`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ order: pokemon.value.map(p => p.id) }),
+  })
+}
+
 async function loadPokemon() {
   if (!selectedDex.value) return
   loading.value = true
   search.value = ''
   if (STATIC) {
-    pokemon.value = staticPokemonStore[selectedDex.value.id] || []
+    const base    = (staticPokemonStore[selectedDex.value.id] || []).map(p => ({ ...p }))
+    const customs = loadStaticCustom(selectedDex.value.id)
+    pokemon.value = applyStaticOrder([...base, ...customs], selectedDex.value.id)
   } else {
     const res = await fetch(`/api/dexes/${selectedDex.value.id}/pokemon`)
     pokemon.value = await res.json()
@@ -557,16 +728,104 @@ function exportData() {
   const caught = {}
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i)
-    if (key.startsWith('pokedex:caught:')) {
+    if (key.startsWith('pokedex:')) {
       caught[key] = JSON.parse(localStorage.getItem(key))
     }
   }
-  const blob = new Blob([JSON.stringify({ version: 1, exported: new Date().toISOString(), caught }, null, 2)], { type: 'application/json' })
+  const blob = new Blob([JSON.stringify({ version: 2, exported: new Date().toISOString(), caught }, null, 2)], { type: 'application/json' })
   const a = document.createElement('a')
   a.href = URL.createObjectURL(blob)
   a.download = `pokedex-progress-${new Date().toISOString().slice(0, 10)}.json`
   a.click()
   URL.revokeObjectURL(a.href)
+}
+
+async function addEntry() {
+  if (!addForm.value.name.trim()) return
+  const form      = { ...addForm.value }
+  const dex       = selectedDex.value
+  const dexInGame = selectedGame.value?.dexes.find(d => d.id === dex.id)
+
+  if (STATIC) {
+    const id     = Date.now()
+    const rawKey = staticCustomKey(dex.id)
+    const arr    = JSON.parse(localStorage.getItem(rawKey) || '[]')
+    arr.push({ id, dex_id: dex.id, ...form })
+    localStorage.setItem(rawKey, JSON.stringify(arr))
+    pokemon.value = [...pokemon.value, { id, dex_id: dex.id, ...form, caught: 0, custom: 1 }]
+    saveStaticOrder()
+  } else {
+    addLoading.value = true
+    const res = await fetch(`/api/dexes/${dex.id}/pokemon`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    const { id } = await res.json()
+    pokemon.value = [...pokemon.value, { id, dex_id: dex.id, ...form, caught: 0, custom: 1 }]
+    addLoading.value = false
+  }
+  if (dexInGame) dexInGame.total += 1
+  addForm.value = { name: '', dex_num: '', nac: '', tipo1: '', tipo2: '', icon_url: '' }
+  showAddModal.value = false
+}
+
+async function deleteEntry(p) {
+  const dex = selectedDex.value
+  const gameSlug = currentGameSlug()
+
+  pokemon.value = pokemon.value.filter(x => x.id !== p.id)
+  if (STATIC) {
+    const rawKey = staticCustomKey(dex.id)
+    const arr    = JSON.parse(localStorage.getItem(rawKey) || '[]').filter(x => x.id !== p.id)
+    localStorage.setItem(rawKey, JSON.stringify(arr))
+    if (p.caught) {
+      const set = staticCaughtSet(gameSlug, dex.slug)
+      set.delete(staticKey(p))
+      staticSaveCaught(gameSlug, dex.slug, set)
+    }
+    saveStaticOrder()
+  } else {
+    await fetch(`/api/pokemon/${p.id}`, { method: 'DELETE' })
+  }
+  const dexInGame = selectedGame.value?.dexes.find(d => d.id === dex.id)
+  if (dexInGame) { dexInGame.total -= 1; if (p.caught) dexInGame.caught -= 1 }
+}
+
+// ── Drag-and-drop reorder ───────────────────────────────────────────────────────
+function onDragStart(e, p) {
+  dragSrcItem = p
+  e.dataTransfer.effectAllowed = 'move'
+  e.dataTransfer.setData('text/plain', String(p.id))
+}
+
+function onDragOver(e, p) {
+  if (!dragSrcItem) return
+  e.preventDefault()
+  e.dataTransfer.dropEffect = 'move'
+  dragOverId.value = p.id
+}
+
+function onDrop(e, p) {
+  e.preventDefault()
+  if (!dragSrcItem || dragSrcItem.id === p.id) { dragSrcItem = null; dragOverId.value = null; return }
+  const list   = [...pokemon.value]
+  const srcIdx = list.findIndex(x => x.id === dragSrcItem.id)
+  const dstIdx = list.findIndex(x => x.id === p.id)
+  if (srcIdx !== -1 && dstIdx !== -1) {
+    list.splice(srcIdx, 1)
+    list.splice(dstIdx, 0, dragSrcItem)
+    pokemon.value = list
+    if (STATIC) saveStaticOrder()
+    else saveServerOrder()
+  }
+  dragSrcItem = null
+  dragOverId.value = null
+}
+
+function onDragEnd() {
+  dragSrcItem = null
+  dragOverId.value = null
 }
 
 async function importData(e) {
@@ -577,7 +836,7 @@ async function importData(e) {
     const { caught } = JSON.parse(text)
     if (!caught || typeof caught !== 'object') throw new Error()
     Object.entries(caught).forEach(([key, val]) => {
-      if (key.startsWith('pokedex:caught:')) localStorage.setItem(key, JSON.stringify(val))
+      if (key.startsWith('pokedex:')) localStorage.setItem(key, JSON.stringify(val))
     })
     await loadGames()
     await loadPokemon()
