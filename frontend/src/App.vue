@@ -252,12 +252,23 @@
                 :class="p.caught ? 'text-gray-400 dark:text-gray-600 line-through' : 'text-gray-800 dark:text-gray-100'">
                 {{ p.name }}
                 <button
+                  v-if="!p.custom"
                   @click.stop="openDuplicate(p)"
                   title="Duplicate"
                   class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
                 >
                   <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                </button>
+                <button
+                  v-if="p.custom"
+                  @click.stop="openEdit(p)"
+                  title="Edit"
+                  class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
+                >
+                  <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                   </svg>
                 </button>
                 <a
@@ -336,7 +347,7 @@
       @click.self="closeModal">
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md">
         <div class="px-6 py-4 border-b dark:border-gray-700 flex items-center justify-between">
-          <h2 class="text-base font-bold text-gray-900 dark:text-white">{{ duplicateSource ? 'Duplicate Pokémon' : 'Add Pokémon' }}</h2>
+          <h2 class="text-base font-bold text-gray-900 dark:text-white">{{ editSource ? 'Edit Pokémon' : duplicateSource ? 'Duplicate Pokémon' : 'Add Pokémon' }}</h2>
           <button @click="closeModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-lg leading-none">✕</button>
         </div>
         <form @submit.prevent="addEntry" class="px-6 py-4 space-y-3">
@@ -392,7 +403,7 @@
             </button>
             <button type="submit" :disabled="addLoading || !addForm.name.trim()"
               class="flex-1 px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 disabled:opacity-40 rounded-lg transition-colors">
-              {{ addLoading ? 'Adding…' : 'Add' }}
+              {{ addLoading ? '…' : editSource ? 'Save' : 'Add' }}
             </button>
           </div>
         </form>
@@ -489,6 +500,7 @@ const addForm          = ref({ name: '', dex_num: '', nac: '', tipo1: '', tipo2:
 const addLoading       = ref(false)
 const dragOverId       = ref(null)
 const duplicateSource  = ref(null)
+const editSource       = ref(null)
 let   dragSrcItem      = null
 
 // ── Derived ────────────────────────────────────────────────────────────────────
@@ -766,7 +778,21 @@ function openDuplicate(p) {
 function closeModal() {
   showAddModal.value    = false
   duplicateSource.value = null
+  editSource.value      = null
   addForm.value = { name: '', dex_num: '', nac: '', tipo1: '', tipo2: '', icon_url: '' }
+}
+
+function openEdit(p) {
+  editSource.value = p
+  addForm.value = {
+    name:     p.name,
+    dex_num:  p.dex_num  || '',
+    nac:      p.nac      || '',
+    tipo1:    p.tipo1    || '',
+    tipo2:    p.tipo2    || '',
+    icon_url: p.icon_url || '',
+  }
+  showAddModal.value = true
 }
 
 function insertEntry(list, entry, afterItem) {
@@ -780,8 +806,32 @@ function insertEntry(list, entry, afterItem) {
 
 async function addEntry() {
   if (!addForm.value.name.trim()) return
-  const form      = { ...addForm.value }
-  const dex       = selectedDex.value
+  const form = { ...addForm.value }
+  const dex  = selectedDex.value
+
+  // ── Edit mode ──────────────────────────────────────────────────────────────
+  if (editSource.value) {
+    const p = editSource.value
+    Object.assign(p, form)
+    if (STATIC) {
+      const rawKey = staticCustomKey(dex.id)
+      const arr = JSON.parse(localStorage.getItem(rawKey) || '[]')
+      const idx = arr.findIndex(x => x.id === p.id)
+      if (idx !== -1) { arr[idx] = { ...arr[idx], ...form }; localStorage.setItem(rawKey, JSON.stringify(arr)) }
+    } else {
+      addLoading.value = true
+      await fetch(`/api/pokemon/${p.id}/fields`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      addLoading.value = false
+    }
+    closeModal()
+    return
+  }
+
+  // ── Create mode ────────────────────────────────────────────────────────────
   const dexInGame = selectedGame.value?.dexes.find(d => d.id === dex.id)
   const after     = duplicateSource.value
 
