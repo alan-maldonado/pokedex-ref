@@ -251,6 +251,15 @@
               <td class="px-3 py-1.5 font-medium group"
                 :class="p.caught ? 'text-gray-400 dark:text-gray-600 line-through' : 'text-gray-800 dark:text-gray-100'">
                 {{ p.name }}
+                <button
+                  @click.stop="openDuplicate(p)"
+                  title="Duplicate"
+                  class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
+                >
+                  <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                </button>
                 <a
                   :href="'https://www.wikidex.net/wiki/' + encodeURIComponent(p.name.replace(/ /g, '_'))"
                   target="_blank"
@@ -324,11 +333,11 @@
   </div>
     <!-- Add Entry Modal -->
     <div v-if="showAddModal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4"
-      @click.self="showAddModal = false">
+      @click.self="closeModal">
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md">
         <div class="px-6 py-4 border-b dark:border-gray-700 flex items-center justify-between">
-          <h2 class="text-base font-bold text-gray-900 dark:text-white">Add Entry</h2>
-          <button @click="showAddModal = false" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-lg leading-none">✕</button>
+          <h2 class="text-base font-bold text-gray-900 dark:text-white">{{ duplicateSource ? 'Duplicate Pokémon' : 'Add Pokémon' }}</h2>
+          <button @click="closeModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-lg leading-none">✕</button>
         </div>
         <form @submit.prevent="addEntry" class="px-6 py-4 space-y-3">
           <!-- Name -->
@@ -377,7 +386,7 @@
           </div>
           <!-- Actions -->
           <div class="flex gap-3 pt-1">
-            <button type="button" @click="showAddModal = false"
+            <button type="button" @click="closeModal"
               class="flex-1 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
               Cancel
             </button>
@@ -479,6 +488,7 @@ const reorderMode      = ref(false)
 const addForm          = ref({ name: '', dex_num: '', nac: '', tipo1: '', tipo2: '', icon_url: '' })
 const addLoading       = ref(false)
 const dragOverId       = ref(null)
+const duplicateSource  = ref(null)
 let   dragSrcItem      = null
 
 // ── Derived ────────────────────────────────────────────────────────────────────
@@ -740,11 +750,40 @@ function exportData() {
   URL.revokeObjectURL(a.href)
 }
 
+function openDuplicate(p) {
+  duplicateSource.value = p
+  addForm.value = {
+    name:     p.name,
+    dex_num:  p.dex_num  || '',
+    nac:      p.nac      || '',
+    tipo1:    p.tipo1    || '',
+    tipo2:    p.tipo2    || '',
+    icon_url: p.icon_url || '',
+  }
+  showAddModal.value = true
+}
+
+function closeModal() {
+  showAddModal.value    = false
+  duplicateSource.value = null
+  addForm.value = { name: '', dex_num: '', nac: '', tipo1: '', tipo2: '', icon_url: '' }
+}
+
+function insertEntry(list, entry, afterItem) {
+  if (!afterItem) return [...list, entry]
+  const idx = list.findIndex(x => x.id === afterItem.id)
+  if (idx === -1) return [...list, entry]
+  const copy = [...list]
+  copy.splice(idx + 1, 0, entry)
+  return copy
+}
+
 async function addEntry() {
   if (!addForm.value.name.trim()) return
   const form      = { ...addForm.value }
   const dex       = selectedDex.value
   const dexInGame = selectedGame.value?.dexes.find(d => d.id === dex.id)
+  const after     = duplicateSource.value
 
   if (STATIC) {
     const id     = Date.now()
@@ -752,7 +791,7 @@ async function addEntry() {
     const arr    = JSON.parse(localStorage.getItem(rawKey) || '[]')
     arr.push({ id, dex_id: dex.id, ...form })
     localStorage.setItem(rawKey, JSON.stringify(arr))
-    pokemon.value = [...pokemon.value, { id, dex_id: dex.id, ...form, caught: 0, custom: 1 }]
+    pokemon.value = insertEntry(pokemon.value, { id, dex_id: dex.id, ...form, caught: 0, custom: 1 }, after)
     saveStaticOrder()
   } else {
     addLoading.value = true
@@ -762,12 +801,12 @@ async function addEntry() {
       body: JSON.stringify(form),
     })
     const { id } = await res.json()
-    pokemon.value = [...pokemon.value, { id, dex_id: dex.id, ...form, caught: 0, custom: 1 }]
+    pokemon.value = insertEntry(pokemon.value, { id, dex_id: dex.id, ...form, caught: 0, custom: 1 }, after)
     addLoading.value = false
+    if (after) saveServerOrder()
   }
   if (dexInGame) dexInGame.total += 1
-  addForm.value = { name: '', dex_num: '', nac: '', tipo1: '', tipo2: '', icon_url: '' }
-  showAddModal.value = false
+  closeModal()
 }
 
 async function deleteEntry(p) {
