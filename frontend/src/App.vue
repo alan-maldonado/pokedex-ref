@@ -175,31 +175,31 @@
           </span>
         </div>
 
-        <!-- Hide caught toggle -->
+        <!-- Caught toggle -->
         <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
-          <div @click="hideCaught = !hideCaught"
-            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideCaught ? 'bg-red-500' : 'bg-gray-300 dark:bg-gray-600']">
-            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideCaught ? 'translate-x-4' : 'translate-x-0.5']" />
+          <div @click="showCaught = !showCaught"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', showCaught ? 'bg-red-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', showCaught ? 'translate-x-4' : 'translate-x-0.5']" />
           </div>
-          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide caught</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Caught</span>
         </label>
 
-        <!-- Hide forms toggle -->
+        <!-- Forms toggle -->
         <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
-          <div @click="hideForms = !hideForms"
-            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideForms ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600']">
-            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideForms ? 'translate-x-4' : 'translate-x-0.5']" />
+          <div @click="showForms = !showForms"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', showForms ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', showForms ? 'translate-x-4' : 'translate-x-0.5']" />
           </div>
-          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide forms</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Forms</span>
         </label>
 
-        <!-- Hide genders toggle -->
+        <!-- Genders toggle -->
         <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
-          <div @click="hideGenders = !hideGenders"
-            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideGenders ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600']">
-            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideGenders ? 'translate-x-4' : 'translate-x-0.5']" />
+          <div @click="showGenders = !showGenders"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', showGenders ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', showGenders ? 'translate-x-4' : 'translate-x-0.5']" />
           </div>
-          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide genders</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Genders</span>
         </label>
       </div>
     </div>
@@ -341,7 +341,7 @@
             <tr v-if="filtered.length === 0">
               <td :colspan="reorderMode ? 7 : 6" class="text-center py-10 text-gray-400 dark:text-gray-600">
                 <template v-if="search">No results for "{{ search }}"</template>
-                <template v-else-if="hideCaught">All caught! 🎉</template>
+                <template v-else-if="!showCaught">All caught! 🎉</template>
                 <template v-else>No Pokémon to show.</template>
               </td>
             </tr>
@@ -497,9 +497,9 @@ const gameDropdownRef  = ref(null)
 const undoToast        = ref(null)
 const undoProgress     = ref(100)
 const darkMode         = ref(localStorage.getItem('darkMode') === 'true')
-const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
-const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
-const hideGenders      = ref(sessionStorage.getItem('hideGenders') === 'true')
+const showCaught       = ref(sessionStorage.getItem('showCaught')  !== 'false')
+const showForms        = ref(sessionStorage.getItem('showForms')   !== 'false')
+const showGenders      = ref(sessionStorage.getItem('showGenders') !== 'false')
 const search           = ref(sessionStorage.getItem('search') ?? '')
 const fadingOut        = ref(new Set())
 const catching         = ref(new Set())
@@ -520,8 +520,8 @@ const selectedGame = computed(() =>
 
 const filtered = computed(() => {
   let list = baseList.value
-  if (hideCaught.value)  list = list.filter(p => !p.caught || fadingOut.value.has(p.id))
-  if (hideGenders.value) list = list.filter(p => !p.name?.includes('(F)'))
+  if (!showCaught.value)  list = list.filter(p => !p.caught || fadingOut.value.has(p.id))
+  if (!showGenders.value) list = list.filter(p => !p.name?.includes('(F)'))
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(p => p.name?.toLowerCase().includes(q))
@@ -530,7 +530,7 @@ const filtered = computed(() => {
 })
 
 const baseList = computed(() => {
-  if (!hideForms.value) return pokemon.value
+  if (showForms.value) return pokemon.value
   const seen = new Set()
   return pokemon.value.filter(p => {
     if (p.name?.includes('(F)')) return true  // gender variants are not forms
@@ -545,7 +545,7 @@ const caughtCount = computed(() => baseList.value.filter(p => p.caught).length)
 
 function dexTotal(dex) {
   if (dex.id === selectedDex.value?.id) return baseList.value.length
-  if (!hideForms.value) return dex.total
+  if (showForms.value) return dex.total
   // modo estático: calcular desde store en memoria
   const list = staticPokemonStore[dex.id]
   if (list) {
@@ -695,7 +695,7 @@ function toggleCaught(p) {
     }, 850)
   }
 
-  if (newVal && hideCaught.value) {
+  if (newVal && !showCaught.value) {
     fadingOut.value.add(p.id)
     fadingOut.value = new Set(fadingOut.value)
     setTimeout(() => {
@@ -949,9 +949,9 @@ async function importData(e) {
 
 // ── Watchers ───────────────────────────────────────────────────────────────────
 watch(darkMode,   v => localStorage.setItem('darkMode', v))
-watch(hideCaught,  v => sessionStorage.setItem('hideCaught',  v))
-watch(hideForms,   v => sessionStorage.setItem('hideForms',   v))
-watch(hideGenders, v => sessionStorage.setItem('hideGenders', v))
+watch(showCaught,  v => sessionStorage.setItem('showCaught',  v))
+watch(showForms,   v => sessionStorage.setItem('showForms',   v))
+watch(showGenders, v => sessionStorage.setItem('showGenders', v))
 watch(search,      v => sessionStorage.setItem('search',      v))
 
 watch(selectedGameSlug, (slug, oldSlug) => {
