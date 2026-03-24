@@ -192,6 +192,15 @@
           </div>
           <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide forms</span>
         </label>
+
+        <!-- Hide genders toggle -->
+        <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+          <div @click="hideGenders = !hideGenders"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', hideGenders ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', hideGenders ? 'translate-x-4' : 'translate-x-0.5']" />
+          </div>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Hide genders</span>
+        </label>
       </div>
     </div>
 
@@ -490,6 +499,7 @@ const undoProgress     = ref(100)
 const darkMode         = ref(localStorage.getItem('darkMode') === 'true')
 const hideCaught       = ref(sessionStorage.getItem('hideCaught') === 'true')
 const hideForms        = ref(sessionStorage.getItem('hideForms') === 'true')
+const hideGenders      = ref(sessionStorage.getItem('hideGenders') === 'true')
 const search           = ref(sessionStorage.getItem('search') ?? '')
 const fadingOut        = ref(new Set())
 const catching         = ref(new Set())
@@ -510,7 +520,8 @@ const selectedGame = computed(() =>
 
 const filtered = computed(() => {
   let list = baseList.value
-  if (hideCaught.value) list = list.filter(p => !p.caught || fadingOut.value.has(p.id))
+  if (hideCaught.value)  list = list.filter(p => !p.caught || fadingOut.value.has(p.id))
+  if (hideGenders.value) list = list.filter(p => !p.name?.includes('(F)'))
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(p => p.name?.toLowerCase().includes(q))
@@ -522,6 +533,7 @@ const baseList = computed(() => {
   if (!hideForms.value) return pokemon.value
   const seen = new Set()
   return pokemon.value.filter(p => {
+    if (p.name?.includes('(F)')) return true  // gender variants are not forms
     const key = p.nac || p.dex_num || String(p.id)
     if (seen.has(key)) return false
     seen.add(key)
@@ -937,9 +949,10 @@ async function importData(e) {
 
 // ── Watchers ───────────────────────────────────────────────────────────────────
 watch(darkMode,   v => localStorage.setItem('darkMode', v))
-watch(hideCaught, v => sessionStorage.setItem('hideCaught', v))
-watch(hideForms,  v => sessionStorage.setItem('hideForms',  v))
-watch(search,     v => sessionStorage.setItem('search',     v))
+watch(hideCaught,  v => sessionStorage.setItem('hideCaught',  v))
+watch(hideForms,   v => sessionStorage.setItem('hideForms',   v))
+watch(hideGenders, v => sessionStorage.setItem('hideGenders', v))
+watch(search,      v => sessionStorage.setItem('search',      v))
 
 watch(selectedGameSlug, (slug, oldSlug) => {
   localStorage.setItem('selectedGameSlug', slug)
