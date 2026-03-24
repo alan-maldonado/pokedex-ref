@@ -201,6 +201,15 @@
           </div>
           <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Genders</span>
         </label>
+
+        <!-- Megas toggle -->
+        <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+          <div @click="showMegas = !showMegas"
+            :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', showMegas ? 'bg-orange-500' : 'bg-gray-300 dark:bg-gray-600']">
+            <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', showMegas ? 'translate-x-4' : 'translate-x-0.5']" />
+          </div>
+          <span class="text-xs text-gray-600 dark:text-gray-400 select-none">Megas</span>
+        </label>
       </div>
     </div>
 
@@ -500,6 +509,7 @@ const darkMode         = ref(localStorage.getItem('darkMode') === 'true')
 const showCaught       = ref(sessionStorage.getItem('showCaught')  !== 'false')
 const showForms        = ref(sessionStorage.getItem('showForms')   !== 'false')
 const showGenders      = ref(sessionStorage.getItem('showGenders') !== 'false')
+const showMegas        = ref(sessionStorage.getItem('showMegas')   !== 'false')
 const search           = ref(sessionStorage.getItem('search') ?? '')
 const fadingOut        = ref(new Set())
 const catching         = ref(new Set())
@@ -522,6 +532,7 @@ const filtered = computed(() => {
   let list = baseList.value
   if (!showCaught.value)  list = list.filter(p => !p.caught || fadingOut.value.has(p.id))
   if (!showGenders.value) list = list.filter(p => !p.name?.includes('(F)'))
+  if (!showMegas.value)   list = list.filter(p => !p.name?.startsWith('Mega-'))
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(p => p.name?.toLowerCase().includes(q))
@@ -533,7 +544,7 @@ const baseList = computed(() => {
   if (showForms.value) return pokemon.value
   const seen = new Set()
   return pokemon.value.filter(p => {
-    if (p.name?.includes('(F)')) return true  // gender variants are not forms
+    if (p.name?.includes('(F)') || p.name?.startsWith('Mega-')) return true  // gender/mega variants are not forms
     const key = p.nac || p.dex_num || String(p.id)
     if (seen.has(key)) return false
     seen.add(key)
@@ -952,6 +963,7 @@ watch(darkMode,   v => localStorage.setItem('darkMode', v))
 watch(showCaught,  v => sessionStorage.setItem('showCaught',  v))
 watch(showForms,   v => sessionStorage.setItem('showForms',   v))
 watch(showGenders, v => sessionStorage.setItem('showGenders', v))
+watch(showMegas,   v => sessionStorage.setItem('showMegas',   v))
 watch(search,      v => sessionStorage.setItem('search',      v))
 
 watch(selectedGameSlug, (slug, oldSlug) => {
