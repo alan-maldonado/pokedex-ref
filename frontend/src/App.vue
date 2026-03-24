@@ -194,7 +194,7 @@
         </label>
 
         <!-- Genders toggle -->
-        <label class="hidden sm:flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <label :class="[STATIC ? 'hidden sm:flex' : 'flex', 'items-center gap-1.5 cursor-pointer flex-shrink-0']">
           <div @click="showGenders = !showGenders"
             :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', showGenders ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600']">
             <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', showGenders ? 'translate-x-4' : 'translate-x-0.5']" />
