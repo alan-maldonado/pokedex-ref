@@ -146,7 +146,7 @@
         </template>
 
         <!-- Add entry -->
-        <button @click="showAddModal = true" title="Add entry"
+        <button v-if="!STATIC" @click="showAddModal = true" title="Add entry"
           class="flex-shrink-0 p-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
@@ -154,7 +154,7 @@
         </button>
 
         <!-- Reorder toggle -->
-        <button @click="reorderMode = !reorderMode" :title="reorderMode ? 'Exit reorder' : 'Reorder'"
+        <button v-if="!STATIC" @click="reorderMode = !reorderMode" :title="reorderMode ? 'Exit reorder' : 'Reorder'"
           :class="['flex-shrink-0 p-1.5 rounded-lg transition-colors', reorderMode ? 'bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700']">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l4-4 4 4M7 5v14M21 15l-4 4-4-4m4 4V5"/>
@@ -194,7 +194,7 @@
         </label>
 
         <!-- Genders toggle -->
-        <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <label class="hidden sm:flex items-center gap-1.5 cursor-pointer flex-shrink-0">
           <div @click="showGenders = !showGenders"
             :class="['relative w-9 h-5 rounded-full transition-colors cursor-pointer', showGenders ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600']">
             <div :class="['absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform', showGenders ? 'translate-x-4' : 'translate-x-0.5']" />
@@ -270,7 +270,7 @@
                 :class="p.caught ? 'text-gray-400 dark:text-gray-600 line-through' : 'text-gray-800 dark:text-gray-100'">
                 {{ p.name }}
                 <button
-                  v-if="!p.custom"
+                  v-if="!STATIC && !p.custom"
                   @click.stop="openDuplicate(p)"
                   title="Duplicate"
                   class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
@@ -280,7 +280,7 @@
                   </svg>
                 </button>
                 <button
-                  v-if="p.custom"
+                  v-if="!STATIC && p.custom"
                   @click.stop="openEdit(p)"
                   title="Edit"
                   class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
@@ -301,7 +301,7 @@
                   </svg>
                 </a>
                 <button
-                  v-if="p.custom"
+                  v-if="!STATIC && p.custom"
                   @click.stop="deleteEntry(p)"
                   title="Delete"
                   class="opacity-0 group-hover:opacity-60 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle text-red-400 hover:text-red-600"

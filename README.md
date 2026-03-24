@@ -14,13 +14,14 @@ The live demo runs entirely in the browser — no server required. Game data is 
 - No setup required
 - Progress is saved per browser/device and is not synced across devices
 - Clearing browser data will reset your progress
+- Adding, editing, duplicating, deleting entries and reordering are not available in this mode
 
 ### Self-hosted
 Runs with a backend (Express + SQLite) served via Docker. Progress is stored in a database and persists independently of the browser.
 
 - Progress syncs across all devices on the same network
 - Data survives browser clears
-- Supports resetting or editing progress via the database
+- Supports custom entries, reordering, and editing via the UI
 
 ---
 
@@ -34,6 +35,35 @@ Runs with a backend (Express + SQLite) served via Docker. Progress is stored in 
 | Pokémon Legends: Arceus | Hisui |
 | Pokémon Brilliant Diamond & Shining Pearl | Sinnoh |
 | Pokémon: Let's Go, Pikachu! & Let's Go, Eevee! | Kanto |
+
+---
+
+## Features
+
+### Filters
+All filters are active by default. Toggling one off hides that category.
+
+| Filter | Color | Hides |
+|--------|-------|-------|
+| Caught | Red | Already-caught Pokémon |
+| Forms | Blue | Alternate forms (same National #) |
+| Genders | Purple | Entries with `(F)` in the name |
+| Megas | Orange | Entries starting with `Mega-` |
+
+Genders and Megas are intentionally excluded from the Forms filter — they each have their own dedicated toggle.
+
+### Custom entries (self-hosted only)
+- **Add Pokémon** — `+` button opens a modal to add an entry manually with name, types, dex numbers, and icon URL
+- **Duplicate** — hover over any row to reveal a copy icon; opens the modal pre-filled for quick edits, inserts the new entry right after the original
+- **Edit** — hover over a custom entry to reveal an edit icon
+- **Delete** — hover over a custom entry to reveal a `×` icon
+
+### Reorder (self-hosted only)
+- Toggle the reorder button (↕) to enable drag-and-drop on all rows
+- Order is persisted in the database
+
+### Export / Import (static mode)
+Progress, custom entries, and order can be exported as a JSON file and re-imported on another browser.
 
 ---
 
@@ -135,5 +165,9 @@ cd frontend && npm install && npm run dev
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/api/games` | All games with dexes and caught/total counts |
-| `GET` | `/api/dexes/:id/pokemon` | All Pokémon for a dex |
+| `GET` | `/api/dexes/:id/pokemon` | All Pokémon for a dex, ordered by sort_order |
 | `PUT` | `/api/pokemon/:id/caught` | Toggle caught `{ caught: true\|false }` |
+| `POST` | `/api/dexes/:id/pokemon` | Add a custom Pokémon to a dex |
+| `PUT` | `/api/pokemon/:id/fields` | Edit fields of a custom Pokémon |
+| `DELETE` | `/api/pokemon/:id` | Delete a custom Pokémon |
+| `PUT` | `/api/dexes/:id/order` | Update sort order `{ order: [id, ...] }` |
