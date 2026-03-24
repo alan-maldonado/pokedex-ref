@@ -162,18 +162,18 @@
         </button>
       </div>
 
-      <!-- Row 2: progress + toggles -->
-      <div class="flex items-center gap-3 flex-wrap">
-
-        <!-- Progress bar -->
-        <div class="flex items-center gap-2 flex-1 min-w-0">
-          <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-            <div class="h-full bg-green-500 rounded-full transition-all duration-300" :style="{ width: progressPct + '%' }" />
-          </div>
-          <span class="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            {{ caughtCount }} / {{ baseList.length }} caught
-          </span>
+      <!-- Row 2: progress bar -->
+      <div class="flex items-center gap-2">
+        <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+          <div class="h-full bg-green-500 rounded-full transition-all duration-300" :style="{ width: progressPct + '%' }" />
         </div>
+        <span class="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
+          {{ caughtCount }} / {{ baseList.length }} caught
+        </span>
+      </div>
+
+      <!-- Row 3: toggles -->
+      <div class="flex items-center gap-3 flex-wrap">
 
         <!-- Caught toggle -->
         <label class="flex items-center gap-1.5 cursor-pointer flex-shrink-0">
