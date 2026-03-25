@@ -162,15 +162,15 @@ app.put('/api/pokemon/:id/caught', (req, res) => {
   res.json({ ok: true })
 })
 
-// Update fields of a custom pokemon
+// Update fields of a pokemon
 app.put('/api/pokemon/:id/fields', (req, res) => {
   const { nac, dex_num, name, tipo1, tipo2, icon_url } = req.body
   if (!name?.trim()) return res.status(400).json({ error: 'name required' })
   const info = db.prepare(`
     UPDATE pokemon SET nac=?, dex_num=?, name=?, tipo1=?, tipo2=?, icon_url=?
-    WHERE id = ? AND custom = 1
+    WHERE id = ?
   `).run(nac || null, dex_num || null, name.trim(), tipo1 || null, tipo2 || null, icon_url || null, Number(req.params.id))
-  if (info.changes === 0) return res.status(403).json({ error: 'not a custom entry' })
+  if (info.changes === 0) return res.status(404).json({ error: 'not found' })
   res.json({ ok: true })
 })
 

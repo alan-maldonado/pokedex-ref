@@ -280,7 +280,7 @@
                   </svg>
                 </button>
                 <button
-                  v-if="!STATIC && p.custom"
+                  v-if="!STATIC"
                   @click.stop="openEdit(p)"
                   title="Edit"
                   class="opacity-0 group-hover:opacity-40 hover:!opacity-100 transition-opacity ml-1 inline-block align-middle"
